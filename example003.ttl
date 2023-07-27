@@ -1,0 +1,41 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.org/marco> a prov:Entity ;
+    rdfs:label "Transparency Office" . 
+
+<http://example.org/catalog1> a dcat:Catalog ;
+    dcterms:modified "2023-07-15"^^xsd:date ;
+    dcat:dataset <http://example.org/dataset1> .
+
+<http://example.org/dataset1> a dcat:Dataset ;
+    dcat:title "Welcome Dataset Number 1" ;
+    dcterms:description "You are very welcome to the Dataset 1" ;
+    dcterms:modified "2023-07-15"^^xsd:date ;
+    dcterms:license <http://example.org/license1> ;
+    dcterms:publisher <http://example.org/marco> ;
+    dcat:distribution <http://example.org/distribution1> .
+
+<http://example.org/dataset3> a dcat:Dataset ;
+    dcat:title "Dataset Number 3" ;
+    dcterms:description "You are really Welcome to the Dataset Three. We are glad to have you here" ;
+    dcat:distribution <http://example.org/distribution3> .
+
+<http://example.org/distribution1> a dcat:Distribution ;
+    dcat:title "Distribution 1" ;
+    dcat:title "Distribution 3" ;
+    dcat:downloadURL <http://example.org/download1> .
+
+<http://example.org/download1> a dcat:Download ;
+    dcat:mediaType "text/csv" ;
+    dcat:size "1000"^^xsd:integer .
+
+<http://example.org/distribution3> a dcat:Distribution ;
+    dcat:title "Distribution 3" ;
+    dcat:downloadURL <http://example.org/download3> .

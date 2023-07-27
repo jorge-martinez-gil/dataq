@@ -1,0 +1,4 @@
+nltk==3.6.5
+rdflib==6.2.0
+Requests==2.31.0
+textstat==0.7.3

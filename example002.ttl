@@ -1,0 +1,47 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/catalog> a dcat:Catalog ;
+    dct:title "et";
+    dct:description "This is an example data catalog." ;
+    dct:publisher <http://example.org/publisher> ;
+    dct:language "et" ;
+    dct:license <http://example.org/license> ;
+    dct:hasPart <http://example.org/dataset1>, <http://example.org/dataset2> .
+
+<http://example.org/dataset1> a dcat:Dataset ;
+    dct:title "Example Dataset 1" ;
+    dct:description "This is an example dataset." ;
+    dct:publisher <http://example.org/publisher> ;
+    dct:language "ea" ;
+    dcat:distribution <http://example.org/distribution1> .
+
+<http://example.org/dataset2> a dcat:Dataset ;
+    dct:title "Example Dataset 2" ;
+    dct:description "This is another example dataset." ;
+    dct:publisher <http://example.org/publisher> ;
+    dct:language "en" ;
+    dcat:distribution <http://example.org/distribution2> .
+
+<http://example.org/distribution1> a dcat:Distribution ;
+    dct:title "Example Distribution 1" ;
+    dct:description "This is an example distribution." ;
+    dct:format "text/csv" ;
+    dcat:downloadURL <http://example.org/data1.csv> .
+
+<http://example.org/distribution2> a dcat:Distribution ;
+    dct:title "Example Distribution 2" ;
+    dct:description "This is another example distribution." ;
+    dct:format "application/json" ;
+    dcat:accessURL <http://example.org/data2.json> .
+
+<http://example.org/publisher> a foaf:Organization ;
+    foaf:name "Example Publisher" ;
+    foaf:mbox <mailto:info@example.org> .
+
+<http://example.org/license> a dct:LicenseDocument ;
+    dct:title "Example License" ;
+    dct:description "This is an example license." ;
+    dct:license <http://example.org/license.html> .

@@ -1,6 +1,6 @@
 # Framework to Automatically Determine the Quality of Open Data Catalogs
 This repository contains code for reproducing the paper
-- Jorge Martinez-Gil, "Framework to Automatically Determine the Quality of Open Data Catalogs", [[arXiv preprint]](https://arxiv.org/abs/2305.035xx), July 2023
+- Jorge Martinez-Gil, "Framework to Automatically Determine the Quality of Open Data Catalogs", [[arXiv preprint]](https://arxiv.org/abs/2307.15464), July 2023
 
 ## Introduction
 
@@ -71,12 +71,12 @@ If you use this work, please cite:
   author    = {Jorge Martinez-Gil},
   title     = {Framework to Automatically Determine the Quality of Open Data Catalogs},
   journal   = {CoRR},
-  volume    = {abs/2305.035xx},
+  volume    = {abs/2307.15464},
   year      = {2023},
-  url       = {https://arxiv.org/abs/2305.035xx},
-  doi       = {https://doi.org/10.48550/arXiv.2305.035xx},
+  url       = {https://arxiv.org/abs/2307.15464},
+  doi       = {https://doi.org/10.48550/arXiv.2307.15464},
   eprinttype = {arXiv},
-  eprint    = {2305.035xx}
+  eprint    = {2307.15464}
 }
 
 ```

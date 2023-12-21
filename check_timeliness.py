@@ -7,6 +7,7 @@
 import sys
 from datetime import datetime, timedelta
 from rdflib import Graph, RDF, Namespace
+import pytz
 
 # Define some RDF prefixes
 dcat = Namespace("http://www.w3.org/ns/dcat#")
@@ -37,8 +38,9 @@ def check_timeliness(rdf_data):
     
     # Check if the modified date is within the last year
     if modified_date:
-        modified_date = datetime.strptime(modified_date, '%Y-%m-%d')
-        one_year_ago = datetime.now() - timedelta(days=365)
+        modified_date_str = str(modified_date)
+        modified_date = datetime.strptime(modified_date_str, '%Y-%m-%dT%H:%M:%S%z')
+        one_year_ago = datetime.now(pytz.UTC) - timedelta(days=365)
         if modified_date > one_year_ago:
             return True
     

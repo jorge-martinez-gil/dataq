@@ -78,7 +78,7 @@ def main():
         entity_type = sys.argv[2]
 
         # Load RDF data from file
-        with open(rdf_data_path, "r") as f:
+        with open(rdf_data_path, "r", encoding="utf-8") as f:
             rdf_data = f.read()
 
         result = check_consistency(rdf_data, entity_type)
@@ -91,7 +91,7 @@ def main():
     except ValueError as e:
         print(f"Error: {e}")
         sys.exit(1)
-
+        
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(1)

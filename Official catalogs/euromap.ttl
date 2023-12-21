@@ -1,0 +1,861 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix edp:  <https://europeandataportal.eu/voc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dqv:   <http://www.w3.org/ns/dqv#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spdx:  <http://spdx.org/rdf/terms#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+
+<https://eurogeographics.org>
+        a       foaf:Document .
+
+<https://www.mapsforeurope.org/>
+        a       foaf:Document .
+
+<http://data.europa.eu/88u/catalogue/eurogeographics>
+        a                    dcat:Catalog;
+        dct:description      "Metadata catalogue for the Open Maps for Europe (OME)"@en;
+        dct:issued           "2023-11-03T14:23:19Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:language         <http://publications.europa.eu/resource/authority/language/ENG>;
+        dct:modified         "2023-11-03T14:23:19Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:publisher        [ a              foaf:Agent;
+                               dct:type       <http://purl.org/adms/publishertype/SupraNationalAuthority>;
+                               foaf:homepage  <https://eurogeographics.org>;
+                               foaf:mbox      <mailto:mapsforeurope@eurogeographics.org>;
+                               foaf:name      "EuroGeographics"@en
+                             ];
+        dct:spatial          <http://publications.europa.eu/resource/authority/continent/EUROPE>;
+        dct:title            "Open Maps for Europe"@en;
+        dct:type             "inspire";
+        foaf:homepage        <https://www.mapsforeurope.org/>;
+        edp:harvestEndpoint  <https://www.mapsforeurope.org/maps/csw> .
+
+
+<http://publications.europa.eu/resource/authority/language/MKD>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMI>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GEO>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/WEL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BOS>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HSB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HUN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/EST>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HRV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FAO>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMJ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/TUR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LAT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/MLT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SME>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BEL>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/record/91f1aec3-1aaf-42d3-8730-c567a46c0116>
+        a                       dcat:CatalogRecord;
+        dct:creator             <http://piveau.io>;
+        dct:identifier          "91f1aec3-1aaf-42d3-8730-c567a46c0116";
+        dct:issued              "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:modified            "2023-11-03T17:32:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        spdx:checksum           [ a                   spdx:Checksum;
+                                  spdx:algorithm      spdx:checksumAlgorithm_md5;
+                                  spdx:checksumValue  "d0ac760e1d0ef270720ec921b9adf4f6"
+                                ];
+        dqv:hasQualityMetadata  <http://data.europa.eu/88u/metrics/91f1aec3-1aaf-42d3-8730-c567a46c0116>;
+        foaf:primaryTopic       <http://data.europa.eu/88u/dataset/91f1aec3-1aaf-42d3-8730-c567a46c0116>;
+        edp:originalLanguage    "en";
+        edp:transIssued         "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transReceived       "2023-11-03T17:32:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transStatus         edp:TransCompleted .
+
+<http://publications.europa.eu/resource/authority/language/NOR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ARM>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/POL>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/dataset/91f1aec3-1aaf-42d3-8730-c567a46c0116>
+        a                  dcat:Dataset;
+        dct:conformsTo     [ a           dct:Standard;
+                             dct:issued  "2022-09-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+                             dct:title   "ORG 2022 Specification"@en
+                           ];
+        dct:description    "Open Regional Gazetteer tarjoaa virallisia maantieteellisiÃ¤ nimiÃ¤, joita sÃ¤ilytetÃ¤Ã¤n kansallisten valvontaviranomaisten lÃ¤hdetiedoissa. SitÃ¤ voidaan kÃ¤yttÃ¤Ã¤ mihin tahansa viite- tai tiedotustarkoitukseen. Se ei kuitenkaan tarkoita, ettÃ¤ kaikki tiedot olisivat laillisesti hyvÃ¤ksyttyjÃ¤. Kansalliset tiedot on kuvattu metatiedoissa."@fi-t-en-t0-mtec , "Den Ã¥bne regionale statstidende giver autoritative geografiske navne som bevaret i kildedataene for de nationale kompetente myndigheder. Den kan bruges til ethvert reference- eller informationsformÃ¥l. Men det betyder ikke, at alle data er lovligt godkendt. De nationale specifikationer er beskrevet i metadataene."@da-t-en-t0-mtec , "V odprtem regionalnem uradnem listu so navedena verodostojna geografska imena, kot so ohranjena v izvornih podatkih NMCA. Uporablja se lahko za kakrÅ¡en koli referenÄni ali informacijski namen. Vendar to ne pomeni, da so vsi podatki zakonsko odobreni. Nacionalne posebnosti so opisane v metapodatkih. V odprtem regionalnem uradnem listu so navedena verodostojna geografska imena, kot so ohranjena v izvornih podatkih NMCA. Uporablja se lahko za kakrÅ¡en koli referenÄni ali informacijski namen. Vendar to ne pomeni, da so vsi podatki zakonsko odobreni.\nNacionalne posebnosti so opisane v metapodatkih."@sl-t-en-t0-mtec , "The Open Regional Gazetteer provides authoritative geographical names as maintained in the source data of the NMCAs. It can be used for any reference or information purpose. But it does not imply that all data is legally approved. National specifics are described in the metadata."@en , "De Open Regional Gazetteer biedt gezaghebbende geografische namen zoals bewaard in de brongegevens van de NMCAâ€™s. Het kan worden gebruikt voor elk referentie- of informatiedoel. Maar het betekent niet dat alle gegevens wettelijk zijn goedgekeurd.\nNationale bijzonderheden worden beschreven in de metadata."@nl-t-en-t0-mtec , "Open Regional Gazetteer poskytuje smÄ›rodatnÃ¡ zemÄ›pisnÃ¡ jmÃ©na, jak jsou udrÅ¾ovÃ¡na ve zdrojovÃ½ch ÃºdajÃ­ch vnitrostÃ¡tnÃ­ch orgÃ¡nÅ¯ pro dohled. MÅ¯Å¾e bÃ½t pouÅ¾it pro jakÃ½koli referenÄnÃ­ nebo informaÄnÃ­ ÃºÄel. NeznamenÃ¡ to vÅ¡ak, Å¾e by vÅ¡echny Ãºdaje byly schvÃ¡leny zÃ¡konem. Specifika jednotlivÃ½ch stÃ¡tÅ¯ jsou popsÃ¡na v metadatech."@cs-t-en-t0-mtec , "Ð’Ñ–Ð´ÐºÑ€Ð¸Ñ‚Ð¸Ð¹ Ñ€ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ð¹ Ð²Ñ–ÑÐ½Ð¸Ðº Ð½Ð°Ð´Ð°Ñ” Ð°Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚Ð½Ñ– Ð³ÐµÐ¾Ð³Ñ€Ð°Ñ„Ñ–Ñ‡Ð½Ñ– Ð½Ð°Ð·Ð²Ð¸, ÑÐºÑ– Ð·Ð±ÐµÑ€Ñ–Ð³Ð°ÑŽÑ‚ÑŒÑÑ Ð² Ð²Ð¸Ñ…Ñ–Ð´Ð½Ð¸Ñ… Ð´Ð°Ð½Ð¸Ñ… NMCA. Ð’Ñ–Ð½ Ð¼Ð¾Ð¶Ðµ Ð±ÑƒÑ‚Ð¸ Ð²Ð¸ÐºÐ¾Ñ€Ð¸ÑÑ‚Ð°Ð½Ð¸Ð¹ Ð´Ð»Ñ Ð±ÑƒÐ´ÑŒ-ÑÐºÐ¸Ñ… Ð´Ð¾Ð²Ñ–Ð´ÐºÐ¾Ð²Ð¸Ñ… Ð°Ð±Ð¾ Ñ–Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–Ð¹Ð½Ð¸Ñ… Ñ†Ñ–Ð»ÐµÐ¹. ÐÐ»Ðµ Ñ†Ðµ Ð½Ðµ Ð¾Ð·Ð½Ð°Ñ‡Ð°Ñ”, Ñ‰Ð¾ Ð²ÑÑ– Ð´Ð°Ð½Ñ– Ð·Ð°Ñ‚Ð²ÐµÑ€Ð´Ð¶ÐµÐ½Ñ– Ð·Ð°ÐºÐ¾Ð½Ð¾Ð¼. ÐÐ°Ñ†Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ñ– Ð¾ÑÐ¾Ð±Ð»Ð¸Ð²Ð¾ÑÑ‚Ñ– Ð¾Ð¿Ð¸ÑÐ°Ð½Ñ– Ð² Ð¼ÐµÑ‚Ð°Ð´Ð°Ð½Ð¸Ñ…. Ð’Ñ–Ð´ÐºÑ€Ð¸Ñ‚Ð¸Ð¹ Ñ€ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ð¹ Ð²Ñ–ÑÐ½Ð¸Ðº Ð½Ð°Ð´Ð°Ñ” Ð°Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚Ð½Ñ– Ð³ÐµÐ¾Ð³Ñ€Ð°Ñ„Ñ–Ñ‡Ð½Ñ– Ð½Ð°Ð·Ð²Ð¸, ÑÐºÑ– Ð·Ð±ÐµÑ€Ñ–Ð³Ð°ÑŽÑ‚ÑŒÑÑ Ð² Ð²Ð¸Ñ…Ñ–Ð´Ð½Ð¸Ñ… Ð´Ð°Ð½Ð¸Ñ… NMCA. Ð’Ñ–Ð½ Ð¼Ð¾Ð¶Ðµ Ð±ÑƒÑ‚Ð¸ Ð²Ð¸ÐºÐ¾Ñ€Ð¸ÑÑ‚Ð°Ð½Ð¸Ð¹ Ð´Ð»Ñ Ð±ÑƒÐ´ÑŒ-ÑÐºÐ¸Ñ… Ð´Ð¾Ð²Ñ–Ð´ÐºÐ¾Ð²Ð¸Ñ… Ð°Ð±Ð¾ Ñ–Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–Ð¹Ð½Ð¸Ñ… Ñ†Ñ–Ð»ÐµÐ¹. ÐÐ»Ðµ Ñ†Ðµ Ð½Ðµ Ð¾Ð·Ð½Ð°Ñ‡Ð°Ñ”, Ñ‰Ð¾ Ð²ÑÑ– Ð´Ð°Ð½Ñ– Ð·Ð°Ñ‚Ð²ÐµÑ€Ð´Ð¶ÐµÐ½Ñ– Ð·Ð°ÐºÐ¾Ð½Ð¾Ð¼.\nÐÐ°Ñ†Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ñ– Ð¾ÑÐ¾Ð±Ð»Ð¸Ð²Ð¾ÑÑ‚Ñ– Ð¾Ð¿Ð¸ÑÐ°Ð½Ñ– Ð² Ð¼ÐµÑ‚Ð°Ð´Ð°Ð½Ð¸Ñ…."@uk-t-en-t0-mtec , "Î¤Î¿ Open Regional Gazetteer Ï€Î±ÏÎ­Ï‡ÎµÎ¹ Î­Î³ÎºÏ…ÏÎµÏ‚ Î³ÎµÏ‰Î³ÏÎ±Ï†Î¹ÎºÎ­Ï‚ Î¿Î½Î¿Î¼Î±ÏƒÎ¯ÎµÏ‚ ÏŒÏ€Ï‰Ï‚ Î´Î¹Î±Ï„Î·ÏÎ¿ÏÎ½Ï„Î±Î¹ ÏƒÏ„Î± Ï€Î·Î³Î±Î¯Î± Î´ÎµÎ´Î¿Î¼Î­Î½Î± Ï„Ï‰Î½ NMCA. ÎœÏ€Î¿ÏÎµÎ¯ Î½Î± Ï‡ÏÎ·ÏƒÎ¹Î¼Î¿Ï€Î¿Î¹Î·Î¸ÎµÎ¯ Î³Î¹Î± Î¿Ï€Î¿Î¹Î¿Î´Î®Ï€Î¿Ï„Îµ ÏƒÎºÎ¿Ï€ÏŒ Î±Î½Î±Ï†Î¿ÏÎ¬Ï‚ Î® Ï€Î»Î·ÏÎ¿Ï†Î¿ÏÎ¯Î±Ï‚. Î‘Î»Î»Î¬ Î±Ï…Ï„ÏŒ Î´ÎµÎ½ ÏƒÎ·Î¼Î±Î¯Î½ÎµÎ¹ ÏŒÏ„Î¹ ÏŒÎ»Î± Ï„Î± Î´ÎµÎ´Î¿Î¼Î­Î½Î± ÎµÎ¯Î½Î±Î¹ Î½ÏŒÎ¼Î¹Î¼Î± ÎµÎ³ÎºÎµÎºÏÎ¹Î¼Î­Î½Î±. ÎŸÎ¹ ÎµÎ¸Î½Î¹ÎºÎ­Ï‚ Î¹Î´Î¹Î±Î¹Ï„ÎµÏÏŒÏ„Î·Ï„ÎµÏ‚ Ï€ÎµÏÎ¹Î³ÏÎ¬Ï†Î¿Î½Ï„Î±Î¹ ÏƒÏ„Î± Î¼ÎµÏ„Î±Î´ÎµÎ´Î¿Î¼Î­Î½Î±."@el-t-en-t0-mtec , "Atvirajame regioniniame leidinyje pateikiami autoritetingi geografiniai pavadinimai, nurodyti NMKI Å¡altiniuose. Jis gali bÅ«ti naudojamas bet kuriuo informaciniu ar informaciniu tikslu. TaÄiau tai nereiÅ¡kia, kad visi duomenys yra teisiÅ¡kai patvirtinti. Nacionaliniai ypatumai apraÅ¡yti metaduomenyse."@lt-t-en-t0-mtec , "Open Regional Gazetteer podaje autorytatywne nazwy geograficzne utrzymywane w danych ÅºrÃ³dÅ‚owych NMCA. MoÅ¼e byÄ‡ stosowany w dowolnym celu referencyjnym lub informacyjnym. Nie oznacza to jednak, Å¼e wszystkie dane sÄ… legalnie zatwierdzane. Specyfika krajowa jest opisana w metadanych."@pl-t-en-t0-mtec , "Avatud piirkondlik vÃ¤ljaanne pakub usaldusvÃ¤Ã¤rseid geograafilisi nimetusi, mida sÃ¤ilitatakse NMCAde lÃ¤hteandmetes. Seda saab kasutada mis tahes viite- vÃµi teabeeesmÃ¤rgil. Kuid see ei tÃ¤henda, et kÃµik andmed on seaduslikult heaks kiidetud.\nRiiklikke eripÃ¤rasid kirjeldatakse metaandmetes."@et-t-en-t0-mtec , "El Open Regional Gazetteer proporciona nombres geogrÃ¡ficos autorizados que se mantienen en los datos de origen de las NMCA. Puede ser utilizado para cualquier propÃ³sito de referencia o informaciÃ³n. Pero no implica que todos los datos estÃ©n legalmente aprobados. Los datos especÃ­ficos nacionales se describen en los metadatos."@es-t-en-t0-mtec , "ÐžÑ‚Ð²Ð¾Ñ€ÐµÐ½Ð¸ÑÑ‚ Ñ€ÐµÐ³Ð¸Ð¾Ð½Ð°Ð»ÐµÐ½ Ð²ÐµÑÑ‚Ð½Ð¸Ðº Ð¿Ñ€ÐµÐ´Ð¾ÑÑ‚Ð°Ð²Ñ Ð°Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚Ð½Ð¸ Ð³ÐµÐ¾Ð³Ñ€Ð°Ñ„ÑÐºÐ¸ Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ñ, Ñ‚Ð°ÐºÐ° ÐºÐ°ÐºÑ‚Ð¾ ÑÐ° Ð·Ð°Ð¿Ð°Ð·ÐµÐ½Ð¸ Ð² Ð¸Ð·Ñ…Ð¾Ð´Ð½Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ð¸ Ð½Ð° ÐÐœÐš. Ð¢Ñ Ð¼Ð¾Ð¶Ðµ Ð´Ð° ÑÐµ Ð¸Ð·Ð¿Ð¾Ð»Ð·Ð²Ð° Ð·Ð° Ð²ÑÑÐºÐ°ÐºÐ²Ð¸ ÑÐ¿Ñ€Ð°Ð²Ð¾Ñ‡Ð½Ð¸ Ð¸Ð»Ð¸ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¾Ð½Ð½Ð¸ Ñ†ÐµÐ»Ð¸. ÐÐ¾ Ñ‚Ð¾Ð²Ð° Ð½Ðµ Ð¾Ð·Ð½Ð°Ñ‡Ð°Ð²Ð°, Ñ‡Ðµ Ð²ÑÐ¸Ñ‡ÐºÐ¸ Ð´Ð°Ð½Ð½Ð¸ ÑÐ° Ð·Ð°ÐºÐ¾Ð½Ð½Ð¾ Ð¾Ð´Ð¾Ð±Ñ€ÐµÐ½Ð¸. ÐÐ°Ñ†Ð¸Ð¾Ð½Ð°Ð»Ð½Ð¸Ñ‚Ðµ Ð¾ÑÐ¾Ð±ÐµÐ½Ð¾ÑÑ‚Ð¸ ÑÐ° Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸ Ð² Ð¼ÐµÑ‚Ð°Ð´Ð°Ð½Ð½Ð¸Ñ‚Ðµ."@bg-t-en-t0-mtec , "Monitorul Oficial Regional Deschis furnizeazÄƒ denumiri geografice autorizate, astfel cum sunt pÄƒstrate Ã®n datele sursÄƒ ale NMCA. Acesta poate fi utilizat Ã®n orice scop de referinÈ›Äƒ sau de informare. Dar aceasta nu implicÄƒ faptul cÄƒ toate datele sunt aprobate legal.\nCaracteristicile naÈ›ionale sunt descrise Ã®n metadate."@ro-t-en-t0-mtec , "Il-Gazzetta ReÄ¡jonali MiftuÄ§a tipprovdi ismijiet Ä¡eografiÄ‹i awtorevoli kif miÅ¼muma fid-data tas-sors tal-NMCAs. Jistaâ€™ jintuÅ¼a gÄ§al kwalunkwe skop taâ€™ referenza jew taâ€™ informazzjoni. IÅ¼da dan ma jimplikax li d-data kollha hija approvata legalment.\nl-ispeÄ‹ifiÄ‹itajiet nazzjonali huma deskritti fil-metadata."@mt-t-en-t0-mtec , "Open Regional Gazetteer tillhandahÃ¥ller auktoritativa geografiska namn som upprÃ¤tthÃ¥lls i kÃ¤lldata frÃ¥n de nationella behÃ¶riga myndigheterna. Den kan anvÃ¤ndas fÃ¶r alla referens- eller informationsÃ¤ndamÃ¥l. Men det innebÃ¤r inte att alla uppgifter Ã¤r juridiskt godkÃ¤nda. Nationella specifikationer beskrivs i metadata."@sv-t-en-t0-mtec , "A NyÃ­lt RegionÃ¡lis KÃ¶zlÃ¶ny az NMCA-k forrÃ¡sadataiban szereplÅ‘ hiteles fÃ¶ldrajzi neveket tartalmazza. BÃ¡rmilyen hivatkozÃ¡si vagy tÃ¡jÃ©koztatÃ¡si cÃ©lra hasznÃ¡lhatÃ³. De ez nem jelenti azt, hogy minden adat jogilag jÃ³vÃ¡hagyott. A nemzeti jellemzÅ‘ket a metaadatok ismertetik."@hu-t-en-t0-mtec , "L'Open Regional Gazetteer fornisce nomi geografici autorevoli come mantenuti nei dati di origine delle NMCA. PuÃ² essere utilizzato per qualsiasi scopo di riferimento o informazione. Ma ciÃ² non implica che tutti i dati siano legalmente approvati. Le specifiche nazionali sono descritte nei metadati."@it-t-en-t0-mtec , "OtvorenÃ½ regionÃ¡lny vestnÃ­k poskytuje spoÄ¾ahlivÃ© zemepisnÃ© nÃ¡zvy, ako sÃº uchovÃ¡vanÃ© v zdrojovÃ½ch Ãºdajoch NMCA. MÃ´Å¾e sa pouÅ¾iÅ¥ na akÃ½koÄ¾vek referenÄnÃ½ alebo informaÄnÃ½ ÃºÄel. NeznamenÃ¡ to vÅ¡ak, Å¾e vÅ¡etky Ãºdaje sÃº zÃ¡konne schvÃ¡lenÃ©.\nNÃ¡rodnÃ© Å¡pecifikÃ¡ sÃº opÃ­sanÃ© v metaÃºdajoch."@sk-t-en-t0-mtec , "Tugann an Iriseoir RÃ©igiÃºnach Oscailte ainmneacha geografacha ÃºdarÃ¡sacha mar a choimeÃ¡dtar i sonraÃ­ foinseacha na NMCAnna. Is fÃ©idir Ã© a ÃºsÃ¡id chun crÃ­ocha tagartha nÃ³ faisnÃ©ise ar bith. Ach nÃ­ thugann sÃ© le tuiscint go bhfuil na sonraÃ­ go lÃ©ir formheasta go dlÃ­thiÃºil. DÃ©antar cur sÃ­os ar shonraÃ­ nÃ¡isiÃºnta sna meiteashonraÃ­."@ga-t-en-t0-mtec , "Open Regional Gazetteer navodi mjerodavne zemljopisne nazive kako su zadrÅ¾ani u izvornim podacima nacionalnih tijela za zaÅ¡titu trÅ¾iÅ¡nog natjecanja. MoÅ¾e se koristiti za bilo koju referentnu ili informativnu svrhu. MeÄ‘utim, to ne znaÄi da su svi podaci zakonski odobreni.\nNacionalni podaci opisani su u metapodacima."@hr-t-en-t0-mtec , "AtklÄtais reÄ£ionÄlais laikraksts sniedz autoritatÄ«vus Ä£eogrÄfiskos nosaukumus, kas saglabÄti VMCA avota datos. To var izmantot jebkÄdai atsaucei vai informÄcijai. TaÄu tas nenozÄ«mÄ“, ka visi dati ir likumÄ«gi apstiprinÄti. Valsts Ä«patnÄ«bas ir aprakstÄ«tas metadatos."@lv-t-en-t0-mtec , "O DiÃ¡rio Regional Aberto fornece nomes geogrÃ¡ficos autorizados, tal como mantidos nos dados de origem das AMCN. Pode ser usado para qualquer referÃªncia ou finalidade de informaÃ§Ã£o. Mas nÃ£o implica que todos os dados sejam legalmente aprovados.\nAs especificidades nacionais sÃ£o descritas nos metadados."@pt-t-en-t0-mtec , "Der Open Regional Gazetteer stellt maÃŸgebliche geografische Bezeichnungen zur VerfÃ¼gung, die in den Quelldaten der NMCAs beibehalten werden. Es kann fÃ¼r jeden Referenz- oder Informationszweck verwendet werden. Dies bedeutet jedoch nicht, dass alle Daten rechtlich genehmigt sind. Nationale Besonderheiten werden in den Metadaten beschrieben."@de-t-en-t0-mtec , "Lâ€™Open Regional Gazetteer fournit des noms gÃ©ographiques faisant autoritÃ©, tels quâ€™ils sont conservÃ©s dans les donnÃ©es sources des APNC. Il peut Ãªtre utilisÃ© Ã  des fins de rÃ©fÃ©rence ou dâ€™information.\nMais cela nâ€™implique pas que toutes les donnÃ©es soient lÃ©galement approuvÃ©es.\nLes spÃ©cificitÃ©s nationales sont dÃ©crites dans les mÃ©tadonnÃ©es."@fr-t-en-t0-mtec;
+        dct:identifier     "ORG_2022";
+        dct:issued         "2022-09-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:language       <http://publications.europa.eu/resource/authority/language/FKV> , <http://publications.europa.eu/resource/authority/language/ALB> , <http://publications.europa.eu/resource/authority/language/SMA> , <http://publications.europa.eu/resource/authority/language/CAT> , <http://publications.europa.eu/resource/authority/language/HRV> , <http://publications.europa.eu/resource/authority/language/SMI> , <http://publications.europa.eu/resource/authority/language/KAL> , <http://publications.europa.eu/resource/authority/language/UKR> , <http://publications.europa.eu/resource/authority/language/RUS> , <http://publications.europa.eu/resource/authority/language/GLE> , <http://publications.europa.eu/resource/authority/language/STL> , <http://publications.europa.eu/resource/authority/language/CES> , <http://publications.europa.eu/resource/authority/language/GEO> , <http://publications.europa.eu/resource/authority/language/ENG> , <http://publications.europa.eu/resource/authority/language/EST> , <http://publications.europa.eu/resource/authority/language/LIT> , <http://publications.europa.eu/resource/authority/language/SRP> , <http://publications.europa.eu/resource/authority/language/DAN> , <http://publications.europa.eu/resource/authority/language/POL> , <http://publications.europa.eu/resource/authority/language/NOR> , <http://publications.europa.eu/resource/authority/language/BEL> , <http://publications.europa.eu/resource/authority/language/ITA> , <http://publications.europa.eu/resource/authority/language/BOS> , <http://publications.europa.eu/resource/authority/language/BUL> , <http://publications.europa.eu/resource/authority/language/BAQ> , <http://publications.europa.eu/resource/authority/language/LAV> , <http://publications.europa.eu/resource/authority/language/FRR> , <http://publications.europa.eu/resource/authority/language/WEL> , <http://publications.europa.eu/resource/authority/language/FRA> , <http://publications.europa.eu/resource/authority/language/SMJ> , <http://publications.europa.eu/resource/authority/language/ISL> , <http://publications.europa.eu/resource/authority/language/HSB> , <http://publications.europa.eu/resource/authority/language/DEU> , <http://publications.europa.eu/resource/authority/language/ELL> , <http://publications.europa.eu/resource/authority/language/GLV> , <http://publications.europa.eu/resource/authority/language/SWE> , <http://publications.europa.eu/resource/authority/language/FIN> , <http://publications.europa.eu/resource/authority/language/HUN> , <http://publications.europa.eu/resource/authority/language/MLT> , <http://publications.europa.eu/resource/authority/language/POR> , <http://publications.europa.eu/resource/authority/language/FRY> , <http://publications.europa.eu/resource/authority/language/MKD> , <http://publications.europa.eu/resource/authority/language/SPA> , <http://publications.europa.eu/resource/authority/language/LAT> , <http://publications.europa.eu/resource/authority/language/TUR> , <http://publications.europa.eu/resource/authority/language/NLD> , <http://publications.europa.eu/resource/authority/language/AZE> , <http://publications.europa.eu/resource/authority/language/ARM> , <http://publications.europa.eu/resource/authority/language/CNR> , <http://publications.europa.eu/resource/authority/language/DSB> , <http://publications.europa.eu/resource/authority/language/RON> , <http://publications.europa.eu/resource/authority/language/STQ> , <http://publications.europa.eu/resource/authority/language/SME> , <http://publications.europa.eu/resource/authority/language/ROH> , <http://publications.europa.eu/resource/authority/language/LTZ> , <http://publications.europa.eu/resource/authority/language/GLA> , <http://publications.europa.eu/resource/authority/language/SLK> , <http://publications.europa.eu/resource/authority/language/SLV> , <http://publications.europa.eu/resource/authority/language/FAO>;
+        dct:modified       "2020-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:provenance     [ a           dct:ProvenanceStatement;
+                             rdfs:label  "This dataset was automatically derived from ERM and EBM."@en
+                           ];
+        dct:spatial        [ a          dct:Location;
+                             dcat:bbox  "POLYGON((-74 84,57 84,57 -22,-74 -22,-74 84))"^^<http://replacement.io/ont/geosparql#wktLiteral>
+                           ];
+        dct:title          "Journalier rÃ©gional ouvert 2022"@fr-t-en-t0-mtec , "Ð’Ñ–Ð´ÐºÑ€Ð¸Ñ‚Ð¸Ð¹ Ñ€ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ð¹ Ð²Ñ–ÑÐ½Ð¸Ðº 2022"@uk-t-en-t0-mtec , "Open Regional Gazetteer 2022"@en , "Otvoreno regionalno glasilo 2022."@hr-t-en-t0-mtec , "Î‘Î½Î¿Î¹ÎºÏ„Î® Ï€ÎµÏÎ¹Ï†ÎµÏÎµÎ¹Î±ÎºÎ® ÎµÏ†Î·Î¼ÎµÏÎ¯Î´Î± 2022"@el-t-en-t0-mtec , "2022 m. atvirasis regiono leidinys"@lt-t-en-t0-mtec , "Monitorul Oficial Regional Deschis 2022"@ro-t-en-t0-mtec , "Otwarty dziennik regionalny 2022"@pl-t-en-t0-mtec , "Odprti regionalni uradni list 2022"@sl-t-en-t0-mtec , "Bollettino regionale aperto 2022"@it-t-en-t0-mtec , "Iriseoir RÃ©igiÃºnach Oscailte 2022"@ga-t-en-t0-mtec , "Ã…bent regionalt statstidende 2022"@da-t-en-t0-mtec , "AtklÄtais reÄ£ionÄlais laikraksts 2022"@lv-t-en-t0-mtec , "OtvorenÃ½ regionÃ¡lny vestnÃ­k 2022"@sk-t-en-t0-mtec , "ÐžÐ±Ð»Ð°ÑÑ‚ÐµÐ½ Ð²ÐµÑÑ‚Ð½Ð¸Ðº â€žÐžÑ‚Ð²Ð¾Ñ€ÐµÐ½â€œ 2022Â Ð³."@bg-t-en-t0-mtec , "Open Regionaal Staatsblad 2022"@nl-t-en-t0-mtec , "BoletÃ­n Regional Abierto 2022"@es-t-en-t0-mtec , "OtevÅ™enÃ½ regionÃ¡lnÃ­ vÄ›stnÃ­k 2022"@cs-t-en-t0-mtec , "Avatud piirkondlik vÃ¤ljaanne 2022"@et-t-en-t0-mtec , "Ã–ppna regionala tidningen 2022"@sv-t-en-t0-mtec , "Gazzetta ReÄ¡jonali MiftuÄ§a 2022"@mt-t-en-t0-mtec , "NyÃ­lt regionÃ¡lis kÃ¶zlÃ¶ny 2022"@hu-t-en-t0-mtec , "Jornal Oficial Regional Aberto 2022"@pt-t-en-t0-mtec , "Avoin aluelehti 2022"@fi-t-en-t0-mtec , "Offener Regionalanzeiger 2022"@de-t-en-t0-mtec;
+        dcat:contactPoint  [ a                   vcard:Organization;
+                             vcard:fn            "EuroGeographics Head Office";
+                             vcard:hasAddress    [ a                     vcard:Address;
+                                                   vcard:country-name    "Belgium";
+                                                   vcard:locality        "Brussels";
+                                                   vcard:postal-code     "1000";
+                                                   vcard:street-address  "Rue du Nord 76/Noordstraat 76"
+                                                 ];
+                             vcard:hasEmail      <mailto:contact@eurogeographics.org>;
+                             vcard:hasTelephone  <tel:+32028887193>;
+                             vcard:hasURL        <https://eurogeographics.org>
+                           ];
+        dcat:distribution  <http://data.europa.eu/88u/distribution/e6b27c14-0033-4c40-b2ea-0ffbcde428d2>;
+        dcat:keyword       "Geographical names"@en , "Administrative units"@en , "Hydrography"@en , "Transport networks"@en;
+        dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/GOVE> , <http://publications.europa.eu/resource/authority/data-theme/ENVI> , <http://publications.europa.eu/resource/authority/data-theme/TRAN> .
+
+<http://publications.europa.eu/resource/authority/language/RUS>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BAQ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/POR>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/distribution/e6b27c14-0033-4c40-b2ea-0ffbcde428d2>
+        a               dcat:Distribution;
+        dct:identifier  "Euro Regional Map@en";
+        dct:title       "Regional karta Ã¶ver euro"@sv-t-en-t0-mtec , "Regionale kaart van de euro"@nl-t-en-t0-mtec , "Ð ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ñ”Ð²Ñ€Ð¾"@uk-t-en-t0-mtec , "RegionÃ¡lnÃ­ mapa eura"@cs-t-en-t0-mtec , "Billeder af Euro Regional"@da-t-en-t0-mtec , "Euron alueellinen kartta"@fi-t-en-t0-mtec , "Mapa regionalna euro"@pl-t-en-t0-mtec , "Regionalna karta eura"@hr-t-en-t0-mtec , "Euro Regional Map"@en , "Î ÎµÏÎ¹Ï†ÎµÏÎµÎ¹Î±ÎºÏŒÏ‚ Ï‡Î¬ÏÏ„Î·Ï‚ Ï„Î¿Ï… ÎµÏ…ÏÏŽ"@el-t-en-t0-mtec , "Il-Mappa ReÄ¡jonali tal-Euro"@mt-t-en-t0-mtec , "Euro regioninis Å¾emÄ—lapis"@lt-t-en-t0-mtec , "Euro regionÃ¡lis tÃ©rkÃ©p"@hu-t-en-t0-mtec , "Euro RegionÃ¡lna mapa"@sk-t-en-t0-mtec , "Mappa regionale dell'euro"@it-t-en-t0-mtec , "Euro piirkondlik kaart"@et-t-en-t0-mtec , "Harta regionalÄƒ euro"@ro-t-en-t0-mtec , "Regionalni zemljevid evra"@sl-t-en-t0-mtec , "Mapa regional del euro"@es-t-en-t0-mtec , "Eiro reÄ£ionÄlÄ karte"@lv-t-en-t0-mtec , "Ð ÐµÐ³Ð¸Ð¾Ð½Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ð½Ð° ÐµÐ²Ñ€Ð¾Ð·Ð¾Ð½Ð°Ñ‚Ð°"@bg-t-en-t0-mtec , "Mapa Regional do Euro"@pt-t-en-t0-mtec , "Carte rÃ©gionale de lâ€™euro"@fr-t-en-t0-mtec , "Euro-Regionalkarte"@de-t-en-t0-mtec , "LÃ©arscÃ¡il RÃ©igiÃºnach an Euro"@ga-t-en-t0-mtec;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+<http://publications.europa.eu/resource/authority/language/FRA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ITA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CNR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/NLD>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SRP>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/AZE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BUL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CES>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ELL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/STQ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FIN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LAV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRY>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ALB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ROH>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/STL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/UKR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/RON>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/KAL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SWE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SLV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LIT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ISL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SLK>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LTZ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DAN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FKV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CAT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DSB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DEU>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SPA>
+        a       dct:LinguisticSystem .
+
+
+
+<http://data.europa.eu/88u/distribution/e6b27c14-0033-4c40-b2ea-0ffbcde428d2>
+        a               dcat:Distribution;
+        dct:identifier  "Euro Regional Map@en";
+        dct:title       "Regional karta Ã¶ver euro"@sv-t-en-t0-mtec , "Regionale kaart van de euro"@nl-t-en-t0-mtec , "Ð ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ñ”Ð²Ñ€Ð¾"@uk-t-en-t0-mtec , "RegionÃ¡lnÃ­ mapa eura"@cs-t-en-t0-mtec , "Billeder af Euro Regional"@da-t-en-t0-mtec , "Euron alueellinen kartta"@fi-t-en-t0-mtec , "Mapa regionalna euro"@pl-t-en-t0-mtec , "Regionalna karta eura"@hr-t-en-t0-mtec , "Euro Regional Map"@en , "Î ÎµÏÎ¹Ï†ÎµÏÎµÎ¹Î±ÎºÏŒÏ‚ Ï‡Î¬ÏÏ„Î·Ï‚ Ï„Î¿Ï… ÎµÏ…ÏÏŽ"@el-t-en-t0-mtec , "Il-Mappa ReÄ¡jonali tal-Euro"@mt-t-en-t0-mtec , "Euro regioninis Å¾emÄ—lapis"@lt-t-en-t0-mtec , "Euro regionÃ¡lis tÃ©rkÃ©p"@hu-t-en-t0-mtec , "Euro RegionÃ¡lna mapa"@sk-t-en-t0-mtec , "Mappa regionale dell'euro"@it-t-en-t0-mtec , "Euro piirkondlik kaart"@et-t-en-t0-mtec , "Harta regionalÄƒ euro"@ro-t-en-t0-mtec , "Regionalni zemljevid evra"@sl-t-en-t0-mtec , "Mapa regional del euro"@es-t-en-t0-mtec , "Eiro reÄ£ionÄlÄ karte"@lv-t-en-t0-mtec , "Ð ÐµÐ³Ð¸Ð¾Ð½Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ð½Ð° ÐµÐ²Ñ€Ð¾Ð·Ð¾Ð½Ð°Ñ‚Ð°"@bg-t-en-t0-mtec , "Mapa Regional do Euro"@pt-t-en-t0-mtec , "Carte rÃ©gionale de lâ€™euro"@fr-t-en-t0-mtec , "Euro-Regionalkarte"@de-t-en-t0-mtec , "LÃ©arscÃ¡il RÃ©igiÃºnach an Euro"@ga-t-en-t0-mtec;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+
+
+<http://publications.europa.eu/resource/authority/language/MKD>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMI>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GEO>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/WEL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BOS>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HSB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HUN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SWA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/EST>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HRV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FAO>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMJ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/TUR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LAT>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/record/6020613b-6d91-49bd-a898-dac54e629878~~1>
+        a                       dcat:CatalogRecord;
+        dct:creator             <http://piveau.io>;
+        dct:identifier          "6020613b-6d91-49bd-a898-dac54e629878";
+        dct:issued              "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:modified            "2023-11-03T17:32:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        spdx:checksum           [ a                   spdx:Checksum;
+                                  spdx:algorithm      spdx:checksumAlgorithm_md5;
+                                  spdx:checksumValue  "845ff7ccbab925de83c662a8200a879a"
+                                ];
+        dqv:hasQualityMetadata  <http://data.europa.eu/88u/metrics/6020613b-6d91-49bd-a898-dac54e629878~~1>;
+        foaf:primaryTopic       <http://data.europa.eu/88u/dataset/6020613b-6d91-49bd-a898-dac54e629878~~1>;
+        edp:originalLanguage    "en";
+        edp:transIssued         "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transReceived       "2023-11-03T17:32:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transStatus         edp:TransCompleted .
+
+<http://publications.europa.eu/resource/authority/language/MLT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SME>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BEL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/NOR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ARM>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/POL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/RUS>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BAQ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/POR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ITA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CNR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/NLD>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SRP>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/AZE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BUL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CES>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/distribution/2b2e05d2-987a-4258-ba47-2bd2df3541c9>
+        a               dcat:Distribution;
+        dct:identifier  "Euro Regional Map@en";
+        dct:title       "Euro regioninis Å¾emÄ—lapis"@lt-t-en-t0-mtec , "RegionÃ¡lnÃ­ mapa eura"@cs-t-en-t0-mtec , "Ð ÐµÐ³Ð¸Ð¾Ð½Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ð½Ð° ÐµÐ²Ñ€Ð¾Ð·Ð¾Ð½Ð°Ñ‚Ð°"@bg-t-en-t0-mtec , "Mapa regional del euro"@es-t-en-t0-mtec , "Mapa Regional do Euro"@pt-t-en-t0-mtec , "Eiro reÄ£ionÄlÄ karte"@lv-t-en-t0-mtec , "Billeder af Euro Regional"@da-t-en-t0-mtec , "Euro-Regionalkarte"@de-t-en-t0-mtec , "Carte rÃ©gionale de lâ€™euro"@fr-t-en-t0-mtec , "Ð ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ñ”Ð²Ñ€Ð¾"@uk-t-en-t0-mtec , "LÃ©arscÃ¡il RÃ©igiÃºnach an Euro"@ga-t-en-t0-mtec , "Mapa regionalna euro"@pl-t-en-t0-mtec , "Il-Mappa ReÄ¡jonali tal-Euro"@mt-t-en-t0-mtec , "Euro RegionÃ¡lna mapa"@sk-t-en-t0-mtec , "Regionale kaart van de euro"@nl-t-en-t0-mtec , "Euro piirkondlik kaart"@et-t-en-t0-mtec , "Î ÎµÏÎ¹Ï†ÎµÏÎµÎ¹Î±ÎºÏŒÏ‚ Ï‡Î¬ÏÏ„Î·Ï‚ Ï„Î¿Ï… ÎµÏ…ÏÏŽ"@el-t-en-t0-mtec , "Harta regionalÄƒ euro"@ro-t-en-t0-mtec , "Mappa regionale dell'euro"@it-t-en-t0-mtec , "Euron alueellinen kartta"@fi-t-en-t0-mtec , "Regional karta Ã¶ver euro"@sv-t-en-t0-mtec , "Regionalna karta eura"@hr-t-en-t0-mtec , "Euro Regional Map"@en , "Regionalni zemljevid evra"@sl-t-en-t0-mtec , "Euro regionÃ¡lis tÃ©rkÃ©p"@hu-t-en-t0-mtec;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+<http://publications.europa.eu/resource/authority/language/ELL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/STQ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FIN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LAV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRY>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ALB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ROH>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/STL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/UKR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/RON>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLG>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/KAL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SWE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SLV>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/dataset/6020613b-6d91-49bd-a898-dac54e629878~~1>
+        a                  dcat:Dataset;
+        dct:conformsTo     [ a           dct:Standard;
+                             dct:issued  "2023-01-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+                             dct:title   "ERM 2023 Specification"@en
+                           ];
+        dct:description    "EuroRegionalMap ist ein paneuropÃ¤ischer topographischer Vektordatensatz im MaÃŸstab 1:250000, der nahtlos und grenzÃ¼berschreitend harmonisiert ist. Es wird in Zusammenarbeit von den National Mapping and Cadastral Agencies (NMCAs) der teilnehmenden LÃ¤nder unter Verwendung offizieller nationaler Datenbanken erstellt. Thematische Schichten: Administrative Grenzen, Hydrographie, Verschiedenes, Named Location, Siedlung, Transport sowie Vegetation und BÃ¶den."@de-t-en-t0-mtec , "EuroRegionalMap is a Pan-European topographic vector dataset at scale 1:250000, that is seamless and harmonized across boundaries. It is produced in cooperation by the National Mapping and Cadastral Agencies (NMCAs) of the participating countries using official national databases. Thematic layers: Administrative Boundaries, Hydrography, Miscellaneous, Named Location, Settlement, Transportation as well as Vegetation and Soils."@en , "EuroRegionalMap Ã¨ un set di dati vettoriali topografici paneuropei in scala 1:250000, che Ã¨ senza soluzione di continuitÃ  e armonizzato attraverso i confini. Ãˆ prodotto in collaborazione dalle agenzie nazionali di mappatura e cadastrale (NMCA) dei paesi partecipanti utilizzando banche dati nazionali ufficiali. Strati tematici: Confini amministrativi, idrografia, varie, localitÃ  nominate, insediamenti, trasporti, nonchÃ© vegetazione e suoli."@it-t-en-t0-mtec , "EuroRegionalMap Ã¤r ett alleuropeiskt topografiskt vektordataset i skala 1:250000, som Ã¤r sÃ¶mlÃ¶st och harmoniserat Ã¶ver grÃ¤nserna. Det produceras i samarbete med de nationella kart- och kadastralbyrÃ¥erna i de deltagande lÃ¤nderna med hjÃ¤lp av officiella nationella databaser. Tematiska skikt: Administrativa grÃ¤nser, hydrografi, diverse, namngiven plats, bosÃ¤ttning, transport samt grÃ¶nsaker och mark. EuroRegionalMap Ã¤r ett alleuropeiskt topografiskt vektordataset i skala 1:250000, som Ã¤r sÃ¶mlÃ¶st och harmoniserat Ã¶ver grÃ¤nserna.\nDet produceras i samarbete med de nationella kart- och kadastralbyrÃ¥erna i de deltagande lÃ¤nderna med hjÃ¤lp av officiella nationella databaser.\nTematiska skikt:\nAdministrativa grÃ¤nser, hydrografi, diverse, namngiven plats, bosÃ¤ttning, transport samt grÃ¶nsaker och mark."@sv-t-en-t0-mtec , "EuroRegionalMap is een pan-Europese topografische vector dataset op schaal 1:250000, die naadloos en grensoverschrijdend geharmoniseerd is. Het wordt geproduceerd in samenwerking door de Nationale Mapping- en Cadastrale agentschappen (NMCAâ€™s) van de deelnemende landen met behulp van officiÃ«le nationale databanken. Thematische lagen: Administratieve grenzen, Hydrografie, Diversen, Benoemde Locatie, Bevestiging, Vervoer, Vegetatie en Bodem."@nl-t-en-t0-mtec , "EuroRegionalMap yra visos Europos topografiniÅ³ vektoriniÅ³ duomenÅ³ rinkinys 1:250000 skalÄ—je, kuris yra vientisas ir suderintas tarpvalstybiniu mastu.\nJÄ… rengia dalyvaujanÄiÅ³ Å¡aliÅ³ nacionalinÄ—s kartografavimo ir kadastro agentÅ«ros, naudodamosi oficialiomis nacionalinÄ—mis duomenÅ³ bazÄ—mis.\nTeminiai lygmenys:\nAdministracinÄ—s ribos, hidrografija, Ä¯vairi, pavadinta vieta, apgyvendinimas, transportas, taip pat augalija ir dirvoÅ¾emis."@lt-t-en-t0-mtec , "EuroRegionalMap â€” Ñ†Ðµ Ð·Ð°Ð³Ð°Ð»ÑŒÐ½Ð¾Ñ”Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ¸Ð¹ Ñ‚Ð¾Ð¿Ð¾Ð³Ñ€Ð°Ñ„Ñ–Ñ‡Ð½Ð¸Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð½Ð¸Ð¹ Ð½Ð°Ð±Ñ–Ñ€ Ð´Ð°Ð½Ð¸Ñ… Ñƒ Ð¼Ð°ÑÑˆÑ‚Ð°Ð±Ñ– 1:250000, ÑÐºÐ¸Ð¹ Ñ” Ð±ÐµÐ·ÑˆÐ¾Ð²Ð½Ð¸Ð¼ Ñ– Ð³Ð°Ñ€Ð¼Ð¾Ð½Ñ–Ð·Ð¾Ð²Ð°Ð½Ð¸Ð¼ Ñ‡ÐµÑ€ÐµÐ· ÐºÐ¾Ñ€Ð´Ð¾Ð½Ð¸. Ð’Ð¾Ð½Ð° Ð¿Ñ€Ð¾Ð²Ð¾Ð´Ð¸Ñ‚ÑŒÑÑ ÑÐ¿Ñ–Ð»ÑŒÐ½Ð¾ Ð· ÐÐ°Ñ†Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ð¼Ð¸ ÐºÐ°Ñ€Ñ‚Ð¾Ð³Ñ€Ð°Ñ„Ñ–Ñ‡Ð½Ð¸Ð¼Ð¸ Ñ‚Ð° ÐºÐ°Ð´Ð°ÑÑ‚Ñ€Ð¾Ð²Ð¸Ð¼Ð¸ Ð°Ð³ÐµÐ½Ñ‚ÑÑ‚Ð²Ð°Ð¼Ð¸ ÐºÑ€Ð°Ñ—Ð½-ÑƒÑ‡Ð°ÑÐ½Ð¸Ñ†ÑŒ Ð· Ð²Ð¸ÐºÐ¾Ñ€Ð¸ÑÑ‚Ð°Ð½Ð½ÑÐ¼ Ð¾Ñ„Ñ–Ñ†Ñ–Ð¹Ð½Ð¸Ñ… Ð½Ð°Ñ†Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ñ… Ð±Ð°Ð· Ð´Ð°Ð½Ð¸Ñ…. Ð¢ÐµÐ¼Ð°Ñ‚Ð¸Ñ‡Ð½Ñ– ÑˆÐ°Ñ€Ð¸:\nÐÐ´Ð¼Ñ–Ð½Ñ–ÑÑ‚Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ñ– ÐºÐ¾Ñ€Ð´Ð¾Ð½Ð¸, Ð³Ñ–Ð´Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ñ–Ñ, Ñ€Ñ–Ð·Ð½Ðµ, Ð½Ð°Ð·Ð²Ð°Ð½Ðµ Ð¼Ñ–ÑÑ†Ðµ Ñ€Ð¾Ð·Ñ‚Ð°ÑˆÑƒÐ²Ð°Ð½Ð½Ñ, Ð¿Ð¾ÑÐµÐ»ÐµÐ½Ð½Ñ, Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚, Ð° Ñ‚Ð°ÐºÐ¾Ð¶ Ð¾Ð²Ð¾Ñ‡Ñ– Ñ‚Ð° Ò‘Ñ€ÑƒÐ½Ñ‚Ð¸."@uk-t-en-t0-mtec , "Î¤Î¿ EuroRegionalMap ÎµÎ¯Î½Î±Î¹ Î­Î½Î± Ï€Î±Î½ÎµÏ…ÏÏ‰Ï€Î±ÏŠÎºÏŒ ÏƒÏÎ½Î¿Î»Î¿ Ï„Î¿Ï€Î¿Î³ÏÎ±Ï†Î¹ÎºÏŽÎ½ Î´Î¹Î±Î½Ï…ÏƒÎ¼Î±Ï„Î¹ÎºÏŽÎ½ Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½ ÎºÎ»Î¯Î¼Î±ÎºÎ±Ï‚ 1:250000, Ï„Î¿ Î¿Ï€Î¿Î¯Î¿ ÎµÎ¯Î½Î±Î¹ Î±Ï€ÏÏŒÏƒÎºÎ¿Ï€Ï„Î¿ ÎºÎ±Î¹ ÎµÎ½Î±ÏÎ¼Î¿Î½Î¹ÏƒÎ¼Î­Î½Î¿ Ï€Î­ÏÎ±Î½ Ï„Ï‰Î½ ÏƒÏ…Î½ÏŒÏÏ‰Î½. Î Î±ÏÎ¬Î³ÎµÏ„Î±Î¹ ÏƒÎµ ÏƒÏ…Î½ÎµÏÎ³Î±ÏƒÎ¯Î± Î±Ï€ÏŒ Ï„Î¿Ï…Ï‚ Î•Î¸Î½Î¹ÎºÎ¿ÏÏ‚ Î¦Î¿ÏÎµÎ¯Ï‚ Î§Î±ÏÏ„Î¿Î³ÏÎ¬Ï†Î·ÏƒÎ·Ï‚ ÎºÎ±Î¹ ÎšÏ„Î·Î¼Î±Ï„Î¿Î»Î¿Î³Î¯Î¿Ï… (NMCA) Ï„Ï‰Î½ ÏƒÏ…Î¼Î¼ÎµÏ„ÎµÏ‡Î¿Ï…ÏƒÏŽÎ½ Ï‡Ï‰ÏÏŽÎ½ Î¼Îµ Ï„Î· Ï‡ÏÎ®ÏƒÎ· ÎµÏ€Î¯ÏƒÎ·Î¼Ï‰Î½ ÎµÎ¸Î½Î¹ÎºÏŽÎ½ Î²Î¬ÏƒÎµÏ‰Î½ Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½. Î˜ÎµÎ¼Î±Ï„Î¹ÎºÎ¬ ÎµÏ€Î¯Ï€ÎµÎ´Î±: Î”Î¹Î¿Î¹ÎºÎ·Ï„Î¹ÎºÎ¬ ÏŒÏÎ¹Î±, Ï…Î´ÏÎ¿Î³ÏÎ±Ï†Î¯Î±, Î´Î¹Î¬Ï†Î¿ÏÎ±, Î¿Î½Î¿Î¼Î±Î¶ÏŒÎ¼ÎµÎ½Î· Ï„Î¿Ï€Î¿Î¸ÎµÏƒÎ¯Î±, Î´Î¹ÎµÏ…Î¸Î­Ï„Î·ÏƒÎ·, Î¼ÎµÏ„Î±Ï†Î¿ÏÎ¬ ÎºÎ±Î¸ÏŽÏ‚ ÎºÎ±Î¹ Î²Î»Î¬ÏƒÏ„Î·ÏƒÎ· ÎºÎ±Î¹ ÎµÎ´Î¬Ï†Î·."@el-t-en-t0-mtec , "O EuroRegionalMap Ã© um conjunto de dados de vetores topogrÃ¡ficos pan-europeus Ã  escala 1:250000, sem descontinuidades e harmonizados alÃ©m-fronteiras. Ã‰ produzido em cooperaÃ§Ã£o pelas AgÃªncias Nacionais de Cartografia e Cadastral (AMCN) dos paÃ­ses participantes, utilizando bases de dados nacionais oficiais. NÃ­veis temÃ¡ticos:\nLimites Administrativos, Hidrografia, Diversos, LocalizaÃ§Ã£o Nomeada, Estabelecimento, Transporte, bem como VegetaÃ§Ã£o e Solos."@pt-t-en-t0-mtec , "EuroRegionalMap Ðµ Ð¿Ð°Ð½ÐµÐ²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¸ Ñ‚Ð¾Ð¿Ð¾Ð³Ñ€Ð°Ñ„ÑÐºÐ¸ Ð²ÐµÐºÑ‚Ð¾Ñ€ÐµÐ½ Ð½Ð°Ð±Ð¾Ñ€ Ð¾Ñ‚ Ð´Ð°Ð½Ð½Ð¸ Ð² Ð¼Ð°Ñ‰Ð°Ð± 1:250000, ÐºÐ¾Ð¹Ñ‚Ð¾ Ðµ Ð±ÐµÐ·Ð¿Ñ€Ð¾Ð±Ð»ÐµÐ¼ÐµÐ½ Ð¸ Ñ…Ð°Ñ€Ð¼Ð¾Ð½Ð¸Ð·Ð¸Ñ€Ð°Ð½ Ð¿Ñ€ÐµÐ· Ð³Ñ€Ð°Ð½Ð¸Ñ†Ð¸Ñ‚Ðµ. Ð¢Ð¾Ð¹ ÑÐµ Ð¸Ð·Ð³Ð¾Ñ‚Ð²Ñ Ð² ÑÑŠÑ‚Ñ€ÑƒÐ´Ð½Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾Ñ‚ Ð½Ð°Ñ†Ð¸Ð¾Ð½Ð°Ð»Ð½Ð¸Ñ‚Ðµ Ð°Ð³ÐµÐ½Ñ†Ð¸Ð¸ Ð·Ð° ÐºÐ°Ñ€Ñ‚Ð¾Ð³Ñ€Ð°Ñ„Ð¸Ñ€Ð°Ð½Ðµ Ð¸ ÐºÐ°Ð´Ð°ÑÑ‚Ñ€Ð°Ð» Ð½Ð° ÑƒÑ‡Ð°ÑÑ‚Ð²Ð°Ñ‰Ð¸Ñ‚Ðµ Ð´ÑŠÑ€Ð¶Ð°Ð²Ð¸, ÐºÐ°Ñ‚Ð¾ ÑÐµ Ð¸Ð·Ð¿Ð¾Ð»Ð·Ð²Ð°Ñ‚ Ð¾Ñ„Ð¸Ñ†Ð¸Ð°Ð»Ð½Ð¸ Ð½Ð°Ñ†Ð¸Ð¾Ð½Ð°Ð»Ð½Ð¸ Ð±Ð°Ð·Ð¸ Ð´Ð°Ð½Ð½Ð¸. Ð¢ÐµÐ¼Ð°Ñ‚Ð¸Ñ‡Ð½Ð¸ ÑÐ»Ð¾ÐµÐ²Ðµ: ÐÐ´Ð¼Ð¸Ð½Ð¸ÑÑ‚Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ð¸ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ð¸, Ñ…Ð¸Ð´Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ð¸Ñ, Ñ€Ð°Ð·Ð½Ð¸, Ð½Ð°Ð¸Ð¼ÐµÐ½ÑƒÐ²Ð°Ð½Ð¾ Ð¼ÐµÑÑ‚Ð¾Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, ÑÐµÐ»Ð¸Ñ‰Ðµ, Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚, ÐºÐ°ÐºÑ‚Ð¾ Ð¸ Ð·ÐµÐ»ÐµÐ½Ñ‡ÑƒÑ†Ð¸ Ð¸ Ð¿Ð¾Ñ‡Ð²Ð¸."@bg-t-en-t0-mtec , "EuroRegionalMap er et paneuropÃ¦isk topografisk vektordatasÃ¦t pÃ¥ skala 1:250000, der er sÃ¸mlÃ¸st og harmoniseret pÃ¥ tvÃ¦rs af grÃ¦nser. Det udarbejdes i samarbejde af de nationale kortlÃ¦gnings- og matrikelagenturer i de deltagende lande ved hjÃ¦lp af officielle nationale databaser. Tematiske lag: Administrative grÃ¦nser, hydrografi, diverse, navngivne placering, bosÃ¦ttelse, transport samt Vegetation og jordbund. EuroRegionalMap er et paneuropÃ¦isk topografisk vektordatasÃ¦t pÃ¥ skala 1:250000, der er sÃ¸mlÃ¸st og harmoniseret pÃ¥ tvÃ¦rs af grÃ¦nser. Det udarbejdes i samarbejde af de nationale kortlÃ¦gnings- og matrikelagenturer i de deltagende lande ved hjÃ¦lp af officielle nationale databaser. Tematiske lag:\nAdministrative grÃ¦nser, hydrografi, diverse, navngivne placering, bosÃ¦ttelse, transport samt Vegetation og jordbund."@da-t-en-t0-mtec , "EuroRegionalMap je paneuropski topografski vektorski skup podataka na ljestvici 1:250000, koji je besprijekoran i usklaÄ‘en preko granica. IzraÄ‘uje ga u suradnji nacionalnih agencija za mapiranje i katastar (NMCA) zemalja sudionica koristeÄ‡i se sluÅ¾benim nacionalnim bazama podataka. Tematski slojevi: Administrativne granice, hidrografija, razni, nazivi lokacije, naseljavanje, prijevoz, vegetacija i tla."@hr-t-en-t0-mtec , "Is tacar sonraÃ­ veicteora topagrafach uile-Eorpach Ã© EuroRegionalMap ar scÃ¡la 1:250000, atÃ¡ gan uaim agus comhchuibhithe thar theorainneacha. Cuireann GnÃ­omhaireachtaÃ­ NÃ¡isiÃºnta MapÃ¡la agus Cadastral (NMCAnna) na dtÃ­ortha rannphÃ¡irteacha Ã© ar fÃ¡il i gcomhar le chÃ©ile trÃ­ ÃºsÃ¡id a bhaint as bunachair sonraÃ­ nÃ¡isiÃºnta oifigiÃºla. Sraitheanna tÃ©amacha: Teorainneacha RiarachÃ¡in, HidreagrafaÃ­ocht, IlghnÃ©itheach, SuÃ­omh Ainmnithe, LonnaÃ­ocht, Iompar chomh maith le FÃ¡sra agus Soils."@ga-t-en-t0-mtec , "EuroRegionalMap to ogÃ³lnoeuropejski zbiÃ³r danych wektorÃ³w topograficznych w skali 1:250000, ktÃ³ry jest pÅ‚ynny i zharmonizowany ponad granicami. Jest on produkowany we wspÃ³Å‚pracy z krajowymi agencjami mapowania i kadastralnymi (NMCA) krajÃ³w uczestniczÄ…cych przy uÅ¼yciu oficjalnych krajowych baz danych. Warstwy tematyczne: Granice administracyjne, hydrografia, rÃ³Å¼ne, nazwane lokalizacja, osiedlenie, transport, a takÅ¼e roÅ›linnoÅ›Ä‡ i gleby. EuroRegionalMap to ogÃ³lnoeuropejski zbiÃ³r danych wektorÃ³w topograficznych w skali 1:250000, ktÃ³ry jest pÅ‚ynny i zharmonizowany ponad granicami.\nJest on produkowany we wspÃ³Å‚pracy z krajowymi agencjami mapowania i kadastralnymi (NMCA) krajÃ³w uczestniczÄ…cych przy uÅ¼yciu oficjalnych krajowych baz danych.\nWarstwy tematyczne:\nGranice administracyjne, hydrografia, rÃ³Å¼ne, nazwane lokalizacja, osiedlenie, transport, a takÅ¼e roÅ›linnoÅ›Ä‡ i gleby."@pl-t-en-t0-mtec , "EuroRegionalMap je vseevropski nabor topografskih vektorskih podatkov v merilu 1:250000, ki je brezhiben in usklajen Äez meje. Pripravlja ga v sodelovanju nacionalnih agencij za kartiranje in katastrskih agencij sodelujoÄih drÅ¾av z uporabo uradnih nacionalnih podatkovnih zbirk. Tematske plasti: Upravne meje, hidrografija, razno, ime lokacije, naselje, prevoz ter vegetacija in tla."@sl-t-en-t0-mtec , "EuroRegionalMap je celoeurÃ³psky topografickÃ½ vektorovÃ½ sÃºbor na stupnici 1:250000, ktorÃ½ je bezproblÃ©movÃ½ a harmonizovanÃ½ naprieÄ hranicami. VypracÃºvajÃº ho v spoluprÃ¡ci nÃ¡rodnÃ© agentÃºry pre mapovanie a katastrÃ¡lne agentÃºry (NMCA) zÃºÄastnenÃ½ch krajÃ­n s pouÅ¾itÃ­m oficiÃ¡lnych vnÃºtroÅ¡tÃ¡tnych databÃ¡z. TematickÃ© vrstvy: AdministratÃ­vne hranice, hydrografia, rÃ´zne, menovanÃ© miesto, osÃ­dlenie, doprava, ako aj vegetÃ¡cia a pÃ´da. EuroRegionalMap je celoeurÃ³psky topografickÃ½ vektorovÃ½ sÃºbor na stupnici 1:250000, ktorÃ½ je bezproblÃ©movÃ½ a harmonizovanÃ½ naprieÄ hranicami.\nVypracÃºvajÃº ho v spoluprÃ¡ci nÃ¡rodnÃ© agentÃºry pre mapovanie a katastrÃ¡lne agentÃºry (NMCA) zÃºÄastnenÃ½ch krajÃ­n s pouÅ¾itÃ­m oficiÃ¡lnych vnÃºtroÅ¡tÃ¡tnych databÃ¡z.\nTematickÃ© vrstvy:\nAdministratÃ­vne hranice, hydrografia, rÃ´zne, menovanÃ© miesto, osÃ­dlenie, doprava, ako aj vegetÃ¡cia a pÃ´da."@sk-t-en-t0-mtec , "EuroRegionalMap es un conjunto de datos vectoriales topogrÃ¡ficos paneuropeos a escala 1:250000, que es transparente y armonizado a travÃ©s de los lÃ­mites. Es elaborado en cooperaciÃ³n por las agencias nacionales de cartografÃ­a y catastrales (ANMCA) de los paÃ­ses participantes utilizando bases de datos nacionales oficiales. Capas temÃ¡ticas: LÃ­mites Administrativos, HidrografÃ­a, MiscelÃ¡neos, UbicaciÃ³n Nombrada, Asentamiento, Transporte asÃ­ como VegetaciÃ³n y Suelos. EuroRegionalMap es un conjunto de datos vectoriales topogrÃ¡ficos paneuropeos a escala 1:250000, que es transparente y armonizado a travÃ©s de los lÃ­mites. Es elaborado en cooperaciÃ³n por las agencias nacionales de cartografÃ­a y catastrales (ANMCA) de los paÃ­ses participantes utilizando bases de datos nacionales oficiales. Capas temÃ¡ticas: LÃ­mites Administrativos, HidrografÃ­a, MiscelÃ¡neos, UbicaciÃ³n Nombrada, Asentamiento, Transporte asÃ­ como VegetaciÃ³n y Suelos. EuroRegionalMap es un conjunto de datos vectoriales topogrÃ¡ficos paneuropeos a escala 1:250000, que es transparente y armonizado a travÃ©s de los lÃ­mites.\nEs elaborado en cooperaciÃ³n por las agencias nacionales de cartografÃ­a y catastrales (ANMCA) de los paÃ­ses participantes utilizando bases de datos nacionales oficiales.\nCapas temÃ¡ticas:\nLÃ­mites Administrativos, HidrografÃ­a, MiscelÃ¡neos, UbicaciÃ³n Nombrada, Asentamiento, Transporte asÃ­ como VegetaciÃ³n y Suelos."@es-t-en-t0-mtec , "EuroRegionalMap est un ensemble paneuropÃ©en de donnÃ©es vectorielles topographiques Ã  lâ€™Ã©chelle 1:250000, qui est homogÃ¨ne et harmonisÃ© au-delÃ  des frontiÃ¨res. Il est produit en coopÃ©ration par les agences nationales de cartographie et cadastrales (ANCM) des pays participants Ã  lâ€™aide de bases de donnÃ©es nationales officielles. Couches thÃ©matiques: Limites administratives, hydrographie, divers, emplacement nommÃ©, Ã©tablissement, transport ainsi que la vÃ©gÃ©tation et les sols."@fr-t-en-t0-mtec , "Az EuroRegionalMap egy pÃ¡neurÃ³pai topogrÃ¡fiai vektor adatkÃ©szlet 1:250000 skÃ¡lÃ¡n, amely zÃ¶kkenÅ‘mentes Ã©s Ã¶sszehangolt a hatÃ¡rokon Ã¡tnyÃºlÃ³an. Ezt a rÃ©szt vevÅ‘ orszÃ¡gok nemzeti tÃ©rkÃ©pezÃ©si Ã©s kataszteri Ã¼gynÃ¶ksÃ©gei (NMCA-k) egyÃ¼ttmÅ±kÃ¶dve Ã¡llÃ­tjÃ¡k elÅ‘ hivatalos nemzeti adatbÃ¡zisok felhasznÃ¡lÃ¡sÃ¡val. Tematikus rÃ©tegek: KÃ¶zigazgatÃ¡si hatÃ¡rok, hidrogrÃ¡fia, vegyes, megnevezett hely, telepÃ¼lÃ©s, szÃ¡llÃ­tÃ¡s, valamint nÃ¶vÃ©nyzet Ã©s talaj. Az EuroRegionalMap egy pÃ¡neurÃ³pai topogrÃ¡fiai vektor adatkÃ©szlet 1:250000 skÃ¡lÃ¡n, amely zÃ¶kkenÅ‘mentes Ã©s Ã¶sszehangolt a hatÃ¡rokon Ã¡tnyÃºlÃ³an. Ezt a rÃ©szt vevÅ‘ orszÃ¡gok nemzeti tÃ©rkÃ©pezÃ©si Ã©s kataszteri Ã¼gynÃ¶ksÃ©gei (NMCA-k) egyÃ¼ttmÅ±kÃ¶dve Ã¡llÃ­tjÃ¡k elÅ‘ hivatalos nemzeti adatbÃ¡zisok felhasznÃ¡lÃ¡sÃ¡val.\nTematikus rÃ©tegek:\nKÃ¶zigazgatÃ¡si hatÃ¡rok, hidrogrÃ¡fia, vegyes, megnevezett hely, telepÃ¼lÃ©s, szÃ¡llÃ­tÃ¡s, valamint nÃ¶vÃ©nyzet Ã©s talaj."@hu-t-en-t0-mtec , "EuroRegionalMap on Ã¼leeuroopaline topograafiline vektorandmekogum skaalal 1:250000, mis on sujuv ja piiriÃ¼leselt Ã¼htlustatud. Seda koostavad koostÃ¶Ã¶s osalevate riikide riiklikud kaardistamis- ja katastriasutused, kasutades ametlikke riiklikke andmebaase. Temaatilised kihid: Halduspiirid, hÃ¼drograafia, muu, nimeline asukoht, asundus, transport, samuti taimestik ja muld."@et-t-en-t0-mtec , "EuroRegionalMap ir Eiropas topogrÄfiskÄ vektora datu kopa mÄ“rogÄ 1:250000, kas ir nevainojama un saskaÅ†ota pÄri robeÅ¾Äm. To sadarbÄ«bÄ sagatavo iesaistÄ«to valstu valsts kartÄ“Å¡anas un kadastrÄlÄs aÄ£entÅ«ras (NMCA), izmantojot oficiÄlas valstu datubÄzes. Tematiskie slÄÅ†i: AdministratÄ«vÄs robeÅ¾as, hidrogrÄfija, daÅ¾Ädi, nosaukta atraÅ¡anÄs vieta, apdzÄ«vota vieta, transports, kÄ arÄ« veÄ£etÄcija un augsnes."@lv-t-en-t0-mtec , "EuroRegionalMap este un set de date vectoriale topografice paneuropene la scara 1:250000, care este perfect È™i armonizat peste graniÈ›e. Acesta este produs Ã®n cooperare de agenÈ›iile naÈ›ionale de cartografiere È™i cadastralÄƒ (ANMC) din È›Äƒrile participante, utilizÃ¢nd bazele de date naÈ›ionale oficiale. Straturi tematice: Limite administrative, Hidrografie, Diverse, LocaÈ›ie numitÄƒ, aÈ™ezare, transport, precum È™i vegetaÈ›ie È™i soluri."@ro-t-en-t0-mtec , "EuroRegionalMap on yleiseurooppalainen topografinen vektoriaineisto asteikolla 1:250000, joka on saumaton ja yhdenmukaistettu rajojen yli. Se on laadittu yhteistyÃ¶ssÃ¤ osallistujamaiden kansallisten kartoitus- ja koordinointitoimistojen (National Mapping and Cadastral Agency, NMCA) kanssa kÃ¤yttÃ¤en virallisia kansallisia tietokantoja. Temaattiset tasot: Hallinnolliset rajat, hydrografia, Sekalaista, Nimitetty sijainti, Settlement, Kuljetus sekÃ¤ kasvis ja maaperÃ¤. EuroRegionalMap on yleiseurooppalainen topografinen vektoriaineisto asteikolla 1:250000, joka on saumaton ja yhdenmukaistettu rajojen yli.\nSe on laadittu yhteistyÃ¶ssÃ¤ osallistujamaiden kansallisten kartoitus- ja koordinointitoimistojen (National Mapping and Cadastral Agency, NMCA) kanssa kÃ¤yttÃ¤en virallisia kansallisia tietokantoja.\nTemaattiset tasot:\nHallinnolliset rajat, hydrografia, Sekalaista, Nimitetty sijainti, Settlement, Kuljetus sekÃ¤ kasvis ja maaperÃ¤."@fi-t-en-t0-mtec , "EuroRegionalMap je celoevropskÃ¡ topografickÃ¡ vektorovÃ¡ datovÃ¡ sada v mÄ›Å™Ã­tku 1:250000, kterÃ¡ je bezproblÃ©movÃ¡ a harmonizovanÃ¡ pÅ™es hranice. VyrÃ¡bÃ­ se ve spoluprÃ¡ci s nÃ¡rodnÃ­mi mapovacÃ­mi a katastrÃ¡lnÃ­mi agenturami zÃºÄastnÄ›nÃ½ch zemÃ­ s vyuÅ¾itÃ­m oficiÃ¡lnÃ­ch vnitrostÃ¡tnÃ­ch databÃ¡zÃ­. TematickÃ© vrstvy: AdministrativnÃ­ hranice, hydrografie, rÅ¯znÃ©, jmenovitÃ© umÃ­stÄ›nÃ­, osÃ­dlenÃ­, doprava, jakoÅ¾ i vegetace a pÅ¯dy. EuroRegionalMap je celoevropskÃ¡ topografickÃ¡ vektorovÃ¡ datovÃ¡ sada v mÄ›Å™Ã­tku 1:250000, kterÃ¡ je bezproblÃ©movÃ¡ a harmonizovanÃ¡ pÅ™es hranice. VyrÃ¡bÃ­ se ve spoluprÃ¡ci s nÃ¡rodnÃ­mi mapovacÃ­mi a katastrÃ¡lnÃ­mi agenturami zÃºÄastnÄ›nÃ½ch zemÃ­ s vyuÅ¾itÃ­m oficiÃ¡lnÃ­ch vnitrostÃ¡tnÃ­ch databÃ¡zÃ­.\nTematickÃ© vrstvy:\nAdministrativnÃ­ hranice, hydrografie, rÅ¯znÃ©, jmenovitÃ© umÃ­stÄ›nÃ­, osÃ­dlenÃ­, doprava, jakoÅ¾ i vegetace a pÅ¯dy."@cs-t-en-t0-mtec , "EuroRegionalMap huwa sett taâ€™ dejta pan-Ewropew dwar il-vettur topografiku fuq skala 1:250000, li huwa bla xkiel u armonizzat bejn il-fruntieri. Huwa prodott fâ€™kooperazzjoni mill-AÄ¡enziji Nazzjonali tal-Immappjar u l-Katastali (NMCAs) tal-pajjiÅ¼i parteÄ‹ipanti bl-uÅ¼u taâ€™ baÅ¼ijiet tad-data nazzjonali uffiÄ‹jali. Saffi tematiÄ‹i: Konfini Amministrattivi, Idrografija, Mixxellanji, Post Imsemmi, Saldu, Trasport kif ukoll VeÄ¡etazzjoni u Ä¦amrija."@mt-t-en-t0-mtec;
+        dct:identifier     "ERM_2023";
+        dct:issued         "2023-01-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:language       <http://publications.europa.eu/resource/authority/language/SWA> , <http://publications.europa.eu/resource/authority/language/LAT> , <http://publications.europa.eu/resource/authority/language/SME> , <http://publications.europa.eu/resource/authority/language/SMA> , <http://publications.europa.eu/resource/authority/language/SLK> , <http://publications.europa.eu/resource/authority/language/GLE> , <http://publications.europa.eu/resource/authority/language/BAQ> , <http://publications.europa.eu/resource/authority/language/NOR> , <http://publications.europa.eu/resource/authority/language/HSB> , <http://publications.europa.eu/resource/authority/language/MLT> , <http://publications.europa.eu/resource/authority/language/SPA> , <http://publications.europa.eu/resource/authority/language/UKR> , <http://publications.europa.eu/resource/authority/language/SLV> , <http://publications.europa.eu/resource/authority/language/KAL> , <http://publications.europa.eu/resource/authority/language/CES> , <http://publications.europa.eu/resource/authority/language/BUL> , <http://publications.europa.eu/resource/authority/language/SRP> , <http://publications.europa.eu/resource/authority/language/GLV> , <http://publications.europa.eu/resource/authority/language/FAO> , <http://publications.europa.eu/resource/authority/language/CAT> , <http://publications.europa.eu/resource/authority/language/BEL> , <http://publications.europa.eu/resource/authority/language/RUS> , <http://publications.europa.eu/resource/authority/language/BOS> , <http://publications.europa.eu/resource/authority/language/HUN> , <http://publications.europa.eu/resource/authority/language/LAV> , <http://publications.europa.eu/resource/authority/language/LTZ> , <http://publications.europa.eu/resource/authority/language/SWE> , <http://publications.europa.eu/resource/authority/language/FRY> , <http://publications.europa.eu/resource/authority/language/GEO> , <http://publications.europa.eu/resource/authority/language/ELL> , <http://publications.europa.eu/resource/authority/language/FRA> , <http://publications.europa.eu/resource/authority/language/SMI> , <http://publications.europa.eu/resource/authority/language/MKD> , <http://publications.europa.eu/resource/authority/language/NLD> , <http://publications.europa.eu/resource/authority/language/AZE> , <http://publications.europa.eu/resource/authority/language/EST> , <http://publications.europa.eu/resource/authority/language/STQ> , <http://publications.europa.eu/resource/authority/language/LIT> , <http://publications.europa.eu/resource/authority/language/WEL> , <http://publications.europa.eu/resource/authority/language/ROH> , <http://publications.europa.eu/resource/authority/language/ENG> , <http://publications.europa.eu/resource/authority/language/FIN> , <http://publications.europa.eu/resource/authority/language/DSB> , <http://publications.europa.eu/resource/authority/language/ARM> , <http://publications.europa.eu/resource/authority/language/SMJ> , <http://publications.europa.eu/resource/authority/language/ISL> , <http://publications.europa.eu/resource/authority/language/RON> , <http://publications.europa.eu/resource/authority/language/ITA> , <http://publications.europa.eu/resource/authority/language/GLA> , <http://publications.europa.eu/resource/authority/language/GLG> , <http://publications.europa.eu/resource/authority/language/HRV> , <http://publications.europa.eu/resource/authority/language/DEU> , <http://publications.europa.eu/resource/authority/language/FKV> , <http://publications.europa.eu/resource/authority/language/FRR> , <http://publications.europa.eu/resource/authority/language/TUR> , <http://publications.europa.eu/resource/authority/language/ALB> , <http://publications.europa.eu/resource/authority/language/POL> , <http://publications.europa.eu/resource/authority/language/STL> , <http://publications.europa.eu/resource/authority/language/CNR> , <http://publications.europa.eu/resource/authority/language/POR> , <http://publications.europa.eu/resource/authority/language/DAN>;
+        dct:provenance     [ a           dct:ProvenanceStatement;
+                             rdfs:label  "ERM 2023 Lineage"@en
+                           ];
+        dct:spatial        [ a          dct:Location;
+                             dcat:bbox  "POLYGON((-64 72,57 72,57 -22,-64 -22,-64 72))"^^<http://replacement.io/ont/geosparql#wktLiteral>
+                           ];
+        dct:title          "Euroregionale Kaart 2023"@nl-t-en-t0-mtec , "EuroRegionalMapa 2023"@es-t-en-t0-mtec , "Euroregionalna karta za 2023."@hr-t-en-t0-mtec , "Harta euroregionalÄƒ 2023"@ro-t-en-t0-mtec , "Euroaluekartta 2023"@fi-t-en-t0-mtec , "Î•Ï…ÏÏ‰Ï€ÎµÏÎ¹Ï†ÎµÏÎµÎ¹Î±ÎºÏŒÏ‚ Ï‡Î¬ÏÏ„Î·Ï‚ 2023"@el-t-en-t0-mtec , "Ð•Ð²Ñ€Ð¾Ñ€ÐµÐ³Ð¸Ð¾Ð½Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð° 2023Â Ð³."@bg-t-en-t0-mtec , "2023 m. Euroregioninis Å¾emÄ—lapis"@lt-t-en-t0-mtec , "Evroregionalni zemljevid za leto 2023"@sl-t-en-t0-mtec , "2023. aasta EuroRegionalMap"@et-t-en-t0-mtec , "EuroRegionalMap 2023"@mt-t-en-t0-mtec , "EuroRegionalMap 2023"@it-t-en-t0-mtec , "EuroRegionalMap 2023"@cs-t-en-t0-mtec , "EuroRegionalMap 2023"@sv-t-en-t0-mtec , "EuroRegionalMap 2023"@hu-t-en-t0-mtec , "EuroRegionalMap 2023"@en , "EuroRegionalMap 2023"@ga-t-en-t0-mtec , "EuroRegionalMap 2023"@lv-t-en-t0-mtec , "EuroRegionalMap 2023"@pl-t-en-t0-mtec , "EuroRegionalMap 2023"@pt-t-en-t0-mtec , "EuroRegionalMap 2023"@da-t-en-t0-mtec , "EuroRegionalMap 2023"@sk-t-en-t0-mtec , "EuroRegionalMap 2023"@de-t-en-t0-mtec , "Ð„Ð²Ñ€Ð¾Ñ€ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð° 2023"@uk-t-en-t0-mtec , "Plan EurorÃ©gional 2023"@fr-t-en-t0-mtec;
+        dcat:contactPoint  [ a                   vcard:Organization;
+                             vcard:fn            "EuroGeographics Head Office";
+                             vcard:hasAddress    [ a                     vcard:Address;
+                                                   vcard:country-name    "Belgium";
+                                                   vcard:locality        "Brussels";
+                                                   vcard:postal-code     "1000";
+                                                   vcard:street-address  "Rue du Nord 76/Noordstraat 76"
+                                                 ];
+                             vcard:hasEmail      <mailto:contact@eurogeographics.org>;
+                             vcard:hasTelephone  <tel:+32028887193>;
+                             vcard:hasURL        <https://eurogeographics.org>
+                           ];
+        dcat:distribution  <http://data.europa.eu/88u/distribution/2b2e05d2-987a-4258-ba47-2bd2df3541c9>;
+        dcat:keyword       "Transport networks"@en , "Land cover"@en , "Hydrography"@en , "Utility and governmental services"@en , "Geographical names"@en , "Land use"@en , "Soil"@en , "Administrative units"@en , "Population distribution â€” demography"@en , "Mineral resources"@en , "Protected sites"@en , "Production and industrial facilities"@en , "Energy resources"@en;
+        dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/GOVE> , <http://publications.europa.eu/resource/authority/data-theme/TRAN> , <http://publications.europa.eu/resource/authority/data-theme/ENVI> , <http://publications.europa.eu/resource/authority/data-theme/AGRI> , <http://publications.europa.eu/resource/authority/data-theme/ECON> , <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+
+<http://publications.europa.eu/resource/authority/language/LIT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ISL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SLK>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LTZ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DAN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FKV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CAT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DSB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DEU>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SPA>
+        a       dct:LinguisticSystem .
+
+
+
+<http://data.europa.eu/88u/distribution/2b2e05d2-987a-4258-ba47-2bd2df3541c9>
+        a               dcat:Distribution;
+        dct:identifier  "Euro Regional Map@en";
+        dct:title       "Euro regionÃ¡lis tÃ©rkÃ©p"@hu-t-en-t0-mtec , "RegionÃ¡lnÃ­ mapa eura"@cs-t-en-t0-mtec , "Ð ÐµÐ³Ð¸Ð¾Ð½Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ð½Ð° ÐµÐ²Ñ€Ð¾Ð·Ð¾Ð½Ð°Ñ‚Ð°"@bg-t-en-t0-mtec , "Mapa regional del euro"@es-t-en-t0-mtec , "Mapa Regional do Euro"@pt-t-en-t0-mtec , "Eiro reÄ£ionÄlÄ karte"@lv-t-en-t0-mtec , "Billeder af Euro Regional"@da-t-en-t0-mtec , "Euro-Regionalkarte"@de-t-en-t0-mtec , "Carte rÃ©gionale de lâ€™euro"@fr-t-en-t0-mtec , "Ð ÐµÐ³Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð° Ñ”Ð²Ñ€Ð¾"@uk-t-en-t0-mtec , "LÃ©arscÃ¡il RÃ©igiÃºnach an Euro"@ga-t-en-t0-mtec , "Mapa regionalna euro"@pl-t-en-t0-mtec , "Il-Mappa ReÄ¡jonali tal-Euro"@mt-t-en-t0-mtec , "Euro RegionÃ¡lna mapa"@sk-t-en-t0-mtec , "Regionale kaart van de euro"@nl-t-en-t0-mtec , "Euro piirkondlik kaart"@et-t-en-t0-mtec , "Î ÎµÏÎ¹Ï†ÎµÏÎµÎ¹Î±ÎºÏŒÏ‚ Ï‡Î¬ÏÏ„Î·Ï‚ Ï„Î¿Ï… ÎµÏ…ÏÏŽ"@el-t-en-t0-mtec , "Harta regionalÄƒ euro"@ro-t-en-t0-mtec , "Mappa regionale dell'euro"@it-t-en-t0-mtec , "Euron alueellinen kartta"@fi-t-en-t0-mtec , "Regional karta Ã¶ver euro"@sv-t-en-t0-mtec , "Regionalna karta eura"@hr-t-en-t0-mtec , "Euro Regional Map"@en , "Regionalni zemljevid evra"@sl-t-en-t0-mtec , "Euro regioninis Å¾emÄ—lapis"@lt-t-en-t0-mtec;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+
+
+<http://publications.europa.eu/resource/authority/file-type/TIFF>
+        a       dct:MediaType .
+
+<http://data.europa.eu/88u/record/91f2aec3-1aaf-42d3-8730-c567a46c0116>
+        a                       dcat:CatalogRecord;
+        dct:creator             <http://piveau.io>;
+        dct:identifier          "91F2AeC3-1aaf-42d3-8730-c567a46c0116";
+        dct:issued              "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:modified            "2023-12-03T17:05:01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        spdx:checksum           [ a                   spdx:Checksum;
+                                  spdx:algorithm      spdx:checksumAlgorithm_md5;
+                                  spdx:checksumValue  "7e62aaf4c5e1329f3cc974bc2201cce9"
+                                ];
+        dqv:hasQualityMetadata  <http://data.europa.eu/88u/metrics/91f2aec3-1aaf-42d3-8730-c567a46c0116>;
+        foaf:primaryTopic       <http://data.europa.eu/88u/dataset/91f2aec3-1aaf-42d3-8730-c567a46c0116>;
+        edp:originalLanguage    "en";
+        edp:transIssued         "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transReceived       "2023-11-03T17:32:38Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transStatus         edp:TransCompleted .
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/dataset/91f2aec3-1aaf-42d3-8730-c567a46c0116>
+        a                  dcat:Dataset;
+        dct:conformsTo     [ a           dct:Standard;
+                             dct:issued  "2023-10-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+                             dct:title   "EuroDEM 2023 Specification"@en
+                           ];
+        dct:description    "EURODEM ist eine digitale Darstellung der BodenoberflÃ¤chentopographie Europas."@de-t-en-t0-mtec , "EURODEM on digitaalinen esitys maanpinnan topografiasta Euroopassa."@fi-t-en-t0-mtec , "l-EURODEM hija rappreÅ¼entazzjoni diÄ¡itali tat-topografija tas-superfiÄ‹je tal-art tal-Ewropa."@mt-t-en-t0-mtec , "EURODEM Ã¨ una rappresentazione digitale della topografia della superficie terrestre dell'Europa."@it-t-en-t0-mtec , "EURODEM yra Europos antÅ¾eminio pavirÅ¡iaus topografija skaitmeninÄ—je reprezentacijoje."@lt-t-en-t0-mtec , "Î¤Î¿ EURODEM ÎµÎ¯Î½Î±Î¹ Î¼Î¹Î± ÏˆÎ·Ï†Î¹Î±ÎºÎ® Î±Î½Î±Ï€Î±ÏÎ¬ÏƒÏ„Î±ÏƒÎ· Ï„Î·Ï‚ Ï„Î¿Ï€Î¿Î³ÏÎ±Ï†Î¯Î±Ï‚ ÎµÎ´Î¬Ï†Î¿Ï…Ï‚ Ï„Î·Ï‚ Î•Ï…ÏÏŽÏ€Î·Ï‚."@el-t-en-t0-mtec , "EURODEM on Euroopa pinnatopograafia digitaalne kujutis."@et-t-en-t0-mtec , "EURODEM est une reprÃ©sentation numÃ©rique de la topographie de la surface du sol de lâ€™Europe."@fr-t-en-t0-mtec , "EURODEM je digitÃ¡lna reprezentÃ¡cia terÃ©nnej topografie EurÃ³py."@sk-t-en-t0-mtec , "O EURODEM Ã© uma representaÃ§Ã£o digital da topografia da superfÃ­cie terrestre da Europa."@pt-t-en-t0-mtec , "EURODEM es una representaciÃ³n digital de la topografÃ­a de superficie terrestre de Europa."@es-t-en-t0-mtec , "Is lÃ©iriÃº digiteach Ã© EURODEM ar topagrafaÃ­ocht dhromchla na talÃºn san Eoraip."@ga-t-en-t0-mtec , "EURODEM er en digital reprÃ¦sentation af Europas jordoverflade topografi."@da-t-en-t0-mtec , "EURODEM Ã¤r en digital representation av markytans topografi i Europa."@sv-t-en-t0-mtec , "EURODEM este o reprezentare digitalÄƒ a topografiei suprafeÈ›ei terestre a Europei."@ro-t-en-t0-mtec , "EURODEM je digitalni prikaz topografije tla u Europi."@hr-t-en-t0-mtec , "EURODEM is een digitale weergave van de topografie van het grondoppervlak van Europa."@nl-t-en-t0-mtec , "EURODEM ir Eiropas zemes virsmas topogrÄfijas digitÄls attÄ“lojums."@lv-t-en-t0-mtec , "EURODEM â€” Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ðµ Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð½Ñ Ñ€ÐµÐ»ÑŒÑ”Ñ„Ñƒ Ð½Ð°Ð·ÐµÐ¼Ð½Ð¾Ñ— Ð¿Ð¾Ð²ÐµÑ€Ñ…Ð½Ñ– Ð„Ð²Ñ€Ð¾Ð¿Ð¸."@uk-t-en-t0-mtec , "EURODEM Ðµ Ð´Ð¸Ð³Ð¸Ñ‚Ð°Ð»Ð½Ð¾ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²ÑÐ½Ðµ Ð½Ð° Ñ‚Ð¾Ð¿Ð¾Ð³Ñ€Ð°Ñ„Ð¸ÑÑ‚Ð° Ð½Ð° Ð·ÐµÐ¼Ð½Ð°Ñ‚Ð° Ð¿Ð¾Ð²ÑŠÑ€Ñ…Ð½Ð¾ÑÑ‚ Ð² Ð•Ð²Ñ€Ð¾Ð¿Ð°."@bg-t-en-t0-mtec , "EuroDEM is a digital representation of the ground surface topography of Europe."@en , "EURODEM je digitÃ¡lnÃ­ reprezentacÃ­ topografie pozemnÃ­ch povrchÅ¯ Evropy."@cs-t-en-t0-mtec , "Az EURODEM EurÃ³pa fÃ¶ldfelszÃ­ni topogrÃ¡fiÃ¡jÃ¡nak digitÃ¡lis reprezentÃ¡ciÃ³ja."@hu-t-en-t0-mtec , "EURODEM je digitalna predstavitev talne topografije Evrope."@sl-t-en-t0-mtec , "EURODEM to cyfrowa reprezentacja topografii powierzchni ziemi w Europie."@pl-t-en-t0-mtec;
+        dct:identifier     "EuroDEM";
+        dct:issued         "2008-04-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:language       <http://publications.europa.eu/resource/authority/language/ENG>;
+        dct:provenance     [ a           dct:ProvenanceStatement;
+                             rdfs:label  "EuroDEM is the best compromise in terms of harmonisation that mapping agencies can achieve on their existing data collections."@en
+                           ];
+        dct:spatial        [ a          dct:Location;
+                             dcat:bbox  "POLYGON((-15 75,30 75,30 30,-15 30,-15 75))"^^<http://replacement.io/ont/geosparql#wktLiteral>
+                           ];
+        dct:title          "Ð„Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð° Ð¼Ð¾Ð´ÐµÐ»ÑŒ Ð¿Ñ–Ð´Ð¹Ð¾Ð¼Ñƒ"@uk-t-en-t0-mtec , "Modelo Europeu de ElevaÃ§Ã£o Digital"@pt-t-en-t0-mtec , "Europos skaitmeninio aukÅ¡Äio modelis"@lt-t-en-t0-mtec , "EvropskÃ½ digitÃ¡lnÃ­ model pro nadmoÅ™skou vÃ½Å¡ku"@cs-t-en-t0-mtec , "Mudell Ewropew taâ€™ Elevazzjoni DiÄ¡itali"@mt-t-en-t0-mtec , "Euroopa digiÃ¼levaatuse mudel"@et-t-en-t0-mtec , "Modelul european de ridicare digitalÄƒ"@ro-t-en-t0-mtec , "ModÃ¨le europÃ©en dâ€™Ã©lÃ©vation numÃ©rique"@fr-t-en-t0-mtec , "Eiropas digitÄlÄ pacÄ“luma modelis"@lv-t-en-t0-mtec , "Samhail Eorpach ingearchlÃ³ digiteach"@ga-t-en-t0-mtec , "Evropski model digitalnega dviga"@sl-t-en-t0-mtec , "Den europeiska modellen fÃ¶r digital hÃ¶jd"@sv-t-en-t0-mtec , "Î•Ï…ÏÏ‰Ï€Î±ÏŠÎºÏŒ Î¼Î¿Î½Ï„Î­Î»Î¿ ÏˆÎ·Ï†Î¹Î±ÎºÎ®Ï‚ Î±Î½ÏÏˆÏ‰ÏƒÎ·Ï‚"@el-t-en-t0-mtec , "Ð•Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¸ Ð¼Ð¾Ð´ÐµÐ» Ð½Ð° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð¾ Ð¸Ð·Ð´Ð¸Ð³Ð°Ð½Ðµ"@bg-t-en-t0-mtec , "Europees model voor digitale verhoging"@nl-t-en-t0-mtec , "Eurooppalainen digitaalinen korkeusmalli"@fi-t-en-t0-mtec , "EurÃ³pai digitÃ¡lis magassÃ¡gi modell"@hu-t-en-t0-mtec , "Europejski model podnoszenia poziomu cyfrowego"@pl-t-en-t0-mtec , "Europski digitalni model uzdizanja"@hr-t-en-t0-mtec , "Modello europeo di elevazione digitale"@it-t-en-t0-mtec , "Modelo Europeo de ElevaciÃ³n Digital"@es-t-en-t0-mtec , "European Digital Elevation Model"@en , "EuropÃ¦isk digital elevatormodel"@da-t-en-t0-mtec , "EurÃ³psky digitÃ¡lny vÃ½Å¡kovÃ½ model"@sk-t-en-t0-mtec , "EuropÃ¤isches digitales HÃ¶henmodell"@de-t-en-t0-mtec;
+        dcat:contactPoint  [ a                   vcard:Organization;
+                             vcard:fn            "EuroGeographics Head Office";
+                             vcard:hasAddress    [ a                     vcard:Address;
+                                                   vcard:country-name    "Belgium";
+                                                   vcard:locality        "Brussels";
+                                                   vcard:postal-code     "1000";
+                                                   vcard:street-address  "Rue du Nord 76/Noordstraat 76"
+                                                 ];
+                             vcard:hasEmail      <mailto:contact@eurogeographics.org>;
+                             vcard:hasTelephone  <tel:+32028887193>;
+                             vcard:hasURL        <https://eurogeographics.org>
+                           ];
+        dcat:distribution  <http://data.europa.eu/88u/distribution/915ef235-fe76-43ce-993d-2f62e8008684>;
+        dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/ENVI>;
+        dcat:theme         [ a               skos:Concept;
+                             skos:inScheme   [ a           skos:ConceptScheme;
+                                               dct:issued  "2008-06-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+                                               dct:title   "GEMET - INSPIRE themes, version 1.0"@en
+                                             ];
+                             skos:prefLabel  "Elevation"
+                           ] .
+
+<http://data.europa.eu/88u/distribution/915ef235-fe76-43ce-993d-2f62e8008684>
+        a               dcat:Distribution;
+        dct:format      <http://publications.europa.eu/resource/authority/file-type/TIFF>;
+        dct:identifier  "European Digital Elevation Model@en";
+        dct:title       "Europejski model podnoszenia poziomu cyfrowego"@pl-t-en-t0-mtec , "EuropÃ¤isches digitales HÃ¶henmodell"@de-t-en-t0-mtec , "Modelo Europeu de ElevaÃ§Ã£o Digital"@pt-t-en-t0-mtec , "ModÃ¨le europÃ©en dâ€™Ã©lÃ©vation numÃ©rique"@fr-t-en-t0-mtec , "Eiropas digitÄlÄ pacÄ“luma modelis"@lv-t-en-t0-mtec , "Euroopa digiÃ¼levaatuse mudel"@et-t-en-t0-mtec , "Modelo Europeo de ElevaciÃ³n Digital"@es-t-en-t0-mtec , "Europski digitalni model uzdizanja"@hr-t-en-t0-mtec , "EvropskÃ½ digitÃ¡lnÃ­ model pro nadmoÅ™skou vÃ½Å¡ku"@cs-t-en-t0-mtec , "Modello europeo di elevazione digitale"@it-t-en-t0-mtec , "EuropÃ¦isk digital elevatormodel"@da-t-en-t0-mtec , "Ð„Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð° Ð¼Ð¾Ð´ÐµÐ»ÑŒ Ð¿Ñ–Ð´Ð¹Ð¾Ð¼Ñƒ"@uk-t-en-t0-mtec , "Samhail Eorpach ingearchlÃ³ digiteach"@ga-t-en-t0-mtec , "EurÃ³pai digitÃ¡lis magassÃ¡gi modell"@hu-t-en-t0-mtec , "Eurooppalainen digitaalinen korkeusmalli"@fi-t-en-t0-mtec , "Mudell Ewropew taâ€™ Elevazzjoni DiÄ¡itali"@mt-t-en-t0-mtec , "Modelul european de ridicare digitalÄƒ"@ro-t-en-t0-mtec , "Ð•Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¸ Ð¼Ð¾Ð´ÐµÐ» Ð½Ð° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð¾ Ð¸Ð·Ð´Ð¸Ð³Ð°Ð½Ðµ"@bg-t-en-t0-mtec , "EurÃ³psky digitÃ¡lny vÃ½Å¡kovÃ½ model"@sk-t-en-t0-mtec , "Europees model voor digitale verhoging"@nl-t-en-t0-mtec , "Europos skaitmeninio aukÅ¡Äio modelis"@lt-t-en-t0-mtec , "Den europeiska modellen fÃ¶r digital hÃ¶jd"@sv-t-en-t0-mtec , "Evropski model digitalnega dviga"@sl-t-en-t0-mtec , "Î•Ï…ÏÏ‰Ï€Î±ÏŠÎºÏŒ Î¼Î¿Î½Ï„Î­Î»Î¿ ÏˆÎ·Ï†Î¹Î±ÎºÎ®Ï‚ Î±Î½ÏÏˆÏ‰ÏƒÎ·Ï‚"@el-t-en-t0-mtec , "European Digital Elevation Model"@en;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+
+<http://data.europa.eu/88u/distribution/915ef235-fe76-43ce-993d-2f62e8008684>
+        a               dcat:Distribution;
+        dct:format      <http://publications.europa.eu/resource/authority/file-type/TIFF>;
+        dct:identifier  "European Digital Elevation Model@en";
+        dct:title       "Europejski model podnoszenia poziomu cyfrowego"@pl-t-en-t0-mtec , "EuropÃ¤isches digitales HÃ¶henmodell"@de-t-en-t0-mtec , "Modelo Europeu de ElevaÃ§Ã£o Digital"@pt-t-en-t0-mtec , "ModÃ¨le europÃ©en dâ€™Ã©lÃ©vation numÃ©rique"@fr-t-en-t0-mtec , "Eiropas digitÄlÄ pacÄ“luma modelis"@lv-t-en-t0-mtec , "Euroopa digiÃ¼levaatuse mudel"@et-t-en-t0-mtec , "Modelo Europeo de ElevaciÃ³n Digital"@es-t-en-t0-mtec , "Europski digitalni model uzdizanja"@hr-t-en-t0-mtec , "EvropskÃ½ digitÃ¡lnÃ­ model pro nadmoÅ™skou vÃ½Å¡ku"@cs-t-en-t0-mtec , "Modello europeo di elevazione digitale"@it-t-en-t0-mtec , "EuropÃ¦isk digital elevatormodel"@da-t-en-t0-mtec , "Ð„Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð° Ð¼Ð¾Ð´ÐµÐ»ÑŒ Ð¿Ñ–Ð´Ð¹Ð¾Ð¼Ñƒ"@uk-t-en-t0-mtec , "Samhail Eorpach ingearchlÃ³ digiteach"@ga-t-en-t0-mtec , "EurÃ³pai digitÃ¡lis magassÃ¡gi modell"@hu-t-en-t0-mtec , "Eurooppalainen digitaalinen korkeusmalli"@fi-t-en-t0-mtec , "Mudell Ewropew taâ€™ Elevazzjoni DiÄ¡itali"@mt-t-en-t0-mtec , "Modelul european de ridicare digitalÄƒ"@ro-t-en-t0-mtec , "Ð•Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¸ Ð¼Ð¾Ð´ÐµÐ» Ð½Ð° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð¾ Ð¸Ð·Ð´Ð¸Ð³Ð°Ð½Ðµ"@bg-t-en-t0-mtec , "EurÃ³psky digitÃ¡lny vÃ½Å¡kovÃ½ model"@sk-t-en-t0-mtec , "Europees model voor digitale verhoging"@nl-t-en-t0-mtec , "Europos skaitmeninio aukÅ¡Äio modelis"@lt-t-en-t0-mtec , "Den europeiska modellen fÃ¶r digital hÃ¶jd"@sv-t-en-t0-mtec , "Evropski model digitalnega dviga"@sl-t-en-t0-mtec , "Î•Ï…ÏÏ‰Ï€Î±ÏŠÎºÏŒ Î¼Î¿Î½Ï„Î­Î»Î¿ ÏˆÎ·Ï†Î¹Î±ÎºÎ®Ï‚ Î±Î½ÏÏˆÏ‰ÏƒÎ·Ï‚"@el-t-en-t0-mtec , "European Digital Elevation Model"@en;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+<http://publications.europa.eu/resource/authority/file-type/TIFF>
+        a       dct:MediaType .
+
+
+
+<http://publications.europa.eu/resource/authority/language/MKD>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMI>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GEO>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/WEL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BOS>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HSB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HUN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SWA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/EST>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/HRV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FAO>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMJ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/TUR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LAT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/MLT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SME>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BEL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/NOR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ARM>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/POL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/RUS>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BAQ>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/distribution/bafe7939-1e73-4a63-a515-854151e3d782>
+        a               dcat:Distribution;
+        dct:identifier  "Euro Global Map@en";
+        dct:license     <http://publications.europa.eu/resource/authority/licence/EUROGEO_2022>;
+        dct:title       "Svetovni zemljevid evra"@sl-t-en-t0-mtec , "Euro Global Map"@en , "Ð•Ð²Ñ€Ð¾ Ð³Ð»Ð¾Ð±Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð°"@bg-t-en-t0-mtec , "Euron maailmanlaajuinen kartta"@fi-t-en-t0-mtec , "GlobÃ¡lnÃ­ mapa eura"@cs-t-en-t0-mtec , "Euro Ã¼lemaailmne kaart"@et-t-en-t0-mtec , "Euro Globale Karte"@de-t-en-t0-mtec , "Mapa global del euro"@es-t-en-t0-mtec , "Pasaulinis euro Å¾emÄ—lapis"@lt-t-en-t0-mtec , "Mappa globale dell'euro"@it-t-en-t0-mtec , "Wereldkaart van de euro"@nl-t-en-t0-mtec , "Az eurÃ³ globÃ¡lis tÃ©rkÃ©pe"@hu-t-en-t0-mtec , "Ð„Ð²Ñ€Ð¾ Ð“Ð»Ð¾Ð±Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð°"@uk-t-en-t0-mtec , "Il-Mappa Globali tal-Euro"@mt-t-en-t0-mtec , "Globalna karta eura"@hr-t-en-t0-mtec , "Euro globÄlÄ karte"@lv-t-en-t0-mtec , "Mapa Global do Euro"@pt-t-en-t0-mtec , "Oversigt over euro"@da-t-en-t0-mtec , "Î Î±Î³ÎºÏŒÏƒÎ¼Î¹Î¿Ï‚ Ï‡Î¬ÏÏ„Î·Ï‚ Ï„Î¿Ï… ÎµÏ…ÏÏŽ"@el-t-en-t0-mtec , "LÃ©arscÃ¡il Dhomhanda an Euro"@ga-t-en-t0-mtec , "Carte globale de lâ€™euro"@fr-t-en-t0-mtec , "Euro GlobÃ¡lna mapa"@sk-t-en-t0-mtec , "Mapa globalna euro"@pl-t-en-t0-mtec , "Den globala eurokartan"@sv-t-en-t0-mtec , "Harta globalÄƒ a euro"@ro-t-en-t0-mtec;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+<http://publications.europa.eu/resource/authority/language/FRR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/POR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ITA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CNR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/NLD>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SRP>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/AZE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/BUL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CES>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ELL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/STQ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SMA>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FIN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LAV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FRY>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ALB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ROH>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/STL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/GLA>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/dataset/egm_2023_2_metadata>
+        a                  dcat:Dataset;
+        dct:conformsTo     [ a           dct:Standard;
+                             dct:issued  "2023-03-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+                             dct:title   "EGM 2023 Data Specification"@en
+                           ];
+        dct:description    "EGM 2023.2 on yleiseurooppalainen aineisto, joka sisÃ¤ltÃ¤Ã¤ peruspaikkatietoa asteikolla 1:1 M, joka kattaa 47 Euroopan maata ja 9 hallintoaluetta. Tiedot ovat saumattomia ja yhdenmukaisia, ja niitÃ¤ tuottaa EGM-projektikoordinaattori (IGN France) yhteistyÃ¶ssÃ¤ Euroopan kansallisten kartoitustoimistojen kanssa. Euroglobalmap sisÃ¤ltÃ¤Ã¤ viisi teemaa: Hallinnolliset rajat, hydrografia, nimetty sijainti, ratkaisu, kuljetus."@fi-t-en-t0-mtec , "EGM 2023.2 je vseevropski nabor podatkov, ki vsebuje osnovne geografske informacije v merilu 1:1 M, ki zajema 47 evropskih drÅ¾av in 9 upravnih obmoÄij. Podatki so brezhibni in usklajeni, pripravlja pa jih koordinator projekta EGM (IGN France) v sodelovanju z nacionalnimi agencijami za kartiranje v Evropi.\nEuroglobalmap vsebuje pet tem:\nUpravne meje, hidrografija, ime lokacije, poravnava, prevoz."@sl-t-en-t0-mtec , "EGM 2023.2 â€” Ð·Ð°Ð³Ð°Ð»ÑŒÐ½Ð¾Ñ”Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ¸Ð¹ Ð½Ð°Ð±Ñ–Ñ€ Ð´Ð°Ð½Ð¸Ñ…, Ñ‰Ð¾ Ð¼Ñ–ÑÑ‚Ð¸Ñ‚ÑŒ Ð±Ð°Ð·Ð¾Ð²Ñƒ Ð³ÐµÐ¾Ð³Ñ€Ð°Ñ„Ñ–Ñ‡Ð½Ñƒ Ñ–Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–ÑŽ Ð² Ð¼Ð°ÑÑˆÑ‚Ð°Ð±Ñ– 1:1 Ðœ, Ñ‰Ð¾ Ð¾Ñ…Ð¾Ð¿Ð»ÑŽÑ” 47 Ñ”Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ¸Ñ… ÐºÑ€Ð°Ñ—Ð½ Ñ– 9 Ð°Ð´Ð¼Ñ–Ð½Ñ–ÑÑ‚Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ð¸Ñ… Ð¾Ð±Ð»Ð°ÑÑ‚ÐµÐ¹. Ð”Ð°Ð½Ñ– Ñ” Ð±ÐµÐ·Ð´Ð¾Ð³Ð°Ð½Ð½Ð¸Ð¼Ð¸ Ñ‚Ð° Ð³Ð°Ñ€Ð¼Ð¾Ð½Ñ–Ð·Ð¾Ð²Ð°Ð½Ð¸Ð¼Ð¸, Ñ– Ð¿Ñ€Ð¾Ð´ÑƒÐºÑƒÑŽÑ‚ÑŒÑÑ ÐšÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð¾Ñ€Ð¾Ð¼ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ñ–Ð² EGM (IGN France) Ñƒ ÑÐ¿Ñ–Ð²Ð¿Ñ€Ð°Ñ†Ñ– Ð· ÐÐ°Ñ†Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ð¼Ð¸ ÐºÐ°Ñ€Ñ‚Ð¾Ð³Ñ€Ð°Ñ„Ñ–Ñ‡Ð½Ð¸Ð¼Ð¸ Ð°Ð³ÐµÐ½Ñ‚ÑÑ‚Ð²Ð°Ð¼Ð¸ Ð„Ð²Ñ€Ð¾Ð¿Ð¸.\nEuroglobalmap Ð¼Ñ–ÑÑ‚Ð¸Ñ‚ÑŒ Ð¿'ÑÑ‚ÑŒ Ñ‚ÐµÐ¼:\nÐÐ´Ð¼Ñ–Ð½Ñ–ÑÑ‚Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ñ– ÐºÐ¾Ñ€Ð´Ð¾Ð½Ð¸, Ð³Ñ–Ð´Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ñ–Ñ, Ð½Ð°Ð·Ð²Ð°Ð½Ðµ Ð¼Ñ–ÑÑ†Ðµ Ñ€Ð¾Ð·Ñ‚Ð°ÑˆÑƒÐ²Ð°Ð½Ð½Ñ, Ð¿Ð¾ÑÐµÐ»ÐµÐ½Ð½Ñ, Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚."@uk-t-en-t0-mtec , "EGM 2023.2 Ðµ Ð¾Ð±Ñ‰Ð¾ÐµÐ²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¸ Ð½Ð°Ð±Ð¾Ñ€ Ð¾Ñ‚ Ð´Ð°Ð½Ð½Ð¸, ÑÑŠÐ´ÑŠÑ€Ð¶Ð°Ñ‰ Ð¾ÑÐ½Ð¾Ð²Ð½Ð° Ð³ÐµÐ¾Ð³Ñ€Ð°Ñ„ÑÐºÐ° Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð² Ð¼Ð°Ñ‰Ð°Ð± 1:1 M, Ð¾Ð±Ñ…Ð²Ð°Ñ‰Ð°Ñ‰ 47 ÐµÐ²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¸ Ð´ÑŠÑ€Ð¶Ð°Ð²Ð¸ Ð¸ 9 Ð°Ð´Ð¼Ð¸Ð½Ð¸ÑÑ‚Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ð¸ Ð¾Ð±Ð»Ð°ÑÑ‚Ð¸. Ð”Ð°Ð½Ð½Ð¸Ñ‚Ðµ ÑÐ° Ð±ÐµÐ·Ð¿Ñ€Ð¾Ð±Ð»ÐµÐ¼Ð½Ð¸ Ð¸ Ñ…Ð°Ñ€Ð¼Ð¾Ð½Ð¸Ð·Ð¸Ñ€Ð°Ð½Ð¸ Ð¸ ÑÐµ Ð¸Ð·Ð³Ð¾Ñ‚Ð²ÑÑ‚ Ð¾Ñ‚ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð¾Ñ€Ð° Ð½Ð° Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð° EGM (IGN France) Ð² ÑÑŠÑ‚Ñ€ÑƒÐ´Ð½Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ Ð½Ð°Ñ†Ð¸Ð¾Ð½Ð°Ð»Ð½Ð¸Ñ‚Ðµ Ð°Ð³ÐµÐ½Ñ†Ð¸Ð¸ Ð·Ð° ÐºÐ°Ñ€Ñ‚Ð¾Ð³Ñ€Ð°Ñ„Ð¸Ñ€Ð°Ð½Ðµ Ð½Ð° Ð•Ð²Ñ€Ð¾Ð¿Ð°. Euroglobalmap ÑÑŠÐ´ÑŠÑ€Ð¶Ð° Ð¿ÐµÑ‚ Ñ‚ÐµÐ¼Ð¸: ÐÐ´Ð¼Ð¸Ð½Ð¸ÑÑ‚Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ð¸ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ð¸, Ñ…Ð¸Ð´Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ð¸Ñ, Ð½Ð°Ð¸Ð¼ÐµÐ½ÑƒÐ²Ð°Ð½Ð¾ Ð¼ÐµÑÑ‚Ð¾Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, ÑÐµÐ»Ð¸Ñ‰Ðµ, Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚."@bg-t-en-t0-mtec , "EGM 2023.2 Ã¤r ett alleuropeiskt dataset som innehÃ¥ller grundlÃ¤ggande geografisk information pÃ¥ skala 1:1 M och omfattar 47 europeiska lÃ¤nder och 9 administrativa omrÃ¥den. Uppgifterna Ã¤r sÃ¶mlÃ¶sa och harmoniserade och tas fram av EGM:s projektsamordnare (IGN France) i samarbete med de nationella karteringsorganen i Europa.\nEuroglobalmap innehÃ¥ller fem teman:\nAdministrativa grÃ¤nser, hydrografi, namngiven plats, avrÃ¤kning, transport."@sv-t-en-t0-mtec , "EGM 2023.2 is a pan-European dataset containing basic geographic information at the scale 1:1 M covering 47 European countries and 9 administrative areas. The data is seamless and harmonised, and is produced by the EGM Project Coordinator (IGN France) in cooperation by the National Mapping Agencies of Europe. EuroGlobalMap contains five themes: Administrative Boundaries, Hydrography, Named Location, Settlement, Transportation."@en , "EGM 2023.2 to ogÃ³lnoeuropejski zbiÃ³r danych zawierajÄ…cy podstawowe informacje geograficzne w skali 1:1 M obejmujÄ…ce 47 krajÃ³w europejskich i 9 obszarÃ³w administracyjnych. Dane sÄ… niezakÅ‚Ã³cone i zharmonizowane i sÄ… tworzone przez koordynatora projektu EGM (IGN France) we wspÃ³Å‚pracy z krajowymi agencjami mapowania Europy. Euroglobalmap zawiera piÄ™Ä‡ tematÃ³w:\nGranice administracyjne, hydrografia, nazwana lokalizacja, osiedlenie, transport."@pl-t-en-t0-mtec , "EGM 2023.2 es un conjunto de datos paneuropeo que contiene informaciÃ³n geogrÃ¡fica bÃ¡sica en la escala 1:1 M que abarca 47 paÃ­ses europeos y 9 Ã¡reas administrativas. Los datos son transparentes y armonizados, y son producidos por el coordinador del proyecto EGM (IGN France) en cooperaciÃ³n con las agencias nacionales de mapeo de Europa. Euroglobalmap contiene cinco temas: LÃ­mites Administrativos, HidrografÃ­a, UbicaciÃ³n Nombrada, Asentamiento, Transporte."@es-t-en-t0-mtec , "Î¤Î¿ EGM 2023.2 ÎµÎ¯Î½Î±Î¹ Î­Î½Î± Ï€Î±Î½ÎµÏ…ÏÏ‰Ï€Î±ÏŠÎºÏŒ ÏƒÏÎ½Î¿Î»Î¿ Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½ Ï€Î¿Ï… Ï€ÎµÏÎ¹Î­Ï‡ÎµÎ¹ Î²Î±ÏƒÎ¹ÎºÎ­Ï‚ Î³ÎµÏ‰Î³ÏÎ±Ï†Î¹ÎºÎ­Ï‚ Ï€Î»Î·ÏÎ¿Ï†Î¿ÏÎ¯ÎµÏ‚ ÏƒÏ„Î·Î½ ÎºÎ»Î¯Î¼Î±ÎºÎ± 1:1 M Ï€Î¿Ï… ÎºÎ±Î»ÏÏ€Ï„ÎµÎ¹ 47 ÎµÏ…ÏÏ‰Ï€Î±ÏŠÎºÎ­Ï‚ Ï‡ÏŽÏÎµÏ‚ ÎºÎ±Î¹ 9 Î´Î¹Î¿Î¹ÎºÎ·Ï„Î¹ÎºÎ­Ï‚ Ï€ÎµÏÎ¹Î¿Ï‡Î­Ï‚. Î¤Î± Î´ÎµÎ´Î¿Î¼Î­Î½Î± ÎµÎ¯Î½Î±Î¹ Î±Ï€ÏÏŒÏƒÎºÎ¿Ï€Ï„Î± ÎºÎ±Î¹ ÎµÎ½Î±ÏÎ¼Î¿Î½Î¹ÏƒÎ¼Î­Î½Î± ÎºÎ±Î¹ Ï€Î±ÏÎ¬Î³Î¿Î½Ï„Î±Î¹ Î±Ï€ÏŒ Ï„Î¿Î½ Î£Ï…Î½Ï„Î¿Î½Î¹ÏƒÏ„Î® ÎˆÏÎ³Î¿Ï… EGM (IGN France) ÏƒÎµ ÏƒÏ…Î½ÎµÏÎ³Î±ÏƒÎ¯Î± Î¼Îµ Ï„Î¿Ï…Ï‚ Î•Î¸Î½Î¹ÎºÎ¿ÏÏ‚ Î¦Î¿ÏÎµÎ¯Ï‚ Î§Î±ÏÏ„Î¿Î³ÏÎ¬Ï†Î·ÏƒÎ·Ï‚ Ï„Î·Ï‚ Î•Ï…ÏÏŽÏ€Î·Ï‚. ÎŸ Euroglobalmap Ï€ÎµÏÎ¹Î»Î±Î¼Î²Î¬Î½ÎµÎ¹ Ï€Î­Î½Ï„Îµ Î¸Î­Î¼Î±Ï„Î±: Î”Î¹Î¿Î¹ÎºÎ·Ï„Î¹ÎºÎ¬ ÏŒÏÎ¹Î±, Î¥Î´ÏÎ¿Î³ÏÎ±Ï†Î¯Î±, ÎŸÎ½Î¿Î¼Î±ÏƒÎ¼Î­Î½Î· Î¤Î¿Ï€Î¿Î¸ÎµÏƒÎ¯Î±, Î”Î¹Î±ÎºÎ±Î½Î¿Î½Î¹ÏƒÎ¼ÏŒÏ‚, ÎœÎµÏ„Î±Ï†Î¿ÏÎ¬."@el-t-en-t0-mtec , "EGM 2023.2 Ã¨ un set di dati paneuropeo contenente informazioni geografiche di base nella scala 1:1 M che coprono 47 paesi europei e 9 aree amministrative. I dati sono senza soluzione di continuitÃ  e armonizzati, ed Ã¨ prodotto dal coordinatore del progetto EGM (IGN France) in collaborazione dalle agenzie nazionali di mappatura d'Europa. Euroglobalmap contiene cinque temi:\nConfini amministrativi, idrografia, localitÃ  nominata, insediamento, trasporto."@it-t-en-t0-mtec , "EGM 2023.2 er et paneuropÃ¦isk datasÃ¦t, der indeholder grundlÃ¦ggende geografiske oplysninger pÃ¥ skalaen 1:1 M, der dÃ¦kker 47 europÃ¦iske lande og 9 administrative omrÃ¥der. Dataene er sÃ¸mlÃ¸se og harmoniserede og udarbejdes af EGM-projektkoordinatoren (IGN France) i samarbejde med de nationale kortlÃ¦gningsbureauer i Europa.\nEuroglobalmap indeholder fem temaer:\nAdministrative grÃ¦nser, hydrografi, navngivet placering, bosÃ¦ttelse, transport."@da-t-en-t0-mtec , "EGM 2023.2 je celoevropskÃ½ datovÃ½ soubor obsahujÃ­cÃ­ zÃ¡kladnÃ­ geografickÃ© informace v mÄ›Å™Ã­tku 1:1 M zahrnujÃ­cÃ­ 47 evropskÃ½ch zemÃ­ a 9 sprÃ¡vnÃ­ch oblastÃ­. Data jsou bezproblÃ©movÃ¡ a harmonizovanÃ¡ a vypracovÃ¡vÃ¡ je koordinÃ¡tor projektu EGM (IGN France) ve spoluprÃ¡ci s nÃ¡rodnÃ­mi mapovacÃ­mi agenturami Evropy. Euroglobalmap obsahuje pÄ›t tÃ©mat: AdministrativnÃ­ hranice, hydrografie, jmenovitÄ› umÃ­stÄ›nÃ­, usazenÃ­, doprava."@cs-t-en-t0-mtec , "EGM 2023.2 is een pan-Europese dataset met geografische basisinformatie op schaal 1:1 M voor 47 Europese landen en 9 administratieve gebieden. De gegevens zijn naadloos en geharmoniseerd en worden geproduceerd door de EGM-projectcoÃ¶rdinator (IGN France) in samenwerking met de National Mapping Agencies of Europe.\nEuroglobalmap bevat vijf themaâ€™s:\nAdministratieve grenzen, hydrografie, naam locatie, afwikkeling, vervoer."@nl-t-en-t0-mtec , "Az EGM 2023.2 egy pÃ¡neurÃ³pai adatkÃ©szlet, amely alapvetÅ‘ fÃ¶ldrajzi informÃ¡ciÃ³kat tartalmaz az 1:1 M skÃ¡lÃ¡n 47 eurÃ³pai orszÃ¡gra Ã©s 9 kÃ¶zigazgatÃ¡si terÃ¼letre kiterjedÅ‘en. Az adatok zÃ¶kkenÅ‘mentesek Ã©s harmonizÃ¡ltak, Ã©s az EGM projektkoordinÃ¡tora (IGN France) Ã¡llÃ­tja elÅ‘ az eurÃ³pai nemzeti tÃ©rkÃ©pÃ©szeti Ã¼gynÃ¶ksÃ©gek egyÃ¼ttmÅ±kÃ¶dÃ©sÃ©vel. Az Euroglobalmap Ã¶t tÃ©mÃ¡t tartalmaz: KÃ¶zigazgatÃ¡si hatÃ¡rok, vÃ­zrajz, megnevezett hely, TelepÃ¼lÃ©s, SzÃ¡llÃ­tÃ¡s."@hu-t-en-t0-mtec , "EGM 2023.2 est un ensemble de donnÃ©es paneuropÃ©ennes contenant des informations gÃ©ographiques de base Ã  lâ€™Ã©chelle 1:1 M couvrant 47 pays europÃ©ens et 9 zones administratives. Les donnÃ©es sont transparentes et harmonisÃ©es, et sont produites par le coordinateur du projet EGM (IGN France) en coopÃ©ration par les agences nationales de cartographie de lâ€™Europe.\nEuroglobalmap contient cinq thÃ¨mes:\nLimites administratives, Hydrographie, Emplacement nommÃ©, Ã‰tablissement, Transport."@fr-t-en-t0-mtec , "EGM 2023.2 je paneuropski skup podataka koji sadrÅ¾i osnovne geografske informacije na ljestvici 1:1 M i obuhvaÄ‡a 47 europskih zemalja i 9 administrativnih podruÄja. Podaci su besprijekorni i usklaÄ‘eni, a izraÄ‘uje ih koordinator projekta EGM (IGN France) u suradnji s nacionalnim agencijama za mapiranje Europe. Euroglobalmap sadrÅ¾i pet tema: Administrativne granice, hidrografija, naziv lokacije, nagodba, prijevoz."@hr-t-en-t0-mtec , "Il-MÄ E 2023.2 huwa sett taâ€™ data pan-Ewropew li fih informazzjoni Ä¡eografika baÅ¼ika fuq l-iskala 1:1 M li tkopri 47 pajjiÅ¼ Ewropew u 9 oqsma amministrattivi. Id-data hija bla xkiel u armonizzata, u hija prodotta mill-Koordinatur tal-ProÄ¡ett tal-MÄ E (IGN France) fâ€™kooperazzjoni mill-AÄ¡enziji Nazzjonali tal-Immappjar tal-Ewropa.\nl-Euroglobalmap fih Ä§ames temi:\nKonfini Amministrattivi, Idrografija, Isem il-Post, il-Ä¦las, it-Trasport."@mt-t-en-t0-mtec , "EGM 2023.2 ist ein gesamteuropÃ¤ischer Datensatz, der grundlegende geografische Informationen im MaÃŸstab 1:1 M fÃ¼r 47 europÃ¤ische LÃ¤nder und 9 Verwaltungsbereiche enthÃ¤lt. Die Daten sind nahtlos und harmonisiert und werden vom EGM-Projektkoordinator (IGN France) in Zusammenarbeit mit den National Mapping Agencies of Europe erstellt. Die Euroglobalmap enthÃ¤lt fÃ¼nf Themen:\nAdministrative Grenzen, Hydrographie, benannter Standort, Siedlung, Transport."@de-t-en-t0-mtec , "Is tacar sonraÃ­ uile-Eorpach Ã© EGM 2023.2 ina bhfuil buneolas geografach ar scÃ¡la 1:1 M a chlÃºdaÃ­onn 47 dtÃ­r Eorpacha agus 9 limistÃ©ar riarachÃ¡in. TÃ¡ na sonraÃ­ gan uaim agus comhchuibhithe, agus is Ã© Comhordaitheoir Tionscadail EGM (IGN France) a thÃ¡irgeann iad i gcomhar le GnÃ­omhaireachtaÃ­ NÃ¡isiÃºnta MapÃ¡la na hEorpa. TÃ¡ cÃºig thÃ©ama in Euroglobalmap:\nTeorainneacha RiarachÃ¡in, HidreagrafaÃ­ocht, SuÃ­omh Ainmnithe, LonnaÃ­ocht, Iompar."@ga-t-en-t0-mtec , "EGM 2023.2 je celoeurÃ³psky sÃºbor Ãºdajov obsahujÃºci zÃ¡kladnÃ© geografickÃ© informÃ¡cie na stupnici 1:1 M pokrÃ½vajÃºci 47 eurÃ³pskych krajÃ­n a 9 administratÃ­vnych oblastÃ­. Ãšdaje sÃº plynulÃ© a harmonizovanÃ© a vypracÃºva ich koordinÃ¡tor projektu EGM (IGN France) v spoluprÃ¡ci s nÃ¡rodnÃ½mi agentÃºrami pre mapovanie EurÃ³py.\nEuroglobalmap obsahuje pÃ¤Å¥ tÃ©m:\nAdministratÃ­vne hranice, hydrografia, nÃ¡zov miesta, osÃ­dlenie, doprava."@sk-t-en-t0-mtec , "EGM 2023.2 yra visos Europos duomenÅ³ rinkinys, kurÄ¯ sudaro 1:1 M mastelio pagrindinÄ— geografinÄ— informacija, apimanti 47 Europos Å¡alis ir 9 administracines sritis. Duomenys yra vientisi ir suderinti, juos rengia EGM projekto koordinatorius (IGN France), bendradarbiaudamas su Europos nacionalinÄ—mis kartografavimo agentÅ«romis.\nEuroglobalmap sudaro penkios temos:\nAdministracinÄ—s ribos, hidrografija, pavadinta vieta, apgyvendinimas, transportas."@lt-t-en-t0-mtec , "EGM 2023.2 on Ã¼leeuroopaline andmekogum, mis sisaldab pÃµhilist geograafilist teavet mÃµÃµtkavas 1:1 M, mis hÃµlmab 47 Euroopa riiki ja 9 halduspiirkonda. Andmed on sujuvad ja Ã¼htlustatud ning neid koostab EGM-projekti koordinaator (IGN France) koostÃ¶Ã¶s Euroopa riiklike kaardistamisasutustega. Euroglobalmap sisaldab viit teemat: Halduspiirid, hÃ¼drograafia, nimega asukoht, asundus, transport."@et-t-en-t0-mtec , "A EGM 2023.2 Ã© um conjunto de dados pan-europeu que contÃ©m informaÃ§Ãµes geogrÃ¡ficas bÃ¡sicas Ã  escala 1:1 M, abrangendo 47 paÃ­ses europeus e 9 Ã¡reas administrativas. Os dados sÃ£o sem descontinuidades e harmonizados e sÃ£o produzidos pelo coordenador do projeto EGM (IGN FranÃ§a) em cooperaÃ§Ã£o com as agÃªncias nacionais de mapeamento da Europa.\nO Euroglobalmap contÃ©m cinco temas:\nLimites Administrativos, Hidrografia, LocalizaÃ§Ã£o Nomeada, Estabelecimento, Transporte."@pt-t-en-t0-mtec , "EGM 2023.2 este un set de date paneuropean care conÈ›ine informaÈ›ii geografice de bazÄƒ la scara 1:1 M care acoperÄƒ 47 de È›Äƒri europene È™i 9 zone administrative. Datele sunt unitare È™i armonizate È™i sunt produse de coordonatorul de proiect al EGM (IGN FranÈ›a), Ã®n cooperare cu agenÈ›iile naÈ›ionale de cartografiere din Europa. Euroglobalmap conÈ›ine cinci teme:\nLimite administrative, hidrografie, locaÈ›ie numitÄƒ, aÈ™ezare, transport."@ro-t-en-t0-mtec , "EGM 2023.2 ir Eiropas mÄ“roga datu kopa, kurÄ ietverta Ä£eogrÄfiskÄ pamatinformÄcija mÄ“rogÄ 1:1 M, aptverot 47 Eiropas valstis un 9 administratÄ«vÄs teritorijas. Dati ir nevainojami un saskaÅ†oti, un tos sagatavo EGM projektu koordinators (IGN France) sadarbÄ«bÄ ar Eiropas valstu kartÄ“Å¡anas aÄ£entÅ«rÄm. Euroglobalmap satur piecas tÄ“mas:\nAdministratÄ«vÄs robeÅ¾as, hidrogrÄfija, nosauktÄ atraÅ¡anÄs vieta, apmetne, transports."@lv-t-en-t0-mtec;
+        dct:identifier     "EGM_2023";
+        dct:issued         "2023-01-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:language       <http://publications.europa.eu/resource/authority/language/FKV> , <http://publications.europa.eu/resource/authority/language/CNR> , <http://publications.europa.eu/resource/authority/language/LTZ> , <http://publications.europa.eu/resource/authority/language/SMJ> , <http://publications.europa.eu/resource/authority/language/CES> , <http://publications.europa.eu/resource/authority/language/KAL> , <http://publications.europa.eu/resource/authority/language/BEL> , <http://publications.europa.eu/resource/authority/language/TUR> , <http://publications.europa.eu/resource/authority/language/ALB> , <http://publications.europa.eu/resource/authority/language/ENG> , <http://publications.europa.eu/resource/authority/language/LAT> , <http://publications.europa.eu/resource/authority/language/RON> , <http://publications.europa.eu/resource/authority/language/GLA> , <http://publications.europa.eu/resource/authority/language/BOS> , <http://publications.europa.eu/resource/authority/language/BAQ> , <http://publications.europa.eu/resource/authority/language/SLV> , <http://publications.europa.eu/resource/authority/language/DAN> , <http://publications.europa.eu/resource/authority/language/POR> , <http://publications.europa.eu/resource/authority/language/EST> , <http://publications.europa.eu/resource/authority/language/BUL> , <http://publications.europa.eu/resource/authority/language/GEO> , <http://publications.europa.eu/resource/authority/language/SLK> , <http://publications.europa.eu/resource/authority/language/FAO> , <http://publications.europa.eu/resource/authority/language/SPA> , <http://publications.europa.eu/resource/authority/language/HRV> , <http://publications.europa.eu/resource/authority/language/FRR> , <http://publications.europa.eu/resource/authority/language/ITA> , <http://publications.europa.eu/resource/authority/language/GLE> , <http://publications.europa.eu/resource/authority/language/FRA> , <http://publications.europa.eu/resource/authority/language/STQ> , <http://publications.europa.eu/resource/authority/language/SME> , <http://publications.europa.eu/resource/authority/language/ROH> , <http://publications.europa.eu/resource/authority/language/ELL> , <http://publications.europa.eu/resource/authority/language/POL> , <http://publications.europa.eu/resource/authority/language/NOR> , <http://publications.europa.eu/resource/authority/language/LAV> , <http://publications.europa.eu/resource/authority/language/GLV> , <http://publications.europa.eu/resource/authority/language/ISL> , <http://publications.europa.eu/resource/authority/language/SRP> , <http://publications.europa.eu/resource/authority/language/HUN> , <http://publications.europa.eu/resource/authority/language/FRY> , <http://publications.europa.eu/resource/authority/language/SWA> , <http://publications.europa.eu/resource/authority/language/SMA> , <http://publications.europa.eu/resource/authority/language/DEU> , <http://publications.europa.eu/resource/authority/language/LIT> , <http://publications.europa.eu/resource/authority/language/RUS> , <http://publications.europa.eu/resource/authority/language/MLT> , <http://publications.europa.eu/resource/authority/language/SMI> , <http://publications.europa.eu/resource/authority/language/HSB> , <http://publications.europa.eu/resource/authority/language/UKR> , <http://publications.europa.eu/resource/authority/language/MKD> , <http://publications.europa.eu/resource/authority/language/STL> , <http://publications.europa.eu/resource/authority/language/WEL> , <http://publications.europa.eu/resource/authority/language/FIN> , <http://publications.europa.eu/resource/authority/language/ARM> , <http://publications.europa.eu/resource/authority/language/NLD> , <http://publications.europa.eu/resource/authority/language/SWE> , <http://publications.europa.eu/resource/authority/language/DSB> , <http://publications.europa.eu/resource/authority/language/AZE> , <http://publications.europa.eu/resource/authority/language/CAT>;
+        dct:provenance     [ a           dct:ProvenanceStatement;
+                             rdfs:label  "EGM 2023 Lineage"@en
+                           ];
+        dct:spatial        [ a          dct:Location;
+                             dcat:bbox  "POLYGON((-64 72,57 72,57 -22,-64 -22,-64 72))"^^<http://replacement.io/ont/geosparql#wktLiteral>
+                           ];
+        dct:title          "EuroGlobalMap 2023"@en , "2023 m. Euroglobalmap"@lt-t-en-t0-mtec , "2023. aasta Euroglobalmap"@et-t-en-t0-mtec , "Euroglobalmap 2023"@ga-t-en-t0-mtec , "Euroglobalmap 2023"@lv-t-en-t0-mtec , "Euroglobalmap 2023"@mt-t-en-t0-mtec , "Euroglobalmap 2023"@ro-t-en-t0-mtec , "Euroglobalmap 2023"@sk-t-en-t0-mtec , "Euroglobalmap 2023"@nl-t-en-t0-mtec , "Euroglobalmap 2023"@fi-t-en-t0-mtec , "Euroglobalmap 2023Â Ð³."@bg-t-en-t0-mtec , "Euroglobalmap 2023"@sl-t-en-t0-mtec , "Euroglobalmap 2023"@hu-t-en-t0-mtec , "Euroglobalmap 2023"@da-t-en-t0-mtec , "Euroglobalmap 2023"@cs-t-en-t0-mtec , "Euroglobalmap 2023"@fr-t-en-t0-mtec , "Î•Ï…ÏÏ‰Ï€Î±Î³ÎºÏŒÏƒÎ¼Î¹Î¿Ï‚ Ï‡Î¬ÏÏ„Î·Ï‚ 2023"@el-t-en-t0-mtec , "Euroglobalmap 2023"@pl-t-en-t0-mtec , "Euroglobalmap 2023"@uk-t-en-t0-mtec , "Euroglobalmap 2023"@de-t-en-t0-mtec , "Euroglobalkarta 2023"@sv-t-en-t0-mtec , "Euroglobalmap 2023."@hr-t-en-t0-mtec , "Mapa Euroglobal 2023"@es-t-en-t0-mtec , "Mapa Euroglobal 2023"@pt-t-en-t0-mtec , "Mappa Euroglobal 2023"@it-t-en-t0-mtec;
+        dcat:contactPoint  [ a                   vcard:Organization;
+                             vcard:fn            "EuroGeographics Head Office";
+                             vcard:hasAddress    [ a                     vcard:Address;
+                                                   vcard:country-name    "Belgium";
+                                                   vcard:locality        "Brussels";
+                                                   vcard:postal-code     "1000";
+                                                   vcard:street-address  "Rue du Nord 76/Noordstraat 76"
+                                                 ];
+                             vcard:hasEmail      <mailto:contact@eurogeographics.org>;
+                             vcard:hasTelephone  <tel:+32028887193>;
+                             vcard:hasURL        <https://eurogeographics.org>
+                           ];
+        dcat:distribution  <http://data.europa.eu/88u/distribution/bafe7939-1e73-4a63-a515-854151e3d782>;
+        dcat:keyword       "Geographical names"@en , "Utility and governmental services"@en , "Hydrography"@en , "Population distribution â€” demography"@en , "Administrative units"@en , "Transport networks"@en;
+        dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/ECON> , <http://publications.europa.eu/resource/authority/data-theme/GOVE> , <http://publications.europa.eu/resource/authority/data-theme/TRAN> , <http://publications.europa.eu/resource/authority/data-theme/SOCI> , <http://publications.europa.eu/resource/authority/data-theme/ENVI> .
+
+<http://publications.europa.eu/resource/authority/language/UKR>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/RON>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/KAL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SWE>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SLV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/LIT>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/ISL>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SLK>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/licence/EUROGEO_2022>
+        a       dct:LicenseDocument .
+
+<http://publications.europa.eu/resource/authority/language/LTZ>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DAN>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/FKV>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/CAT>
+        a       dct:LinguisticSystem .
+
+<http://data.europa.eu/88u/record/egm_2023_2_metadata>
+        a                       dcat:CatalogRecord;
+        dct:creator             <http://piveau.io>;
+        dct:identifier          "EGM_2023_2_Metadata";
+        dct:issued              "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:modified            "2023-11-03T17:32:40Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        spdx:checksum           [ a                   spdx:Checksum;
+                                  spdx:algorithm      spdx:checksumAlgorithm_md5;
+                                  spdx:checksumValue  "b063de5c75d2dec46cbf9746acefba2"
+                                ];
+        dqv:hasQualityMetadata  <http://data.europa.eu/88u/metrics/egm_2023_2_metadata>;
+        foaf:primaryTopic       <http://data.europa.eu/88u/dataset/egm_2023_2_metadata>;
+        edp:originalLanguage    "en";
+        edp:transIssued         "2023-11-03T14:25:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transReceived       "2023-11-03T17:32:40Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transStatus         edp:TransCompleted .
+
+<http://publications.europa.eu/resource/authority/language/DEU>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/DSB>
+        a       dct:LinguisticSystem .
+
+<http://publications.europa.eu/resource/authority/language/SPA>
+        a       dct:LinguisticSystem .
+
+
+<http://data.europa.eu/88u/distribution/bafe7939-1e73-4a63-a515-854151e3d782>
+        a               dcat:Distribution;
+        dct:identifier  "Euro Global Map@en";
+        dct:license     <http://publications.europa.eu/resource/authority/licence/EUROGEO_2022>;
+        dct:title       "Svetovni zemljevid evra"@sl-t-en-t0-mtec , "Euro Global Map"@en , "Ð•Ð²Ñ€Ð¾ Ð³Ð»Ð¾Ð±Ð°Ð»Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð°"@bg-t-en-t0-mtec , "Euron maailmanlaajuinen kartta"@fi-t-en-t0-mtec , "GlobÃ¡lnÃ­ mapa eura"@cs-t-en-t0-mtec , "Euro Ã¼lemaailmne kaart"@et-t-en-t0-mtec , "Euro Globale Karte"@de-t-en-t0-mtec , "Mapa global del euro"@es-t-en-t0-mtec , "Pasaulinis euro Å¾emÄ—lapis"@lt-t-en-t0-mtec , "Mappa globale dell'euro"@it-t-en-t0-mtec , "Wereldkaart van de euro"@nl-t-en-t0-mtec , "Az eurÃ³ globÃ¡lis tÃ©rkÃ©pe"@hu-t-en-t0-mtec , "Ð„Ð²Ñ€Ð¾ Ð“Ð»Ð¾Ð±Ð°Ð»ÑŒÐ½Ð° ÐºÐ°Ñ€Ñ‚Ð°"@uk-t-en-t0-mtec , "Il-Mappa Globali tal-Euro"@mt-t-en-t0-mtec , "Globalna karta eura"@hr-t-en-t0-mtec , "Euro globÄlÄ karte"@lv-t-en-t0-mtec , "Mapa Global do Euro"@pt-t-en-t0-mtec , "Oversigt over euro"@da-t-en-t0-mtec , "Î Î±Î³ÎºÏŒÏƒÎ¼Î¹Î¿Ï‚ Ï‡Î¬ÏÏ„Î·Ï‚ Ï„Î¿Ï… ÎµÏ…ÏÏŽ"@el-t-en-t0-mtec , "LÃ©arscÃ¡il Dhomhanda an Euro"@ga-t-en-t0-mtec , "Carte globale de lâ€™euro"@fr-t-en-t0-mtec , "Euro GlobÃ¡lna mapa"@sk-t-en-t0-mtec , "Mapa globalna euro"@pl-t-en-t0-mtec , "Den globala eurokartan"@sv-t-en-t0-mtec , "Harta globalÄƒ a euro"@ro-t-en-t0-mtec;
+        dcat:accessURL  <https://www.mapsforeurope.org/access-data> .
+
+<http://publications.europa.eu/resource/authority/licence/EUROGEO_2022>
+        a       dct:LicenseDocument .

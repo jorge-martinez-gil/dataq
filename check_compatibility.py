@@ -53,10 +53,10 @@ def main():
         rdf_data_path2 = sys.argv[2]
 
         # Load RDF data from files
-        with open(rdf_data_path, "r") as f:
+        with open(rdf_data_path, "r", encoding="utf-8") as f:
             rdf_data = f.read()
         
-        with open(rdf_data_path2, "r") as f:
+        with open(rdf_data_path2, "r", encoding="utf-8") as f:
             rdf_data2 = f.read()
 
         result = check_compatibility(rdf_data, rdf_data2)

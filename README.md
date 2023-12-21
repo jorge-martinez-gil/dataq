@@ -1,37 +1,41 @@
 # Framework to Automatically Determine the Quality of Open Data Catalogs
-This repository contains code for reproducing the paper
-- Jorge Martinez-Gil, "Framework to Automatically Determine the Quality of Open Data Catalogs", [[arXiv preprint]](https://arxiv.org/abs/2307.15464), July 2023
 
-## Introduction
+> **Repository Overview**: This repository offers an innovative solution for assessing the quality of open data catalogs, based on the paper by Jorge Martinez-Gil.
 
-Data catalogs play a crucial role in modern data-driven organizations by facilitating the discovery, understanding, and utilization of diverse data assets. However, ensuring their quality and reliability is complex, especially in open and large-scale data environments. This framework proposes to automatically determine the quality of open data catalogs, addressing the need for efficient and reliable quality assessment mechanisms. The goal is to empower data-driven organizations to make informed decisions based on trustworthy and well-curated data assets.
+[![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464)
 
-## Core Quality Dimensions
+## 🌟 Introduction
 
-Our framework can analyze various core quality dimensions, including:
+In the era of data-driven decision making, data catalogs are indispensable. They streamline the discovery, understanding, and utilization of diverse data assets. This framework introduces an automated approach to evaluate the quality of open data catalogs. It's designed to bolster confidence in the data used by organizations, ensuring decisions are based on accurate, complete, and timely information.
 
-1. Accuracy: Assessing the correctness and precision of data in the catalog.
-2. Completeness: Measuring the extent to which all required data is available.
-3. Consistency: Checking for coherence and agreement between different data sources in the catalog.
-4. Scalability: Evaluating the capability of the catalog to handle growing data volumes.
-5. Timeliness: Determining how up-to-date the data in the catalog is.
+## 📊 Core Quality Dimensions
 
-## Non-Core Quality Dimensions
+The framework evaluates data catalogs across multiple dimensions:
 
-In addition to core quality dimensions, the framework implements a set of non-core quality dimensions, such as:
+- **Accuracy**: Ensures data correctness and precision.
+- **Completeness**: Measures data availability comprehensively.
+- **Consistency**: Maintains coherence across various data sources.
+- **Scalability**: Assesses the catalog's ability to manage growing data volumes.
+- **Timeliness**: Keeps data relevant and up-to-date.
 
-1. Provenance: Assessing the origin and history of data to establish its reliability.
-2. Readability: Evaluating the clarity and understandability of the catalog's data descriptions.
-3. Licensing: Verifying the usage rights and restrictions associated with the data.
+## 📈 Non-Core Quality Dimensions
 
-## Compatibility and Similarity Assessment
+Beyond the core dimensions, we assess:
 
-Our framework offers several alternatives for the assessment of compatibility and similarity across different data catalogs. This allows organizations to identify and leverage complementary data assets effectively.
+- **Provenance**: Traces the origin and history of data.
+- **Readability**: Guarantees clear and understandable data descriptions.
+- **Licensing**: Confirms data usage rights and restrictions.
 
-## Install
+## 🔄 Compatibility and Similarity Assessment
+
+Identify and leverage complementary data assets through our advanced assessment tools for compatibility and similarity among various data catalogs.
+
+## 🛠️ Installation
 ``` pip install -r requirements.txt```
 
-## Usage
+## ⚙️ Usage
+
+A suite of commands to evaluate different aspects of a data catalog:
 
 ``` python check_accuracy.py example001.ttl```
 Check the accuracy of a DCAT data catalog.
@@ -63,8 +67,10 @@ Check the similarity of two DCAT data catalogs.
 ``` python check_timeliness.pyexample001.ttl ```
 Check the timeliness of a DCAT data catalog.
 
-## Citation
-If you use this work, please cite:
+
+## 📚 Citation
+
+Please cite our work if you find it useful:
 
 ```
 @inproceedings{martinez2023d,
@@ -81,5 +87,6 @@ If you use this work, please cite:
 
 ```
 
-# License
-This code is released under the MIT License. See the LICENSE file for more information.
+## 📄 License
+
+This project is available under the MIT License - see the [LICENSE](https://chat.openai.com/c/LICENSE) file for details.

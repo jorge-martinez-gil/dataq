@@ -82,7 +82,7 @@ def main():
     rdf_data_path = sys.argv[1]
 
     # Load RDF data from file
-    with open(rdf_data_path, "r") as f:
+    with open(rdf_data_path, "r", encoding="utf-8") as f:
         rdf_data = f.read()
 
     result = check_scalability(rdf_data)

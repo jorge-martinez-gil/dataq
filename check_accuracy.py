@@ -11,8 +11,15 @@ import requests
 
 # Define some RDF prefixes
 dcat = Namespace("http://www.w3.org/ns/dcat#")
-foaf = Namespace("http://xmlns.com/foaf/0.1/")
+dct = Namespace("http://purl.org/dc/terms/")
 rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+
+# Example DCT properties (you can adjust as needed)
+dct_properties = [
+    dct.title,
+    dct.identifier,
+    dct.description
+]
 
 def check_links(rdf_data):
     """
@@ -74,48 +81,45 @@ def calculate_duplicates(rdf_data):
         return percentage_duplicates
 
 
-def core_links(rdf_data):
+def core_links(rdf_data, property_set):
     """
     Calculates the percentage of missing core properties in a Data Catalog.
 
     Args:
         rdf_data (str): The RDF data to check for missing core properties.
+        property_set (str): The property set to use ('dcat' or 'dct').
 
     Returns:
         float: The percentage of missing core properties in the RDF data.
     """
-    required_properties = [
+    required_properties = dct_properties if property_set == 'dct' else [
         dcat.title,
         rdf.type
     ]
     graph = Graph()
     graph.parse(data=rdf_data, format="turtle")
     completeness_scores = []
-    for catalog in graph.subjects(RDF.type, dcat.Catalog):
-        catalog_completeness = calculate_completeness(graph, catalog, required_properties)
-        completeness_scores.append(catalog_completeness)
-    for dataset in graph.subjects(RDF.type, dcat.Dataset):
-        dataset_completeness = calculate_completeness(graph, dataset, required_properties)
-        completeness_scores.append(dataset_completeness)
-    for distribution in graph.subjects(RDF.type, dcat.Distribution):
-        distribution_completeness = calculate_completeness(graph, distribution, required_properties)
-        completeness_scores.append(distribution_completeness)
+    for subject_type in [dcat.Catalog, dcat.Dataset, dcat.Distribution]:
+        for subject in graph.subjects(RDF.type, subject_type):
+            completeness_score = calculate_completeness(graph, subject, required_properties)
+            completeness_scores.append(completeness_score)
     result = sum(completeness_scores) / len(completeness_scores)
-    print(f"{result}% of core properties are not present.")
+    print(f"{result}% of core properties are not present using {property_set.upper()} properties.")
     return result
 
 
-def check_accuracy(rdf_data):
+def check_accuracy(rdf_data, property_set):
     """
     Calculates the accuracy of a Data Catalog file by averaging the percentages of broken links, duplicated datasets or distributions, and missing core properties.
 
     Args:
         rdf_data (str): The RDF data to check for accuracy.
+        property_set (str): The property set to use ('dcat' or 'dct').
 
     Returns:
         float: The accuracy of the RDF data file.
     """
-    core_result = core_links(rdf_data)
+    core_result = core_links(rdf_data, property_set)
     duplicates_result = calculate_duplicates(rdf_data)
     check_links_result = check_links(rdf_data)
     mean = (core_result + duplicates_result + check_links_result) / 3
@@ -147,28 +151,32 @@ Usage: python check_accuracy.py filepath
 """
 def main():
     try:
-        # Get path to Data Catalog file from command line argument
-        if len(sys.argv) < 2:
-            print("Usage: python check_accuracy.py filepath")
+        if len(sys.argv) < 3:
+            print("Usage: python check_accuracy.py filepath [dcat|dct]")
             sys.exit(1)
 
         rdf_data_path = sys.argv[1]
+        property_set = sys.argv[2]
 
-        # Load RDF data from file
-        with open(rdf_data_path, "r") as f:
+        if property_set not in ['dcat', 'dct']:
+            print("Invalid property set. Choose 'dcat' or 'dct'.")
+            sys.exit(1)
+
+        with open(rdf_data_path, "r", encoding="utf-8") as f:
             rdf_data = f.read()
 
-        result = check_accuracy(rdf_data)
-        print(f"The accuracy of {rdf_data_path} is {result}%.")
+        result = check_accuracy(rdf_data, property_set)
+        print(f"The accuracy of {rdf_data_path} using {property_set.upper()} properties is {result}%.")
 
     except FileNotFoundError:
         print(f"File not found: {rdf_data_path}")
         sys.exit(1)
-
+    except UnicodeDecodeError as e:
+        print(f"Unicode decode error: {e}")
+        sys_exit(1)
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()

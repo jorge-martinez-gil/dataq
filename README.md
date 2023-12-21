@@ -64,7 +64,7 @@ Check the scalability of a DCAT data catalog.
 ``` python check_similarity.py example001.ttl example002.ttl```
 Check the similarity of two DCAT data catalogs.
 
-``` python check_timeliness.pyexample001.ttl ```
+``` python check_timeliness.py example001.ttl ```
 Check the timeliness of a DCAT data catalog.
 
 

@@ -89,4 +89,4 @@ Please cite our work if you find it useful:
 
 ## 📄 License
 
-This project is available under the MIT License - see the [LICENSE](https://chat.openai.com/c/LICENSE) file for details.
+This project is available under the MIT License.

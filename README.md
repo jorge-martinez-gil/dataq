@@ -2,7 +2,7 @@
 
 > **Repository Overview**: This repository offers an innovative solution for assessing the quality of open data catalogs, based on the paper by Jorge Martinez-Gil.
 
-[![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464)
+[![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464) [![arXiv](https://img.shields.io/badge/arXiv-2405.02095-b31b1b.svg)](https://arxiv.org/abs/2405.02095) [![Citations](https://img.shields.io/badge/citations-3-blue)](https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=X1pRUYcAAAAJ:XUAslYVNQLQC)
 
 ## 🌟 Introduction
 

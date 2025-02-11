@@ -90,3 +90,20 @@ Please cite our work if you find it useful:
 ## 📄 License
 
 This project is available under the MIT License.
+
+## 📚 Research that has cited this work
+
+1. **[Assessing the Readability of Open Data Portals: A Case Study of Open Data Pakistan](http://jice.um.edu.my/index.php/MJLIS/article/view/48035)**
+   - **Authors:** N.F. Warraich, T. Rasool
+   - **Journal:** *Journal of Library and Information Science*, 2023
+   - **Abstract:** Open data portals provide accessible and reproducible data. This study evaluates the readability of datasets from Open Data Pakistan.
+
+2. **[Automated Quality Indicators for Machine-Actionable Data Management Plans](https://repositum.tuwien.at/handle/20.500.12708/200466)**
+   - **Author:** L. Arnhold
+   - **Journal:** *Repositum*, TU Wien, 2024
+   - **Abstract:** Discusses the role of machine-actionable Data Management Plans (DMPs) in research, focusing on automated quality indicators for improving data management.
+
+3. **[An Overview of Approaches to Quantify Open Data Catalog Similarity](http://publicationslist.org/data/jorge-martinez-gil/ref-204/Data-Catalogs.pdf)**
+   - **Author:** J. Martinez-Gil
+   - **Journal:** *Preprint*, 2023
+   - **Abstract:** As open data initiatives grow, this paper explores various methods to measure the similarity between different open data catalogs.

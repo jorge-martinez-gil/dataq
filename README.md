@@ -2,7 +2,7 @@
 
 > **Repository Overview**: This repository offers an innovative solution for assessing the quality of open data catalogs, based on the paper by Jorge Martinez-Gil.
 
-[![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464) [![Citations](https://img.shields.io/badge/citations-3-blue)](https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=X1pRUYcAAAAJ:XUAslYVNQLQC)
+[![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Citations](https://img.shields.io/badge/citations-3-blue)](https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=X1pRUYcAAAAJ:XUAslYVNQLQC)
 
 ## 🌟 Introduction
 
@@ -37,35 +37,18 @@ Identify and leverage complementary data assets through our advanced assessment 
 
 A suite of commands to evaluate different aspects of a data catalog:
 
-``` python check_accuracy.py example001.ttl```
-Check the accuracy of a DCAT data catalog.
-
-``` python check_compatibility.py example001.ttl example002.ttl```
-Check the compatibility of two DCAT data catalogs.
-
-``` python check_completeness.py example001.ttl```
-Check the completeness of a DCAT data catalog.
-
-``` python check_consistency.py example001.ttl entity_type```
-Check the consistency of a DCAT data catalog for the kind of entity (catalog, dataset, distribution).
-
-``` python check_licensing.py example001.ttl```
-Check the licensing of a DCAT data catalog.
-
-``` python check_lineage_provenance.py example001.ttl```
-Check the lineage and provenance of a DCAT data catalog.
-
-``` python check_readability.py example001.ttl```
-Check the readability of a DCAT data catalog according the Flesch-Kincaid Grade Level.
-
-``` python check_scalability.py example001.ttl```
-Check the scalability of a DCAT data catalog.
-
-``` python check_similarity.py example001.ttl example002.ttl```
-Check the similarity of two DCAT data catalogs.
-
-``` python check_timeliness.py example001.ttl```
-Check the timeliness of a DCAT data catalog.
+```bash
+python check_accuracy.py example001.ttl    # Check data accuracy
+python check_completeness.py example001.ttl    # Assess completeness
+python check_consistency.py example001.ttl entity_type    # Ensure consistency
+python check_scalability.py example001.ttl    # Evaluate scalability
+python check_timeliness.py example001.ttl    # Verify timeliness
+python check_compatibility.py example001.ttl example002.ttl    # Compare compatibility
+python check_similarity.py example001.ttl example002.ttl    # Analyze similarity
+python check_licensing.py example001.ttl    # Check licensing compliance
+python check_lineage_provenance.py example001.ttl    # Assess data provenance
+python check_readability.py example001.ttl    # Measure readability (Flesch-Kincaid Grade Level)
+```
 
 
 ## 📚 Citation

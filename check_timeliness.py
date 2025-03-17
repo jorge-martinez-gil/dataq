@@ -1,71 +1,125 @@
 # -*- coding: utf-8 -*-
 """
-[Martinez-Gil2023d]  Framework to Automatically Determine the Quality of Open Data Catalogs, arXiv preprint arXiv:2307.15464, 2023
+[Martinez-Gil2023d] Framework to Automatically Determine the Quality of Open Data Catalogs,
+arXiv preprint arXiv:2307.15464, 2023
+
+This script checks the timeliness of a DCAT catalog in RDF data. A catalog is considered 
+timely if its modification date (dcterms:modified) is within the last 365 days.
+The RDF data can be loaded from a local file or a URL.
+
+Usage:
+    python check_timeliness.py <file_or_url>
+
+Example:
+    python check_timeliness.py data.ttl
+    python check_timeliness.py http://example.com/data.ttl
 
 @author: Jorge Martinez-Gil
 """
+
 import sys
 from datetime import datetime, timedelta
 from rdflib import Graph, RDF, Namespace
 import pytz
+from typing import Optional
+import requests
 
-# Define some RDF prefixes
+# Define RDF namespaces
 dcat = Namespace("http://www.w3.org/ns/dcat#")
 foaf = Namespace("http://xmlns.com/foaf/0.1/")
-rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+rdf_ns = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 dcterms = Namespace("http://purl.org/dc/terms/")
 
-def check_timeliness(rdf_data):
+def load_rdf_data(source: str) -> str:
+    """
+    Loads RDF data from a file or a URL.
+
+    Args:
+        source (str): A file path or a URL.
+
+    Returns:
+        str: The RDF data as a string.
+    """
+    if source.startswith("http://") or source.startswith("https://"):
+        try:
+            response = requests.get(source)
+            response.raise_for_status()
+            return response.text
+        except Exception as e:
+            print(f"Error fetching RDF data from URL '{source}': {e}")
+            sys.exit(1)
+    else:
+        try:
+            with open(source, "r", encoding="utf-8") as f:
+                return f.read()
+        except FileNotFoundError:
+            print(f"File not found: {source}")
+            sys.exit(1)
+        except Exception as e:
+            print(f"Error reading file '{source}': {e}")
+            sys.exit(1)
+
+def check_timeliness(rdf_data: str, rdf_format: str = "turtle") -> bool:
     """
     Checks the timeliness of an RDF data file containing a DCAT catalog.
+    
+    A catalog is considered timely if its modification date (dcterms:modified)
+    is within the last 365 days.
 
     Args:
         rdf_data (str): The RDF data as a string.
+        rdf_format (str): The RDF serialization format (default is "turtle").
 
     Returns:
         bool: True if the catalog is timely, False otherwise.
     """
     graph = Graph()
-    graph.parse(data=rdf_data, format="turtle")
-    
-    # Get the modified date of the catalog
-    modified_date = None
+    try:
+        graph.parse(data=rdf_data, format=rdf_format)
+    except Exception as e:
+        print(f"Error parsing RDF data: {e}")
+        return False
+
+    modified_date: Optional[str] = None
+
+    # Retrieve the first modification date for a DCAT catalog in the graph
     for s, p, o in graph.triples((None, RDF.type, dcat.Catalog)):
         for s2, p2, o2 in graph.triples((s, dcterms.modified, None)):
-            modified_date = o2
+            modified_date = str(o2)
             break
-        break
+        if modified_date:
+            break
+
+    if not modified_date:
+        print("No modification date found in the catalog.")
+        return False
+
+    try:
+        # Parse the modification date (expects ISO 8601 format with timezone)
+        parsed_date = datetime.strptime(modified_date, '%Y-%m-%dT%H:%M:%S%z')
+    except Exception as e:
+        print(f"Error parsing modified date '{modified_date}': {e}")
+        return False
+
+    one_year_ago = datetime.now(pytz.UTC) - timedelta(days=365)
+    return parsed_date > one_year_ago
+
+def main() -> None:
+    """
+    Main function that checks the timeliness of a DCAT catalog and prints the result.
     
-    # Check if the modified date is within the last year
-    if modified_date:
-        modified_date_str = str(modified_date)
-        modified_date = datetime.strptime(modified_date_str, '%Y-%m-%dT%H:%M:%S%z')
-        one_year_ago = datetime.now(pytz.UTC) - timedelta(days=365)
-        if modified_date > one_year_ago:
-            return True
-    
-    return False
-
-"""
-Program that checks the timeliness of a DCAT catalog.
-
-Usage: python check_timeliness.py filepath
-"""
-def main():
-
-    # Get path to RDF data file from command line argument
+    Usage:
+        python check_timeliness.py <file_or_url>
+    """
     if len(sys.argv) < 2:
-        print("Usage: python check_timeliness.py filepath")
+        print("Usage: python check_timeliness.py <file_or_url>")
         sys.exit(1)
 
-    rdf_data_path = sys.argv[1]
+    rdf_data_source = sys.argv[1]
+    rdf_data = load_rdf_data(rdf_data_source)
+    timely = check_timeliness(rdf_data)
+    print(f"The timeliness of '{rdf_data_source}' is {timely}.")
 
-    # Load RDF data from file
-    with open(rdf_data_path, "r", encoding="utf-8") as f:
-        rdf_data = f.read()
-
-    result = check_timeliness(rdf_data)
-    print(f"The timeliness {rdf_data_path} is {result}.")
-       
 if __name__ == "__main__":
     main()
+

@@ -1,71 +1,66 @@
 # -*- coding: utf-8 -*-
 """
-[Martinez-Gil2023d]  Framework to Automatically Determine the Quality of Open Data Catalogs, arXiv preprint arXiv:2307.15464, 2023
+[Martinez-Gil2023d] Framework to Automatically Determine the Quality of Open Data Catalogs,
+arXiv preprint arXiv:2307.15464, 2023
 
-@author: Jorge Martinez-Gil
+This module provides a command-line tool to load and parse RDF data from either a local file
+or a URL. The RDF data is expected to be in Turtle format and is converted into a nested dictionary
+structure for easier inspection. The tool is intended to help users quickly view the content of
+an RDF data catalog by displaying each subject along with its associated predicates and objects.
+
+Main functionalities:
+    - Load RDF data from a URL or a local file.
+    - Parse the RDF data into a dictionary where each subject is a key mapping to another dictionary
+      containing predicates as keys and lists of object values.
+    - Print the structured RDF data in a human-readable format to the console.
+
+Usage:
+    python show_data_catalog.py <file_or_url>
+
+Examples:
+    python show_data_catalog.py data/catalog.ttl
+    python show_data_catalog.py http://example.com/catalog.ttl
+
+@author: Jorge Martinez-Gil (improved version)
 """
 
 import sys
+import requests
 from rdflib import Graph
 
+def load_rdf_data(source: str) -> str:
+    # Check if source is a URL
+    if source.startswith("http"):
+        response = requests.get(source)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        return response.text
+    else:
+        with open(source, "r", encoding="utf-8") as f:
+            return f.read()
+
 def parse_rdf_data(rdf_data: str) -> dict:
-    """
-    Parses RDF data into a dictionary.
-
-    Args:
-        rdf_data: A string containing RDF data in Turtle format.
-
-    Returns:
-        A dictionary containing the RDF triples.
-    """
-    # Load RDF data into graph
     graph = Graph().parse(data=rdf_data, format="turtle")
-
-    # Create a dictionary to store the RDF triples
     rdf_dict = {}
-
-    # Iterate through the RDF triples and add them to the dictionary
     for subject, predicate, obj in graph:
         subject = str(subject)
         predicate = str(predicate)
         obj = str(obj)
-
-        if subject not in rdf_dict:
-            rdf_dict[subject] = {}
-
-        if predicate not in rdf_dict[subject]:
-            rdf_dict[subject][predicate] = []
-
-        rdf_dict[subject][predicate].append(obj)
-
+        rdf_dict.setdefault(subject, {}).setdefault(predicate, []).append(obj)
     return rdf_dict
 
-"""
-This program provides a function for printing a DCAT data catalog.
-
-Usage:
-    python show_data_catalog.py catalog.ttl
-
-The function `parse_rdf_data` takes an RDF data string as input and returns a dictionary
-containing the RDF triples.
-
-"""
 def main():
-    # Get path to Data Catalog from command line argument
     if len(sys.argv) < 2:
-        print("Usage: python show_data_catalog.py catalog.ttl")
+        print("Usage: python show_data_catalog.py <file_or_url>")
         sys.exit(1)
 
-    rdf_data_path = sys.argv[1]
+    source = sys.argv[1]
+    try:
+        rdf_data = load_rdf_data(source)
+    except Exception as e:
+        print(f"Error loading RDF data: {e}")
+        sys.exit(1)
 
-    # Load RDF data from file
-    with open(rdf_data_path, "r") as f:
-        rdf_data = f.read()
-
-    # Parse RDF data into dictionary
     rdf_dict = parse_rdf_data(rdf_data)
-
-    # Print the dictionary
     for subject, data in rdf_dict.items():
         print(subject)
         for predicate, objects in data.items():
@@ -73,3 +68,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

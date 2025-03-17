@@ -1,100 +1,117 @@
 # -*- coding: utf-8 -*-
 """
-[Martinez-Gil2023d]  Framework to Automatically Determine the Quality of Open Data Catalogs, arXiv preprint arXiv:2307.15464, 2023
+[Martinez-Gil2023d] Framework to Automatically Determine the Quality of Open Data Catalogs,
+arXiv preprint arXiv:2307.15464, 2023
+
+This script calculates the consistency percentage (the percentage of (subject, predicate) pairs 
+with a single, consistent attribute value) from RDF data in Turtle format. The RDF data can be 
+provided from a local file or a URL. It considers all DCAT entities: Catalog, Dataset, and Distribution.
+
+Usage:
+    python check_consistency.py <file_or_url>
+    
+Example:
+    python check_consistency.py data.ttl
+    python check_consistency.py http://example.com/data.ttl
 
 @author: Jorge Martinez-Gil
 """
+
 import sys
+import requests
 from rdflib import Graph, Namespace, RDF
 
-def check_consistency(rdf_data: str, entity_type: str) -> float:
+def check_consistency(rdf_data: str) -> float:
     """
-    Checks if there are inconsistencies in the attribute values for a specific entity type.
+    Checks consistency in the attribute values for all DCAT entities (Catalog, Dataset, Distribution).
+
+    For each (subject, predicate) pair among these entities, if multiple distinct object 
+    values are present, it is considered inconsistent. This function calculates the percentage 
+    of consistent pairs (i.e., those with exactly one object value).
 
     Args:
         rdf_data: A string containing RDF data in Turtle format.
-        entity_type: The type of entity to compare (e.g. "catalog", "dataset", "distribution").
 
     Returns:
-        A float representing the percentage of (subject, predicate) pairs that have inconsistent attribute values for the specified entity type.
+        A float representing the percentage of (subject, predicate) pairs that are consistent.
     """
     graph = Graph()
-    graph.parse(data=rdf_data, format="turtle")
+    try:
+        graph.parse(data=rdf_data, format="turtle")
+    except Exception as e:
+        print(f"Error parsing RDF data: {e}")
+        return 0.0
 
-    contradictions = set()
-
-    # Define namespaces for RDF and DCAT
-    RDF_NS = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+    # Define namespace for DCAT
     DCAT_NS = Namespace("http://www.w3.org/ns/dcat#")
 
-    # Query the RDF graph for entities of the specified type
-    if entity_type == "catalog":
-        entities = graph.subjects(RDF.type, DCAT_NS.Catalog)
-    elif entity_type == "dataset":
-        entities = graph.subjects(RDF.type, DCAT_NS.Dataset)
-    elif entity_type == "distribution":
-        entities = graph.subjects(RDF.type, DCAT_NS.Distribution)
-    else:
-        raise ValueError(f"Invalid entity type: {entity_type}")
+    # Get all DCAT entities: Catalog, Dataset, and Distribution
+    catalogs = set(graph.subjects(RDF.type, DCAT_NS.Catalog))
+    datasets = set(graph.subjects(RDF.type, DCAT_NS.Dataset))
+    distributions = set(graph.subjects(RDF.type, DCAT_NS.Distribution))
+    all_entities = catalogs.union(datasets).union(distributions)
 
-    # Iterate through the entities and check for inconsistencies in their attribute values
-    for entity in entities:
-        subjects_predicates = {}  # Dictionary to store (subject, predicate) pairs and their corresponding objects
-
-        # Iterate through the triples in the RDF graph for the entity and store (subject, predicate) pairs and their objects
+    # Aggregate all (subject, predicate) pairs and their object values
+    all_pairs = {}
+    for entity in all_entities:
         for subj, pred, obj in graph.triples((entity, None, None)):
-            if (subj, pred) in subjects_predicates:
-                objects = subjects_predicates[(subj, pred)]
-                if obj not in objects:
-                    contradictions.add((subj, pred))
-                objects.append(obj)
+            key = (subj, pred)
+            if key in all_pairs:
+                all_pairs[key].add(obj)
             else:
-                subjects_predicates[(subj, pred)] = [obj]
+                all_pairs[key] = {obj}
 
-    # Calculate the percentage of inconsistencies
-    total_pairs = len(subjects_predicates)
-    inconsistent_pairs = len(contradictions)
-    percentage = (inconsistent_pairs / total_pairs) * 100
+    # Count inconsistencies: any (subject, predicate) pair with more than one distinct object
+    inconsistent_pairs = sum(1 for objects in all_pairs.values() if len(objects) > 1)
+    total_pairs = len(all_pairs)
 
-    return percentage
+    if total_pairs == 0:
+        print("No (subject, predicate) pairs found for the DCAT entities.")
+        return 0.0
 
-"""
-This program checks the consistency of a Data Catalog for a specific entity type.
+    # Calculate consistency percentage: pairs with only one object value are consistent
+    consistency_percentage = ((total_pairs - inconsistent_pairs) / total_pairs) * 100
+    return consistency_percentage
 
-Usage:
-    python check_consistency.py cataglog.ttl entity_type
-
-The function `check_consistency` takes an RDF data string and an entity type as input and returns a set of (subject, predicate) pairs that have inconsistent attribute values for the specified entity type.
-"""
-
-def main():
-    try:
-        # Get path to Data Catalog and entity type from command line arguments
-        if len(sys.argv) < 3:
-            print("Usage: python check_consistency.py filepath entity_type")
+def load_rdf_data(source: str) -> str:
+    """
+    Loads RDF data from a file or a URL.
+    
+    Args:
+        source: A file path or a URL.
+    
+    Returns:
+        The RDF data as a string.
+    """
+    if source.startswith("http://") or source.startswith("https://"):
+        try:
+            response = requests.get(source)
+            response.raise_for_status()
+            return response.text
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching RDF data from URL: {e}")
+            sys.exit(1)
+    else:
+        try:
+            with open(source, "r", encoding="utf-8") as f:
+                return f.read()
+        except FileNotFoundError:
+            print(f"File not found: {source}")
+            sys.exit(1)
+        except UnicodeDecodeError as e:
+            print(f"Unicode decode error: {e}")
             sys.exit(1)
 
-        rdf_data_path = sys.argv[1]
-        entity_type = sys.argv[2]
-
-        # Load RDF data from file
-        with open(rdf_data_path, "r", encoding="utf-8") as f:
-            rdf_data = f.read()
-
-        result = check_consistency(rdf_data, entity_type)
-        print(f"The percentage of inconsistencies in {rdf_data_path} for {entity_type} is {result:.2f}%.")
-
-    except FileNotFoundError:
-        print(f"File not found: {rdf_data_path}")
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python check_consistency.py <file_or_url>")
         sys.exit(1)
 
-    except ValueError as e:
-        print(f"Error: {e}")
-        sys.exit(1)
-        
-    except Exception as e:
-        print(f"Error: {e}")
-        sys.exit(1)
-        
+    source = sys.argv[1]
+    rdf_data = load_rdf_data(source)
+    result = check_consistency(rdf_data)
+    print(f"The consistency percentage in '{source}' is {result:.2f}%.")
+
 if __name__ == "__main__":
     main()
+

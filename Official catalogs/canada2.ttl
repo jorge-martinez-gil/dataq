@@ -1,0 +1,53 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344>
+    a dcat:Dataset ;
+    dct:title "Population estimates, quarterly"@en, "Estimations de la population, trimestrielles"@fr ;
+    dct:description "Estimated number of persons by quarter of a year and by year, Canada, provinces and territories."@en,
+                    "Nombre estimé de personnes selon le trimestre de l'année et l'année, Canada, provinces et territoires."@fr ;
+    dct:identifier "ec690886-687d-4d59-9b1b-51311435d344" ;
+    dct:issued "2018-06-27T16:47:39.391446"^^xsd:dateTime ;
+    dct:modified "2024-12-17T15:10:04.457039"^^xsd:dateTime ;
+    dct:accrualPeriodicity "P3M" ;
+    dct:publisher <https://open.canada.ca/organization/A0F0FCFC-BC3B-4696-8B6D-E7E411D55BAC> ;
+    dcat:contactPoint [
+        a vcard:Organization ;
+        vcard:hasEmail <mailto:infostats@statcan.gc.ca>
+    ] ;
+    dcat:keyword "population and demography"@en, "population estimates"@en, "quarterly estimates provinces and territories"@en,
+                 "table"@en, "estimations démographiques"@fr, "estimations trimestrielles provinces et territoires"@fr,
+                 "population et démographie"@fr, "tableau"@fr ;
+    dcat:distribution 
+        <https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/6bb8189f-98a3-4ea5-8f95-5e02739f3a60>,
+        <https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/bdba79cd-c087-4f53-81b9-b8ab31058ccf>,
+        <https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/c0d626a2-2840-4a7b-baba-5707ff371b67>,
+        <https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/c7c19a2b-e19c-48c7-8935-527ea4990895>,
+        <https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/5e3c41b4-c059-4aa8-9072-fd3a5901c6df> .
+
+<https://open.canada.ca/organization/A0F0FCFC-BC3B-4696-8B6D-E7E411D55BAC>
+    a foaf:Organization ;
+    foaf:name "Statistics Canada"@en, "Statistique Canada"@fr .
+
+# Distributions
+
+<https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/6bb8189f-98a3-4ea5-8f95-5e02739f3a60>
+    a dcat:Distribution ;
+    dct:title "Dataset"@en, "Ensembles de données"@fr ;
+    dcat:accessURL <https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip> ;
+    dct:format "CSV" ;
+    dct:language "en" ;
+    dct:issued "2024-12-17T15:10:04.480980"^^xsd:dateTime ;
+    dct:modified "2024-12-17T15:10:04.465288"^^xsd:dateTime .
+
+<https://open.canada.ca/dataset/ec690886-687d-4d59-9b1b-51311435d344/resource/bdba79cd-c087-4f53-81b9-b8ab31058ccf>
+    a dcat:Distribution ;
+    dct:title "Dataset"@en, "Ensembles de données"@fr ;
+    dcat:accessURL <https://www150.statcan.gc.ca/n1/tbl/csv/17100009-fra.zip> ;
+    dct:format "CSV" ;
+    dct:language "fr" ;
+    dct:issued "2024-12-17T15:10:04.480975"^^xsd:dateTime ;
+    dct:modified "2024-12-17T15:10:04.465155"^^xsd:dateTime .

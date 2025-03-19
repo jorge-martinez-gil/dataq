@@ -1,0 +1,18 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pacificdata.org/data/dataset/125f131d-c8cd-4802-bf62-b4c5be16401c> a dcat:Dataset ;
+    dcterms:title "Population Projections for Pacific Island Countries and Territories (1950-2050)" ;
+    dcterms:description "This dataset provides population projections for Pacific Island countries and territories from 1950 to 2050, disaggregated by sex and 5-year age groups." ;
+    dcterms:issued "2025-02-22"^^xsd:date ;
+    dcterms:publisher <https://pacificdata.org/data/organization/pacific-community-spc> ;
+    dcterms:license <https://pacificdata.org/data/license/public> ;
+    dcat:keyword "population", "projections", "Pacific Islands", "demographics" ;
+    dcat:distribution <https://pacificdata.org/data/dataset/125f131d-c8cd-4802-bf62-b4c5be16401c/resource/125f131d-c8cd-4802-bf62-b4c5be16401c> .
+
+<https://pacificdata.org/data/dataset/125f131d-c8cd-4802-bf62-b4c5be16401c/resource/125f131d-c8cd-4802-bf62-b4c5be16401c> a dcat:Distribution ;
+    dcterms:title "Population Projections Data (CSV)" ;
+    dcat:accessURL <https://pacificdata.org/data/dataset/125f131d-c8cd-4802-bf62-b4c5be16401c/resource/125f131d-c8cd-4802-bf62-b4c5be16401c/download/population_projections.csv> ;
+    dcat:mediaType "text/csv" ;
+    dcat:format "CSV" .

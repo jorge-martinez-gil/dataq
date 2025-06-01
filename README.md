@@ -1,6 +1,6 @@
 # Framework to Automatically Determine the Quality of Open Data Catalogs
 
-> **Repository Overview**: This repository offers an innovative solution for assessing the quality of open data catalogs, based on the paper by Jorge Martinez-Gil.
+> **Repository Overview**: This repository offers an innovative solution for assessing the quality of open data catalogs: *Martinez-Gil, J. (2025). Framework to automatically determine the quality of open data catalogs. Expert Systems with Applications, 128379.*
 
 [![DOI: 10.1016/j.eswa.2025.128379](https://img.shields.io/badge/DOI-10.1016%2Fj.eswa.2025.128379-red.svg)](https://doi.org/10.1016/j.eswa.2025.128379)
 [![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Citations](https://img.shields.io/badge/citations-3-blue)](https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=X1pRUYcAAAAJ:XUAslYVNQLQC)

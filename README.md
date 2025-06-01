@@ -2,6 +2,7 @@
 
 > **Repository Overview**: This repository offers an innovative solution for assessing the quality of open data catalogs, based on the paper by Jorge Martinez-Gil.
 
+[![DOI: 10.1016/j.eswa.2025.128379](https://img.shields.io/badge/DOI-10.1016%2Fj.eswa.2025.128379-red.svg)](https://doi.org/10.1016/j.eswa.2025.128379)
 [![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Citations](https://img.shields.io/badge/citations-3-blue)](https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=X1pRUYcAAAAJ:XUAslYVNQLQC)
 
 ## 🌟 Introduction
@@ -56,16 +57,15 @@ python check_readability.py example001.ttl    # Measure readability (Flesch-Kinc
 Please cite our work if you find it useful:
 
 ```
-@inproceedings{martinez2023d,
-  author    = {Jorge Martinez-Gil},
-  title     = {Framework to Automatically Determine the Quality of Open Data Catalogs},
-  journal   = {CoRR},
-  volume    = {abs/2307.15464},
-  year      = {2023},
-  url       = {https://arxiv.org/abs/2307.15464},
-  doi       = {https://doi.org/10.48550/arXiv.2307.15464},
-  eprinttype = {arXiv},
-  eprint    = {2307.15464}
+@article{martinez2025datacatalogs,
+  title = {Framework to Automatically Determine the Quality of Open Data Catalogs},
+  journal = {Expert Systems with Applications},
+  pages = {128379},
+  year = {2025},
+  issn = {0957-4174},
+  doi = {https://doi.org/10.1016/j.eswa.2025.128379},
+  url = {https://www.sciencedirect.com/science/article/pii/S0957417425019980},
+  author = {Jorge Martinez-Gil},
 }
 
 ```

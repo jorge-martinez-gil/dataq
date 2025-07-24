@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-[Martinez-Gil2023d] Framework to Automatically Determine the Quality of Open Data Catalogs,
-arXiv preprint arXiv:2307.15464, 2023
+[Martinez-Gil2025] Jorge Martinez-Gil: Framework to automatically determine the quality of open data catalogs. Expert Syst. Appl. 289: 128379 (2025).
 
 This module provides a command-line tool to load and parse RDF data from either a local file
 or a URL. The RDF data is expected to be in Turtle format and is converted into a nested dictionary

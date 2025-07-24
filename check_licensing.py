@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-[Martinez-Gil2023d] Framework to Automatically Determine the Quality of Open Data Catalogs,
-arXiv preprint arXiv:2307.15464, 2023
+[Martinez-Gil2025] Jorge Martinez-Gil: Framework to automatically determine the quality of open data catalogs. Expert Syst. Appl. 289: 128379 (2025).
 
 This script calculates the percentage of datasets (of type dcat:Dataset) that have a license 
 defined (using dcterms:license) in the provided RDF data. The RDF data can be loaded from a local 

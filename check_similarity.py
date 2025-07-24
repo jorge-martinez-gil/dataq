@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-[Martinez-Gil2023d] Framework to Automatically Determine the Quality of Open Data Catalogs,
-arXiv preprint arXiv:2307.15464, 2023
+[Martinez-Gil2025] Jorge Martinez-Gil: Framework to automatically determine the quality of open data catalogs. Expert Syst. Appl. 289: 128379 (2025).
 
 This script calculates the similarity between two DCAT catalogs in Turtle format based on their titles 
 and descriptions. Similarity is computed using the Jaccard similarity between preprocessed texts.

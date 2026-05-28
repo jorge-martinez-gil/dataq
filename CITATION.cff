@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Framework to Automatically Determine the Quality of Open Data Catalogs"
+abstract: >
+  An automated framework for evaluating the quality of open data catalogs
+  across multiple dimensions including accuracy, completeness, consistency,
+  scalability, timeliness, provenance, readability, and licensing. The
+  framework is implemented in Python and operates on RDF/Turtle-encoded
+  data catalogs.
+authors:
+  - family-names: "Martinez-Gil"
+    given-names: "Jorge"
+    orcid: "https://orcid.org/0000-0002-8179-6810"
+repository-code: "https://github.com/jorge-martinez-gil/dataq"
+license: MIT
+keywords:
+  - open data
+  - data catalog
+  - data quality
+  - linked data
+  - RDF
+  - knowledge graph
+  - data management
+  - FAIR data
+preferred-citation:
+  type: article
+  title: "Framework to Automatically Determine the Quality of Open Data Catalogs"
+  authors:
+    - family-names: "Martinez-Gil"
+      given-names: "Jorge"
+      orcid: "https://orcid.org/0000-0002-8179-6810"
+  journal: "Expert Systems with Applications"
+  volume: 289
+  pages: "128379"
+  year: 2025
+  issn: "0957-4174"
+  doi: "10.1016/j.eswa.2025.128379"
+  url: "https://www.sciencedirect.com/science/article/pii/S0957417425019980"

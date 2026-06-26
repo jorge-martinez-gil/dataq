@@ -1,0 +1,71 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+<https://pacificdata.org/data/dataset/oai-www-spc-int-ff1734c3-687e-4576-bb31-0280a38f6cec>
+    a dcat:Dataset ;
+    dcterms:title "The status of Pacific education: a sector analysis based on internationally comparable statistics" ;
+    dcterms:description "This report provides a comprehensive analysis of the education sector in Pacific countries, utilizing internationally comparable statistics to assess the current status and identify areas for improvement." ;
+    dcterms:issued "2021-01-01"^^xsd:date ;
+    dcterms:modified "2023-06-19"^^xsd:date ;
+    dcterms:publisher [ 
+        a foaf:Organization ;
+        foaf:name "Pacific Community (SPC)" ;
+        vcard:hasEmail <mailto:spc@spc.int> ;
+        vcard:hasAddress [
+            a vcard:Address ;
+            vcard:street-address "95 Promenade Roger Laroque" ;
+            vcard:locality "Noumea" ;
+            vcard:region "South Province" ;
+            vcard:postal-code "98848" ;
+            vcard:country-name "New Caledonia"
+        ]
+    ] ;
+    dcterms:identifier "oai:www.spc.int:ff1734c3-687e-4576-bb31-0280a38f6cec" ;
+    dcterms:language "en" ;
+    dcterms:subject "Education", "Statistics", "Pacific Region" ;
+    dcterms:license <https://pacificdata.org/data/license/public> ;
+    dcat:keyword "education", "sector analysis", "Pacific", "statistics" ;
+    dcat:distribution [
+        a dcat:Distribution ;
+        dcterms:title "Full Report PDF" ;
+        dcat:accessURL <https://pacificdata.org/data/dataset/oai-www-spc-int-ff1734c3-687e-4576-bb31-0280a38f6cec/resource/ff1734c3-687e-4576-bb31-0280a38f6cec/download/status-of-pacific-education-report.pdf> ;
+        dcat:mediaType "application/pdf" ;
+        dcat:format "PDF"
+    ] ;
+    dcat:contactPoint [
+        a vcard:Organization ;
+        vcard:fn "Pacific Community (SPC) - Educational Quality and Assessment Programme (EQAP)" ;
+        vcard:hasEmail <mailto:eqap@spc.int> ;
+        vcard:hasAddress [
+            a vcard:Address ;
+            vcard:street-address "3 Luke Street" ;
+            vcard:locality "Nabua" ;
+            vcard:region "Suva" ;
+            vcard:country-name "Fiji"
+        ]
+    ] ;
+    dcterms:accrualPeriodicity "As needed" ;
+    dcterms:spatial [
+        a dcterms:Location ;
+        dcterms:location "Pacific Island Countries and Territories" ;
+        dcterms:coverage "Oceania"
+    ] ;
+    dcterms:provenance "Data compiled and analyzed by the Pacific Community's Educational Quality and Assessment Programme (EQAP)." ;
+    dcterms:conformsTo <https://www.iso.org/standard/54580.html> ;
+    dcterms:accessRights "Public" ;
+    dcterms:relation <https://pacificdata.org/data/organization/spc-educational-quality-and-assessment-programme> ;
+    dcterms:source "International educational statistics databases and national education ministries." ;
+    dcterms:rightsHolder "Pacific Community (SPC)" ;
+    dcterms:creator [
+        a foaf:Organization ;
+        foaf:name "Pacific Community (SPC) - Educational Quality and Assessment Programme (EQAP)" ;
+        vcard:hasEmail <mailto:eqap@spc.int>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dcat:landingPage <https://pacificdata.org/data/dataset/oai-www-spc-int-ff1734c3-687e-4576-bb31-0280a38f6cec> .
+
+
+

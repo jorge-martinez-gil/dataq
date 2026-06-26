@@ -1,0 +1,242 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dqv:    <http://www.w3.org/ns/dqv#> .
+@prefix edp:    <https://europeandataportal.eu/voc#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+
+
+<http://data.europa.eu/88u/catalogue/europeana>
+        a                dcat:Catalog;
+        dct:description  "The catalogue of all cultural heritage datasets aggregated by Europeana"@en;
+        dct:issued       "2022-11-21T05:37:08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> , "2022-03-16T15:17:29Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:language     <http://publications.europa.eu/resource/authority/language/ENG>;
+        dct:license      <http://publications.europa.eu/resource/authority/licence/CC0>;
+        dct:modified     "2023-02-03T08:01:42.550632"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:publisher    [ a              foaf:Agent;
+                           foaf:homepage  <https://www.europeana.eu>;
+                           foaf:mbox      <mailto:api@europeana.eu>;
+                           foaf:name      "Europeana Foundation"
+                         ];
+        dct:spatial      <http://publications.europa.eu/resource/authority/continent/EUROPE>;
+        dct:title        "Europeana Datasets"@en;
+        dct:type         "dcat-ap" .
+		
+
+<http://purl.org/adms/licencetype/NonCommercialUseOnly>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/licencetype/1.0>;
+        skos:prefLabel  "Non-commercial use only"@en .
+
+<https://creativecommons.org/licenses/by-nc-sa/2.0/>
+        a         dct:RightsStatement , dct:LicenseDocument;
+        dct:type  <http://purl.org/adms/licencetype/ViralEffect-ShareAlike> , <http://purl.org/adms/licencetype/NonCommercialUseOnly> , <http://purl.org/adms/licencetype/Attribution> .
+
+<https://doi.org/10.48550/arXiv.2211.01226>
+        a                foaf:Document;
+        dct:description  "A research paper describing the DEArt dataset. It was published in the VISART VI Workshop at the European Conference of Computer Vision (ECCV) in October 2022."@en;
+        dct:format       <http://publications.europa.eu/resource/authority/file-type/PDF>;
+        dct:title        "Research paper describing the dataset."@en;
+        dct:type         <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN>;
+        schema:url       "https://arxiv.org/pdf/2211.01226.pdf";
+        dcat:mediaType   <http://www.iana.org/assignments/media-types/application/pdf> .
+
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+        a       dct:RightsStatement .
+
+<http://purl.org/adms/licencetype/ViralEffect-ShareAlike>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/licencetype/1.0>;
+        skos:prefLabel  "Viral effect (a.k.a. Share-alike)"@en .
+
+<https://saintgeorgeonabike.eu/>
+        a          foaf:Agent;
+        dct:type   <http://purl.org/adms/publishertype/NonProfitOrganisation>;
+        foaf:name  "Project Saint George on a Bike"@en .
+
+<https://www.iana.org/assignments/media-types/application/zip>
+        a       dct:MediaType .
+
+<https://zenodo.org/record/6984525>
+        a                foaf:Document;
+        dct:description  "The landing page the DEArt dataset at Zenodo, where the dataset and its metadata can be accessed."@en;
+        dct:format       <http://publications.europa.eu/resource/authority/file-type/HTML>;
+        dct:title        "The dataset landing page at Zenodo."@en;
+        dct:type         <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN>;
+        schema:url       "https://zenodo.org/record/6984525";
+        dcat:mediaType   <http://www.iana.org/assignments/media-types/text/html> .
+
+<http://www.iana.org/assignments/media-types/text/html>
+        a       dct:MediaType .
+
+<http://publications.europa.eu/resource/authority/data-theme>
+        a          skos:ConceptScheme;
+        dct:title  "Data theme"@en .
+
+<http://data.europa.eu/88u/record/https-doi-org-10-5281-zenodo-6984525>
+        a                       dcat:CatalogRecord;
+        dct:creator             <http://piveau.io>;
+        dct:identifier          "https://doi.org/10.5281/zenodo.6984525";
+        dct:issued              "2023-02-03T08:01:34Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        dct:modified            "2023-02-06T01:11:57Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        spdx:checksum           [ a                   spdx:Checksum;
+                                  spdx:algorithm      spdx:checksumAlgorithm_md5;
+                                  spdx:checksumValue  "eb43878720f01534de1b514865e720ea"
+                                ];
+        dqv:hasQualityMetadata  <http://data.europa.eu/88u/metrics/https-doi-org-10-5281-zenodo-6984525>;
+        foaf:primaryTopic       <http://data.europa.eu/88u/dataset/https-doi-org-10-5281-zenodo-6984525>;
+        edp:originalLanguage    "en";
+        edp:transIssued         "2023-02-03T08:01:34Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transReceived       "2023-02-06T01:11:57Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        edp:transStatus         edp:TransCompleted .
+
+<http://purl.org/adms/publishertype/NonProfitOrganisation>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/publishertype/1.0>;
+        skos:prefLabel  "Non-Profit Organisation"@en .
+
+<https://orcid.org/0000-0002-6978-2974>
+        a          foaf:Agent;
+        dct:type   <http://purl.org/adms/publishertype/PrivateIndividual(s)>;
+        foaf:name  "Maria-Cristina Marinescu" .
+
+dcatap:stable  a  skos:Concept .
+
+<https://orcid.org/0000-0001-5432-0657>
+        a          foaf:Agent;
+        dct:type   <http://purl.org/adms/publishertype/PrivateIndividual(s)>;
+        foaf:name  "Joaquim More Lopez" .
+
+<https://www.iana.org/assignments/media-types/application/xml>
+        a       dct:MediaType .
+
+<https://orcid.org/0000-0003-3257-8512>
+        a          foaf:Agent , vcard:Kind;
+        dct:type   <http://purl.org/adms/publishertype/PrivateIndividual(s)>;
+        foaf:name  "Artem Reshetnikov" .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF>
+        a              dct:MediaTypeOrExtent;
+        skos:inScheme  <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/XML>
+        a              dct:MediaTypeOrExtent;
+        skos:inScheme  <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://data.europa.eu/88u/dataset/https-doi-org-10-5281-zenodo-6984525>
+        a                  dcat:Dataset;
+        dct:accessRights   <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        dct:creator        <https://orcid.org/0000-0003-3257-8512> , <https://orcid.org/0000-0001-5432-0657> , <https://orcid.org/0000-0002-6978-2974>;
+        dct:description    "A DEART egy tÃ¡rgyfelismerÃ©s Ã©s osztÃ¡lyozÃ¡si adatkÃ©szlet, amely a XII. Ã©s a XVIII. szÃ¡zad kÃ¶zÃ¶tti festmÃ©nyek referenciakÃ©nt szolgÃ¡l. TÃ¶bb mint 15000 kÃ©pet tartalmaz, mintegy 80% nem ionos, Ã©s manuÃ¡lis megjegyzÃ©seket tartalmaz a hatÃ¡rolÃ³ dobozokhoz, amelyek 69 osztÃ¡ly Ã¶sszes pÃ©ldÃ¡nyÃ¡t azonosÃ­tjÃ¡k, valamint 12 lehetsÃ©ges pÃ³zt az emberszerÅ± objektumok azonosÃ­tÃ¡sÃ¡ra szolgÃ¡lÃ³ dobozokhoz. Ezek kÃ¶zÃ¼l tÃ¶bb mint 50 osztÃ¡ly kulturÃ¡lis Ã¶rÃ¶ksÃ©gre jellemzÅ‘, Ã©s Ã­gy nem jelenik meg mÃ¡s adatkÃ©szletekben; ezek a kÃ©pzeletbeli lÃ©nyeket, szimbolikus entitÃ¡sokat Ã©s a mÅ±vÃ©szethez kapcsolÃ³dÃ³ egyÃ©b kategÃ³riÃ¡kat tÃ¼krÃ¶zik."@hu-t-en-t0-mtec , "Î¤Î¿ DEART ÎµÎ¯Î½Î±Î¹ Î­Î½Î± ÏƒÏÎ½Î¿Î»Î¿ Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½ Ï„Î±Î¾Î¹Î½ÏŒÎ¼Î·ÏƒÎ·Ï‚ ÎºÎ±Î¹ Î±Î½Î¯Ï‡Î½ÎµÏ…ÏƒÎ·Ï‚ Î±Î½Ï„Î¹ÎºÎµÎ¹Î¼Î­Î½Ï‰Î½ Ï€Î¿Ï… Ï€ÏÎ¿Î¿ÏÎ¯Î¶ÎµÏ„Î±Î¹ Î½Î± Î±Ï€Î¿Ï„ÎµÎ»Î­ÏƒÎµÎ¹ Î±Î½Î±Ï†Î¿ÏÎ¬ Î³Î¹Î± Î­ÏÎ³Î± Î¶Ï‰Î³ÏÎ±Ï†Î¹ÎºÎ®Ï‚ Î¼ÎµÏ„Î±Î¾Ï Ï„Î¿Ï… Î§Î™Î™Î¿Ï… ÎºÎ±Î¹ Ï„Î¿Ï… XVIII Î±Î¹ÏŽÎ½Î±. Î ÎµÏÎ¹Î­Ï‡ÎµÎ¹ Ï€ÎµÏÎ¹ÏƒÏƒÏŒÏ„ÎµÏÎµÏ‚ Î±Ï€ÏŒ 15000 ÎµÎ¹ÎºÏŒÎ½ÎµÏ‚, Ï€ÎµÏÎ¯Ï€Î¿Ï… 80Â % Î¼Î· ÎµÎ¹ÎºÎ¿Î½Î¹ÎºÎ­Ï‚, ÎµÏ…Î¸Ï…Î³ÏÎ±Î¼Î¼Î¹ÏƒÎ¼Î­Î½ÎµÏ‚ Î¼Îµ Ï‡ÎµÎ¹ÏÎ¿ÎºÎ¯Î½Î·Ï„ÎµÏ‚ ÏƒÎ·Î¼ÎµÎ¹ÏŽÏƒÎµÎ¹Ï‚ Î³Î¹Î± Ï„Î± Ï€Î»Î±Î¯ÏƒÎ¹Î± Î¿ÏÎ¹Î¿Î¸Î­Ï„Î·ÏƒÎ·Ï‚ Ï€Î¿Ï… Ï€ÏÎ¿ÏƒÎ´Î¹Î¿ÏÎ¯Î¶Î¿Ï…Î½ ÏŒÎ»ÎµÏ‚ Ï„Î¹Ï‚ Ï€ÎµÏÎ¹Ï€Ï„ÏŽÏƒÎµÎ¹Ï‚ 69 ÎºÎ»Î¬ÏƒÎµÏ‰Î½ ÎºÎ±Î¸ÏŽÏ‚ ÎºÎ±Î¹ 12 Ï€Î¹Î¸Î±Î½Î­Ï‚ ÏƒÏ„Î¬ÏƒÎµÎ¹Ï‚ Î³Î¹Î± ÎºÎ¿Ï…Ï„Î¹Î¬ Ï€Î¿Ï… Ï„Î±Ï…Ï„Î¿Ï€Î¿Î¹Î¿ÏÎ½ Î±Î½Î¸ÏÏŽÏ€Î¹Î½Î± Î±Î½Ï„Î¹ÎºÎµÎ¯Î¼ÎµÎ½Î±. Î‘Ï€ÏŒ Î±Ï…Ï„Î­Ï‚, Ï€ÎµÏÎ¹ÏƒÏƒÏŒÏ„ÎµÏÎµÏ‚ Î±Ï€ÏŒ 50 Ï„Î¬Î¾ÎµÎ¹Ï‚ ÎµÎ¯Î½Î±Î¹ ÎµÎ¹Î´Î¹ÎºÎ­Ï‚ Î³Î¹Î± Ï„Î·Î½ Ï€Î¿Î»Î¹Ï„Î¹ÏƒÏ„Î¹ÎºÎ® ÎºÎ»Î·ÏÎ¿Î½Î¿Î¼Î¹Î¬ ÎºÎ±Î¹, Ï‰Ï‚ ÎµÎº Ï„Î¿ÏÏ„Î¿Ï…, Î´ÎµÎ½ ÎµÎ¼Ï†Î±Î½Î¯Î¶Î¿Î½Ï„Î±Î¹ ÏƒÎµ Î¬Î»Î»Î± ÏƒÏÎ½Î¿Î»Î± Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½Î‡ Î±Ï…Ï„Î¬ Î±Î½Ï„Î±Î½Î±ÎºÎ»Î¿ÏÎ½ Ï†Î±Î½Ï„Î±ÏƒÏ„Î¹ÎºÎ¬ ÏŒÎ½Ï„Î±, ÏƒÏ…Î¼Î²Î¿Î»Î¹ÎºÎ­Ï‚ Î¿Î½Ï„ÏŒÏ„Î·Ï„ÎµÏ‚ ÎºÎ±Î¹ Î¬Î»Î»ÎµÏ‚ ÎºÎ±Ï„Î·Î³Î¿ÏÎ¯ÎµÏ‚ Ï€Î¿Ï… ÏƒÏ‡ÎµÏ„Î¯Î¶Î¿Î½Ï„Î±Î¹ Î¼Îµ Ï„Î·Î½ Ï„Î­Ï‡Î½Î·."@el-t-en-t0-mtec , "DEART ir objektu noteikÅ¡anas un klasifikÄcijas datu kopa, kas paredzÄ“ta kÄ atsauce uz gleznÄm laikposmÄ no XII lÄ«dz XVIII gadsimtam. Tas satur vairÄk nekÄ 15000 attÄ“lu, aptuveni 80Â % ne-koku, kas saskaÅ†oti ar manuÄlÄm anotÄcijÄm, kas paredzÄ“tas sasaistes lodziÅ†iem, kas identificÄ“ visus 69 klaÅ¡u gadÄ«jumus, kÄ arÄ« 12 iespÄ“jamÄs pozas kastÄ“m, kas identificÄ“ cilvÄ“kiem lÄ«dzÄ«gus objektus. No tÄm vairÄk nekÄ 50 klases ir specifiskas kultÅ«ras mantojumam un tÄdÄ“jÄdi nav iekÄ¼autas citÄs datu kopÄs; tie atspoguÄ¼o iedomÄtas bÅ«tnes, simboliskas vienÄ«bas un citas kategorijas, kas saistÄ«tas ar mÄkslu."@lv-t-en-t0-mtec , "DEART je detekcija objektov in predstavlja klasifikacijski nabor podatkov, ki naj bi bil referenca za slike med XII. in XVII. stoletjem. Vsebuje veÄ kot 15000 slik, pribliÅ¾no 80Â % neionskih, poravnanih z roÄnimi opombami za okvirje, ki oznaÄujejo vse primere 69 razredov, kot tudi 12 moÅ¾nih poz za Å¡katle, ki identificirajo ÄloveÅ¡ke predmete. Od tega je veÄ kot 50 razredov znaÄilnih za kulturno dediÅ¡Äino in se zato ne pojavljajo v drugih naborih podatkov; ti odraÅ¾ajo namiÅ¡ljena bitja, simbolne entitete in druge kategorije, povezane z umetnostjo."@sl-t-en-t0-mtec , "DEART er et objektdetektering og udgÃ¸r klassifikationsdatasÃ¦t beregnet til at vÃ¦re en reference for malerier mellem XII og XVIIIth Ã¥rhundrede. Den indeholder mere end 15000 billeder, ca. 80Â % ikke-iconic, tilpasset manuelle anmÃ¦rkninger til afgrÃ¦nsningsfelterne, der identificerer alle forekomster af 69 klasser samt 12 mulige positurer til bokse, der identificerer menneskelignende objekter. Af disse er mere end 50 klasser kulturarvsspecifikke og optrÃ¦der derfor ikke i andre datasÃ¦t; disse afspejler imaginÃ¦re vÃ¦sener, symbolske enheder og andre kategorier relateret til kunst."@da-t-en-t0-mtec , "DEART â€“ tai objektÅ³ aptikimo ir klasifikavimo duomenÅ³ rinkinys, skirtas XII-XVII a. paveikslams. Jame yra daugiau nei 15000 vaizdÅ³, apie 80Â % ne-ikoniniÅ³, suderintÅ³ su rankinÄ—mis anotacijomis, skirtomis sieniniams langeliams, identifikuojantiems visus 69 klasiÅ³ atvejus, taip pat 12 galimÅ³ pozÅ³ dÄ—Å¾Ä—ms, kuriose identifikuojami Ä¯ Å¾mogÅ³ panaÅ¡Å«s objektai. IÅ¡ jÅ³ daugiau kaip 50 klasiÅ³ yra bÅ«dingos kultÅ«ros paveldui, todÄ—l jÅ³ nÄ—ra kituose duomenÅ³ rinkiniuose; jie atspindi Ä¯sivaizduojamas bÅ«tybes, simbolines esybes ir kitas su menu susijusias kategorijas."@lt-t-en-t0-mtec , "Is Ã©ard is DeArt ann nÃ¡ rud a bhrath agus is Ã©ard atÃ¡ i gceist leis tacar sonraÃ­ aicmithe a bheith ina thagairt do phictiÃºir idir an XIIÃº agus an XVIIIÃº haois. TÃ¡ nÃ­os mÃ³ nÃ¡ 15000 Ã­omhÃ¡, thart ar 80Â % neamh-iconic, ailÃ­nithe le nÃ³taÃ­ lÃ¡imhe do na boscaÃ­ ceangail ag aithint gach cÃ¡s de 69 rang chomh maith le 12 Ãºdar fÃ©ideartha do bhoscaÃ­ a aithint rudaÃ­ daonna-mhaith. DÃ­obh sin, tÃ¡ nÃ­os mÃ³ nÃ¡ 50 aicme ina n-oidhreacht chultÃºrtha sonrach agus dÃ¡ bhrÃ­ sin nÃ­l siad le feiceÃ¡il i dtacair sonraÃ­ eile; lÃ©irÃ­onn siad sin neacha samhlaÃ­ocha, aonÃ¡in shiombalacha agus catagÃ³irÃ­ eile a bhaineann le healaÃ­n."@ga-t-en-t0-mtec , "DEART je detekcia objektov a predstavuje klasifikaÄnÃ½ sÃºbor Ãºdajov, ktorÃ½ mÃ¡ byÅ¥ referenciou pre maÄ¾by medzi XII. a XVIII. storoÄÃ­m. Obsahuje viac ako 15000 obrÃ¡zkov, asi 80Â % neiconic, zarovnanÃ½ch s manuÃ¡lnymi poznÃ¡mkami pre ohraniÄenÃ© boxy identifikujÃºce vÅ¡etky prÃ­pady 69 tried, ako aj 12 moÅ¾nÃ½ch pÃ³z pre boxy identifikujÃºce objekty podobnÃ© Äloveku. Z nich je viac ako 50 tried Å¡pecifickÃ© pre kultÃºrne dediÄstvo, a preto sa nenachÃ¡dzajÃº v inÃ½ch sÃºboroch Ãºdajov; tieto odrÃ¡Å¾ajÃº imaginÃ¡rne bytosti, symbolickÃ© entity a inÃ© kategÃ³rie sÃºvisiace s umenÃ­m."@sk-t-en-t0-mtec , "DEART Ã¤r en objektdetektering och utgÃ¶r klassificeringsdataset som Ã¤r tÃ¤nkt att vara en referens fÃ¶r mÃ¥lningar mellan XII: e och XVIII-talen. Den innehÃ¥ller mer Ã¤n 15000 bilder, cirka 80Â % icke-iconic, i linje med manuella anteckningar fÃ¶r avgrÃ¤nsande lÃ¥dor som identifierar alla instanser av 69 klasser samt 12 mÃ¶jliga poser fÃ¶r lÃ¥dor som identifierar mÃ¤nniskoliknande objekt. Av dessa Ã¤r mer Ã¤n 50 klasser kulturarvsspecifika och fÃ¶rekommer dÃ¤rfÃ¶r inte i andra datamÃ¤ngder. dessa speglar imaginÃ¤ra varelser, symboliska entiteter och andra kategorier relaterade till konst."@sv-t-en-t0-mtec , "DEART est un jeu de donnÃ©es de dÃ©tection et de classification de pose destinÃ© Ã  Ãªtre une rÃ©fÃ©rence pour les peintures entre le XIIe et le XVIIIe siÃ¨cle. Il contient plus de 15000 images, environ 80Â % non-iconiques, alignÃ©es sur des annotations manuelles pour les boÃ®tes de dÃ©limitation identifiant toutes les instances de 69 classes ainsi que 12 poses possibles pour les boÃ®tes identifiant des objets semblables Ã  des humains. Parmi celles-ci, plus de 50 classes sont spÃ©cifiques au patrimoine culturel et nâ€™apparaissent donc pas dans dâ€™autres ensembles de donnÃ©es; ceux-ci reflÃ¨tent des Ãªtres imaginaires, des entitÃ©s symboliques et dâ€™autres catÃ©gories liÃ©es Ã  lâ€™art."@fr-t-en-t0-mtec , "Id-DEART huwa skoperta taâ€™ oÄ¡Ä¡ett u jippreÅ¼enta sett taâ€™ data taâ€™ klassifikazzjoni maÄ§sub biex ikun referenza gÄ§all-pitturi bejn is-sekli XII u XVIIIth. Fih aktar minn 15000 immaÄ¡ni, madwar 80Â % mhux ikoniÄ‹i, allinjati ma â€˜annotazzjonijiet manwali gÄ§all-kaxxi taâ€™ delimitazzjoni li jidentifikaw l-istanzi kollha ta â€˜69 klassi kif ukoll 12 possibbli gÄ§al kaxxi li jidentifikaw oÄ¡Ä¡etti simili gÄ§all-bniedem. Minn dawn, aktar minn 50 klassi huma speÄ‹ifiÄ‹i gÄ§all-wirt kulturali u gÄ§alhekk ma jidhrux fâ€™settijiet taâ€™ data oÄ§rajn; dawn jirriflettu Ä§lejjaq immaÄ¡inarji, entitajiet simboliÄ‹i u kategoriji oÄ§ra relatati mal-arti."@mt-t-en-t0-mtec , "DEART Ã¨ un dataset di rilevamento e classificazione degli oggetti destinato ad essere un riferimento per i dipinti tra il XII e il XVIII secolo. Contiene piÃ¹ di 15000 immagini, circa l'80Â % non iconiche, allineate con annotazioni manuali per le caselle di confine che identificano tutte le istanze di 69 classi e 12 possibili pose per scatole che identificano oggetti simili all'uomo. Di questi, piÃ¹ di 50 classi sono specifiche del patrimonio culturale e quindi non compaiono in altri set di dati; questi riflettono esseri immaginari, entitÃ  simboliche e altre categorie relative all'arte."@it-t-en-t0-mtec , "DEART je objektovÃ¡ detekce a pÃ³zovÃ¡ klasifikaÄnÃ­ datovÃ¡ sada, kterÃ¡ mÃ¡ bÃ½t referencÃ­ pro malby mezi XII. a XVII. stoletÃ­m. Obsahuje vÃ­ce neÅ¾ 15000 obrÃ¡zkÅ¯, asi 80Â % nelikÃ³novÃ½ch, v souladu s manuÃ¡lnÃ­mi poznÃ¡mkami pro ohraniÄenÃ© krabice identifikujÃ­cÃ­ vÅ¡echny instance 69 tÅ™Ã­d, stejnÄ› jako 12 moÅ¾nÃ½ch pÃ³z pro krabice identifikujÃ­cÃ­ objekty podobnÃ© ÄlovÄ›ku. Z nich je vÃ­ce neÅ¾ 50 tÅ™Ã­d specifickÃ© pro kulturnÃ­ dÄ›dictvÃ­, a proto se neobjevuje v jinÃ½ch datovÃ½ch souborech; odrÃ¡Å¾ejÃ­ imaginÃ¡rnÃ­ bytosti, symbolickÃ© entity a dalÅ¡Ã­ kategorie souvisejÃ­cÃ­ s umÄ›nÃ­m."@cs-t-en-t0-mtec , "DEART is een object detectie en pose classificatie dataset bedoeld als referentie voor schilderijen tussen de XIIe en de XVIIIe eeuw. Het bevat meer dan 15000 afbeeldingen, ongeveer 80Â % niet-iconisch, uitgelijnd met handmatige annotaties voor de begrenzingsvakken die alle gevallen van 69 klassen identificeren, evenals 12 mogelijke poses voor dozen die menselijke objecten identificeren. Meer dan 50 klassen zijn specifiek cultureel erfgoed en komen dus niet voor in andere datasets; deze weerspiegelen denkbeeldige wezens, symbolische entiteiten en andere categorieÃ«n die verband houden met kunst."@nl-t-en-t0-mtec , "DEART on objektide tuvastamine ja klassifitseerimise andmekogum, mis on mÃµeldud viitena maalidele XII ja XVIII sajandi vahel. See sisaldab rohkem kui 15000 pilti, mis on umbes 80Â % mitteikoonilised, mis on kooskÃµlas manuaalsete mÃ¤rkustega piirdekastide kohta, mis identifitseerivad kÃµik 69 klassi juhtumid, ning 12 vÃµimalikku kujutist kastide jaoks, mis identifitseerivad inimsarnaseid objekte. Neist enam kui 50 klassi on kultuuripÃ¤randile omased ja seega ei esine neid muudes andmekogumites; need peegeldavad kujuteldavaid olendeid, sÃ¼mboolseid olendeid ja muid kunstiga seotud kategooriaid."@et-t-en-t0-mtec , "DEART jest wykrywaniem obiektÃ³w i zestawem danych klasyfikacyjnych, ktÃ³re majÄ… byÄ‡ odniesieniem do obrazÃ³w miÄ™dzy XII a XVIII wiekiem. Zawiera ponad 15000 obrazÃ³w, okoÅ‚o 80Â % nieikonicznych, wyrÃ³wnanych z rÄ™cznymi adnotacjami dla pÃ³l granicznych identyfikujÄ…cych wszystkie instancje 69 klas, a takÅ¼e 12 moÅ¼liwych pozycji dla pudeÅ‚ek identyfikujÄ…cych obiekty podobne do czÅ‚owieka. SpoÅ›rÃ³d nich ponad 50 klas jest charakterystycznych dla dziedzictwa kulturowego i w zwiÄ…zku z tym nie figuruje w innych zbiorach danych; odzwierciedlajÄ… one wyimaginowane istoty, byty symboliczne i inne kategorie zwiÄ…zane ze sztukÄ…."@pl-t-en-t0-mtec , "DEART on objektien havaitseminen ja esittÃ¤misen luokitteluaineisto, joka on tarkoitettu viitteeksi maalauksille XII- ja XVIII-vuosisatojen vÃ¤lillÃ¤. Se sisÃ¤ltÃ¤Ã¤ yli 15000 kuvaa, noin 80Â % ei-iconic-kuvia, jotka ovat linjassa rajausruutujen manuaalisten huomautusten kanssa, jotka tunnistavat kaikki 69 luokan esiintymÃ¤t, sekÃ¤ 12 mahdollista asentoa ihmiskaltaisten esineiden tunnistamiseen. NÃ¤istÃ¤ yli 50 luokkaa on kulttuuriperintÃ¶kohtaisia, joten niitÃ¤ ei esiinny muissa tietoaineistoissa. ne heijastavat kuvitteellisia olentoja, symbolisia olentoja ja muita taiteeseen liittyviÃ¤ luokkia."@fi-t-en-t0-mtec , "DEART es un conjunto de datos de detecciÃ³n de objetos y clasificaciÃ³n de poses destinado a ser una referencia para las pinturas entre los siglos XII y XVIII. Contiene mÃ¡s de 15000 imÃ¡genes, alrededor del 80Â % no icÃ³nicas, alineadas con anotaciones manuales para las cajas delimitadoras que identifican todas las instancias de 69 clases, asÃ­ como 12 posibles poses para cajas que identifican objetos similares a los humanos. De ellas, mÃ¡s de 50 clases son especÃ­ficas del patrimonio cultural y, por lo tanto, no aparecen en otros conjuntos de datos; estos reflejan seres imaginarios, entidades simbÃ³licas y otras categorÃ­as relacionadas con el arte."@es-t-en-t0-mtec , "DEART Ðµ Ð¾Ð±ÐµÐºÑ‚ Ð·Ð° Ð¾Ñ‚ÐºÑ€Ð¸Ð²Ð°Ð½Ðµ Ð¸ Ð¿Ð¾ÑÑ‚Ð°Ð²ÑÐ½Ðµ Ð½Ð° ÐºÐ»Ð°ÑÐ¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ð¾Ð½ÐµÐ½ Ð½Ð°Ð±Ð¾Ñ€ Ð¾Ñ‚ Ð´Ð°Ð½Ð½Ð¸, Ð¿Ñ€ÐµÐ´Ð½Ð°Ð·Ð½Ð°Ñ‡ÐµÐ½ Ð´Ð° Ð±ÑŠÐ´Ðµ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð½Ð° Ñ‚Ð¾Ñ‡ÐºÐ° Ð·Ð° ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ð¸ Ð¼ÐµÐ¶Ð´Ñƒ XII Ð¸ XVIII Ð²ÐµÐº. Ð¢Ð¾Ð¹ ÑÑŠÐ´ÑŠÑ€Ð¶Ð° Ð¿Ð¾Ð²ÐµÑ‡Ðµ Ð¾Ñ‚ 15000 Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ, Ð¾ÐºÐ¾Ð»Ð¾ 80Â % Ð½Ðµ-Ð¸ÐºÐ¾Ð½Ð¸Ñ‡Ð½Ð¸, Ð¿Ð¾Ð´Ñ€Ð°Ð²Ð½ÐµÐ½Ð¸ Ñ Ñ€ÑŠÑ‡Ð½Ð¸ Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ð¸Ð¸ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ‡Ð½Ð¸Ñ‚Ðµ ÐºÑƒÑ‚Ð¸Ð¸, Ð¸Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ð¸Ñ†Ð¸Ñ€Ð°Ñ‰Ð¸ Ð²ÑÐ¸Ñ‡ÐºÐ¸ ÑÐ»ÑƒÑ‡Ð°Ð¸ Ð½Ð° 69 ÐºÐ»Ð°ÑÐ°, ÐºÐ°ÐºÑ‚Ð¾ Ð¸ 12 Ð²ÑŠÐ·Ð¼Ð¾Ð¶Ð½Ð¸ Ð¿Ð¾Ð·Ð¸ Ð·Ð° ÐºÑƒÑ‚Ð¸Ð¸, Ð¸Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ð¸Ñ†Ð¸Ñ€Ð°Ñ‰Ð¸ Ñ‡Ð¾Ð²ÐµÑˆÐºÐ¸ Ð¾Ð±ÐµÐºÑ‚Ð¸. ÐžÑ‚ Ñ‚ÑÑ… Ð¿Ð¾Ð²ÐµÑ‡Ðµ Ð¾Ñ‚ 50 ÐºÐ»Ð°ÑÐ° ÑÐ° ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸Ñ‡Ð½Ð¸ Ð·Ð° ÐºÑƒÐ»Ñ‚ÑƒÑ€Ð½Ð¾Ñ‚Ð¾ Ð½Ð°ÑÐ»ÐµÐ´ÑÑ‚Ð²Ð¾ Ð¸ Ð¿Ð¾Ñ€Ð°Ð´Ð¸ Ñ‚Ð¾Ð²Ð° Ð½Ðµ ÑÐ° Ð²ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸ Ð² Ð´Ñ€ÑƒÐ³Ð¸ Ð½Ð°Ð±Ð¾Ñ€Ð¸ Ð¾Ñ‚ Ð´Ð°Ð½Ð½Ð¸; Ñ‚Ðµ Ð¾Ñ‚Ñ€Ð°Ð·ÑÐ²Ð°Ñ‚ Ð²ÑŠÐ¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼Ð¸ ÑÑŠÑ‰ÐµÑÑ‚Ð²Ð°, ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¸Ñ‡Ð½Ð¸ ÑÑŠÑ‰Ð½Ð¾ÑÑ‚Ð¸ Ð¸ Ð´Ñ€ÑƒÐ³Ð¸ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸, ÑÐ²ÑŠÑ€Ð·Ð°Ð½Ð¸ Ñ Ð¸Ð·ÐºÑƒÑÑ‚Ð²Ð¾Ñ‚Ð¾."@bg-t-en-t0-mtec , "DEART este un set de date de clasificare È™i de detectare a obiectelor, menit sÄƒ fie o referinÈ›Äƒ pentru picturile din secolele al XII-lea È™i al XVIII-lea. ConÈ›ine mai mult de 15000 de imagini, aproximativ 80Â % non-iconice, aliniate cu adnotÄƒri manuale pentru casetele de limitÄƒ, identificÃ¢nd toate cazurile din 69 de clase, precum È™i 12 poziÈ›ii posibile pentru casetele de identificare a obiectelor asemÄƒnÄƒtoare omului. Dintre acestea, peste 50 de clase sunt specifice patrimoniului cultural È™i, prin urmare, nu apar Ã®n alte seturi de date; acestea reflectÄƒ fiinÈ›e imaginare, entitÄƒÈ›i simbolice È™i alte categorii legate de artÄƒ."@ro-t-en-t0-mtec , "DEART - Ñ†Ðµ Ð¾Ð±'Ñ”ÐºÑ‚ Ð²Ð¸ÑÐ²Ð»ÐµÐ½Ð½Ñ Ñ– ÐºÐ»Ð°ÑÐ¸Ñ„Ñ–ÐºÐ°Ñ†Ñ–Ð¹Ð½Ð¸Ð¹ Ð½Ð°Ð±Ñ–Ñ€ Ð´Ð°Ð½Ð¸Ñ…, Ð¿Ñ€Ð¸Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð´Ð»Ñ Ð¿Ð¾ÑÐ¸Ð»Ð°Ð½Ð½Ñ Ð½Ð° ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ð¸ Ð¼Ñ–Ð¶ XII Ñ– XVIII ÑÑ‚Ð¾Ð»Ñ–Ñ‚Ñ‚ÑÐ¼Ð¸. Ð’Ñ–Ð½ Ð¼Ñ–ÑÑ‚Ð¸Ñ‚ÑŒ Ð±Ñ–Ð»ÑŒÑˆÐµ 15000 Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½ÑŒ, Ð±Ð»Ð¸Ð·ÑŒÐºÐ¾ 80% Ð½ÐµÑ–ÐºÐ¾Ð½Ñ–Ñ‡Ð½Ð¸Ñ…, Ð²Ð¸Ñ€Ñ–Ð²Ð½ÑÐ½Ð¸Ñ… Ð· Ñ€ÑƒÑ‡Ð½Ð¸Ð¼Ð¸ Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ñ–ÑÐ¼Ð¸ Ð´Ð»Ñ Ð¾Ð±Ð¼ÐµÐ¶ÑƒÐ²Ð°Ð»ÑŒÐ½Ð¸Ñ… ÐºÐ¾Ñ€Ð¾Ð±Ð¾Ðº, Ñ‰Ð¾ Ñ–Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ñ–ÐºÑƒÑŽÑ‚ÑŒ Ð²ÑÑ– ÐµÐºÐ·ÐµÐ¼Ð¿Ð»ÑÑ€Ð¸ 69 ÐºÐ»Ð°ÑÑ–Ð², Ð° Ñ‚Ð°ÐºÐ¾Ð¶ 12 Ð¼Ð¾Ð¶Ð»Ð¸Ð²Ð¸Ñ… Ð¿Ð¾Ð· Ð´Ð»Ñ ÐºÐ¾Ñ€Ð¾Ð±Ð¾Ðº, Ñ‰Ð¾ Ñ–Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ñ–ÐºÑƒÑŽÑ‚ÑŒ Ð»ÑŽÐ´ÑÑŒÐºÑ– Ð¾Ð±'Ñ”ÐºÑ‚Ð¸. Ð— Ð½Ð¸Ñ… Ð±Ñ–Ð»ÑŒÑˆÐµ 50 ÐºÐ»Ð°ÑÑ–Ð² Ñ” ÑÐ¿ÐµÑ†Ð¸Ñ„Ñ–Ñ‡Ð½Ð¸Ð¼Ð¸ ÐºÑƒÐ»ÑŒÑ‚ÑƒÑ€Ð½Ð¾ÑŽ ÑÐ¿Ð°Ð´Ñ‰Ð¸Ð½Ð¾ÑŽ Ñ–, Ñ‚Ð°ÐºÐ¸Ð¼ Ñ‡Ð¸Ð½Ð¾Ð¼, Ð½Ðµ Ð·'ÑÐ²Ð»ÑÑŽÑ‚ÑŒÑÑ Ð² Ñ–Ð½ÑˆÐ¸Ñ… Ð½Ð°Ð±Ð¾Ñ€Ð°Ñ… Ð´Ð°Ð½Ð¸Ñ…; Ð²Ð¾Ð½Ð¸ Ð²Ñ–Ð´Ð¾Ð±Ñ€Ð°Ð¶Ð°ÑŽÑ‚ÑŒ ÑƒÑÐ²Ð½Ñ– Ñ–ÑÑ‚Ð¾Ñ‚Ð¸, ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ–Ñ‡Ð½Ñ– ÑÑƒÑ‚Ð½Ð¾ÑÑ‚Ñ– Ñ‚Ð° Ñ–Ð½ÑˆÑ– ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ñ–Ñ—, Ð¿Ð¾Ð²'ÑÐ·Ð°Ð½Ñ– Ð· Ð¼Ð¸ÑÑ‚ÐµÑ†Ñ‚Ð²Ð¾Ð¼."@uk-t-en-t0-mtec , "DEART ist ein Objekterkennungs- und Pose-Klassifikations-Datensatz, der als Referenz fÃ¼r GemÃ¤lde zwischen dem XII. und dem XVIII. Jahrhundert gedacht ist. Es enthÃ¤lt mehr als 15000 Bilder, etwa 80Â % nicht ikonisch, ausgerichtet mit manuellen Anmerkungen fÃ¼r die BegrenzungskÃ¤sten, die alle Instanzen von 69 Klassen identifizieren, sowie 12 mÃ¶gliche Posen fÃ¼r Boxen, die menschenÃ¤hnliche Objekte identifizieren. Davon sind mehr als 50 Klassen kulturerbespezifisch und erscheinen daher nicht in anderen DatensÃ¤tzen; diese spiegeln imaginÃ¤re Wesen, symbolische EntitÃ¤ten und andere Kategorien im Zusammenhang mit Kunst wider."@de-t-en-t0-mtec , "DEART Ã© uma deteÃ§Ã£o de objetos e um conjunto de dados de classificaÃ§Ã£o destinado a ser uma referÃªncia para pinturas entre os sÃ©culos XII e XVIII. Ele contÃ©m mais de 15000 imagens, cerca de 80Â % nÃ£o-icÃ´nicas, alinhadas com apontamentos manuais para as caixas delimitadoras que identificam todas as instÃ¢ncias de 69 classes, bem como 12 possÃ­veis poses para caixas de identificaÃ§Ã£o de objetos semelhantes a humanos. Destas, mais de 50 classes sÃ£o especÃ­ficas do patrimÃ³nio cultural e, por conseguinte, nÃ£o figuram noutros conjuntos de dados; estes refletem seres imaginÃ¡rios, entidades simbÃ³licas e outras categorias relacionadas Ã  arte."@pt-t-en-t0-mtec , "DEART je predmet detekcije i predstavlja klasifikacijski skup podataka koji bi trebao biti referenca za slike izmeÄ‘u XII. i XVIII. stoljeÄ‡a. SadrÅ¾i viÅ¡e od 15000 slika, oko 80Â % ne-ikonski, usklaÄ‘eno s ruÄnim biljeÅ¡kama za rubne kutije koje identificiraju sve primjere 69 klasa, kao i 12 moguÄ‡ih poza za kutije za identifikaciju predmeta nalik ljudima. Od toga je viÅ¡e od 50 razreda specifiÄno za kulturnu baÅ¡tinu i stoga se ne pojavljuje u drugim skupovima podataka; to odraÅ¾ava zamiÅ¡ljena biÄ‡a, simboliÄke entitete i druge kategorije povezane s umjetnoÅ¡Ä‡u."@hr-t-en-t0-mtec , "DEArt is an object detection and pose classification dataset meant to be a reference for paintings between the XIIth and the XVIIIth centuries. It contains more than 15000 images, about 80% non-iconic, aligned with manual annotations for the bounding boxes identifying all instances of 69 classes as well as 12 possible poses for boxes identifying human-like objects. Of these, more than 50 classes are cultural heritage specific and thus do not appear in other datasets; these reflect imaginary beings, symbolic entities and other categories related to art."@en;
+        dct:issued         "2022-10-22"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:modified       "2022-10-22"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dct:publisher      <https://saintgeorgeonabike.eu/>;
+        dct:spatial        <http://publications.europa.eu/resource/authority/continent/EUROPE>;
+        dct:temporal       [ a               dct:PeriodOfTime;
+                             dcat:endDate    "1800-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+                             dcat:startDate  "1101-01-01"^^<http://www.w3.org/2001/XMLSchema#date>
+                           ];
+        dct:title          "Strani, ki se povezujejo na: Zbirka podatkov o evropski umetnosti"@sl-t-en-t0-mtec , "Schrijf je in voor onze nieuwsbrief Dataset van Europese kunst"@nl-t-en-t0-mtec , "DEART: Conjunto de dados da arte europeia"@pt-t-en-t0-mtec , "DART: Setul de date al artei europene"@ro-t-en-t0-mtec , "Ð¡Ð²ÑŠÑ€ÑˆÐµÐ½Ð¾ Ðµ Ñ: ÐÐ°Ð±Ð¾Ñ€ Ð¾Ñ‚ Ð´Ð°Ð½Ð½Ð¸ Ð·Ð° ÐµÐ²Ñ€Ð¾Ð¿ÐµÐ¹ÑÐºÐ¾Ñ‚Ð¾ Ð¸Ð·ÐºÑƒÑÑ‚Ð²Ð¾"@bg-t-en-t0-mtec , "LÃ¤s mer: Dataset av europeisk konst"@sv-t-en-t0-mtec , "DEART: Ensemble de donnÃ©es de lâ€™art europÃ©en"@fr-t-en-t0-mtec , "Hvad er det? DatasÃ¦t om europÃ¦isk kunst"@da-t-en-t0-mtec , "Untertitel: Datensatz der europÃ¤ischen Kunst"@de-t-en-t0-mtec , "AtraÅ¡anÄs vieta: Eiropas mÄkslas datu kopa"@lv-t-en-t0-mtec , "KehittÃ¤jÃ¤: Eurooppalaisen taiteen tietoaineisto"@fi-t-en-t0-mtec , "DeArt: Tacar sonraÃ­ na hEalaÃ­ne EorpaÃ­"@ga-t-en-t0-mtec , "Az Ã©n hibÃ¡m. Az eurÃ³pai mÅ±vÃ©szet adatkÃ©szlete"@hu-t-en-t0-mtec , "ProchÃ¡zenÃ­: DatovÃ½ soubor evropskÃ©ho umÄ›nÃ­"@cs-t-en-t0-mtec , "DEART: Sett taâ€™ data tal-Arti Ewropea"@mt-t-en-t0-mtec , "Å½ymÄ—s: Europos meno duomenÅ³ rinkinys"@lt-t-en-t0-mtec , "Â¿QuÃ© es lo que dice? Conjunto de datos del arte europeo"@es-t-en-t0-mtec , "DEART: Ð’Ð†Ð”ÐÐžÐ’Ð›Ð•ÐÐÐ¯ ÐÐ°Ð±Ñ–Ñ€ Ð´Ð°Ð½Ð¸Ñ… Ñ”Ð²Ñ€Ð¾Ð¿ÐµÐ¹ÑÑŒÐºÐ¾Ð³Ð¾ Ð¼Ð¸ÑÑ‚ÐµÑ†Ñ‚Ð²Ð°"@uk-t-en-t0-mtec , "DEART: SÃºbor Ãºdajov o eurÃ³pskom umenÃ­"@sk-t-en-t0-mtec , "Î— Î“Î•Î©Î¡Î“Î™Î‘: Î£ÏÎ½Î¿Î»Î¿ Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½ Ï„Î·Ï‚ ÎµÏ…ÏÏ‰Ï€Î±ÏŠÎºÎ®Ï‚ Ï„Î­Ï‡Î½Î·Ï‚"@el-t-en-t0-mtec , "DEArt: Dataset of European Art"@en , "Originaalpealkiri: Euroopa kunsti andmekogum"@et-t-en-t0-mtec , "Å to se dogaÄ‘a? Skup podataka o europskoj umjetnosti"@hr-t-en-t0-mtec , "ProszÄ™ bardzo. ZbiÃ³r danych sztuki europejskiej"@pl-t-en-t0-mtec , "DEART: Set di dati dell'arte europea"@it-t-en-t0-mtec;
+        dcat:contactPoint  <https://orcid.org/0000-0003-3257-8512>;
+        dcat:distribution  <http://data.europa.eu/88u/distribution/9bc19481-9d6d-4fd6-beca-3d07ed062dbd>;
+        dcat:keyword       "Religious Art"@en , "Computer Vision"@en , "Cultural Heritage"@en , "Object Detection"@en;
+        dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+        foaf:page          <https://doi.org/10.48550/arXiv.2211.01226> , <https://zenodo.org/record/6984525> .
+
+<http://purl.org/adms/licencetype/Attribution>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/licencetype/1.0>;
+        skos:prefLabel  "Attribution"@en .
+
+<http://publications.europa.eu/resource/authority/data-theme/EDUC>
+        a               skos:Concept;
+        skos:inScheme   <http://publications.europa.eu/resource/authority/data-theme>;
+        skos:prefLabel  "Education"@en .
+
+<http://data.europa.eu/88u/distribution/9bc19481-9d6d-4fd6-beca-3d07ed062dbd>
+        a                    dcat:Distribution;
+        dcatap:availability  dcatap:stable;
+        dct:description      "ZIP archyvas, kuriame yra visos pastabos XML ir keli papildomi ZIP archyvai, kuriuose yra anotuotÅ³ vaizdo failÅ³."@lt-t-en-t0-mtec , "ArchÃ­v ZIP obsahujÃºci vÅ¡etky anotÃ¡cie v XML a niekoÄ¾ko ÄalÅ¡Ã­ch ZIP archÃ­vov obsahujÃºcich anotovanÃ© obrazovÃ© sÃºbory."@sk-t-en-t0-mtec , "Ett ZIP-arkiv som innehÃ¥ller alla kommentarer i XML, och flera ytterligare ZIP-arkiv som innehÃ¥ller de kommenterade bildfilerna."@sv-t-en-t0-mtec , "A ZIP archive containing all the annotations in XML, and several additional ZIP archives containing the annotated image files."@en , "ZIP-arhiiv, mis sisaldab kÃµiki XML-i mÃ¤rkeid, ja mitu tÃ¤iendavat ZIP-arhiivi, mis sisaldavad selgitustega pildifaile."@et-t-en-t0-mtec , "Un archivo ZIP que contiene todas las anotaciones en XML, y varios archivos ZIP adicionales que contienen los archivos de imagen anotados."@es-t-en-t0-mtec , "Archiwum ZIP zawierajÄ…ce wszystkie adnotacje w XML oraz kilka dodatkowych archiwÃ³w ZIP zawierajÄ…cych pliki obrazÃ³w z adnotacjami."@pl-t-en-t0-mtec , "Een ZIP-archief met alle annotaties in XML en een aantal extra ZIP-archieven met de geannoteerde afbeeldingsbestanden."@nl-t-en-t0-mtec , "Ein ZIP-Archiv mit allen Anmerkungen in XML und mehrere zusÃ¤tzliche ZIP-Archive mit den kommentierten Bilddateien."@de-t-en-t0-mtec , "ZIP-arkisto, joka sisÃ¤ltÃ¤Ã¤ kaikki XML: n merkinnÃ¤t, ja useita muita ZIP-arkistoja, jotka sisÃ¤ltÃ¤vÃ¤t selityksillÃ¤ varustetut kuvatiedostot."@fi-t-en-t0-mtec , "ZIP-Ð°Ñ€Ñ…Ñ–Ð², Ñ‰Ð¾ Ð¼Ñ–ÑÑ‚Ð¸Ñ‚ÑŒ Ð²ÑÑ– Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ñ–Ñ— Ð² XML, Ñ– ÐºÑ–Ð»ÑŒÐºÐ° Ð´Ð¾Ð´Ð°Ñ‚ÐºÐ¾Ð²Ð¸Ñ… Ð°Ñ€Ñ…Ñ–Ð²Ñ–Ð² ZIP, Ñ‰Ð¾ Ð¼Ñ–ÑÑ‚ÑÑ‚ÑŒ Ð°Ð½Ð¾Ñ‚Ð¾Ð²Ð°Ð½Ñ– Ñ„Ð°Ð¹Ð»Ð¸ Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½ÑŒ."@uk-t-en-t0-mtec , "Archiv ZIP obsahujÃ­cÃ­ vÅ¡echny poznÃ¡mky v XML a nÄ›kolik dalÅ¡Ã­ch ZIP archivÅ¯ obsahujÃ­cÃ­ch komentovanÃ© obrazovÃ© soubory."@cs-t-en-t0-mtec , "O arhivÄƒ ZIP care conÈ›ine toate adnotÄƒrile din XML È™i mai multe arhive ZIP suplimentare care conÈ›in fiÈ™ierele de imagine adnotate."@ro-t-en-t0-mtec , "Une archive ZIP contenant toutes les annotations en XML, et plusieurs archives ZIP supplÃ©mentaires contenant les fichiers image annotÃ©s."@fr-t-en-t0-mtec , "Arhiv ZIP, ki vsebuje vse opombe v XML, in veÄ dodatnih arhivov ZIP, ki vsebujejo oznaÄene slikovne datoteke."@sl-t-en-t0-mtec , "ÎˆÎ½Î± Î±ÏÏ‡ÎµÎ¯Î¿ ZIP Ï€Î¿Ï… Ï€ÎµÏÎ¹Î­Ï‡ÎµÎ¹ ÏŒÎ»Î± Ï„Î± ÏƒÏ‡ÏŒÎ»Î¹Î± ÏƒÏ„Î¿ XML, ÎºÎ±Î¹ Ï€Î¿Î»Î»Î¬ ÎµÏ€Î¹Ï€Î»Î­Î¿Î½ Î±ÏÏ‡ÎµÎ¯Î± ZIP Ï€Î¿Ï… Ï€ÎµÏÎ¹Î­Ï‡Î¿Ï…Î½ Ï„Î± ÏƒÏ‡Î¿Î»Î¹Î±ÏƒÎ¼Î­Î½Î± Î±ÏÏ‡ÎµÎ¯Î± ÎµÎ¹ÎºÏŒÎ½Î±Ï‚."@el-t-en-t0-mtec , "ZIP arhiva koja sadrÅ¾i sve biljeÅ¡ke u XML-u i nekoliko dodatnih ZIP arhiva koje sadrÅ¾e biljeÅ¡ke s slikovnim datotekama."@hr-t-en-t0-mtec , "Arkivju ZIP li fih l-annotazzjonijiet kollha fl-XML, u diversi arkivji ZIP addizzjonali li fihom il-fajls tal-immaÄ¡ni annotati."@mt-t-en-t0-mtec , "Um arquivo ZIP contendo todas as apontamentos em XML e vÃ¡rios arquivos ZIP adicionais contendo os arquivos de imagem anotados."@pt-t-en-t0-mtec , "Egy ZIP archÃ­vum, amely tartalmazza az Ã¶sszes XML-jegyzetet, Ã©s tÃ¶bb tovÃ¡bbi ZIP archÃ­vumot, amelyek a jegyzetelt kÃ©pfÃ¡jlokat tartalmazzÃ¡k."@hu-t-en-t0-mtec , "Un archivio ZIP contenente tutte le annotazioni in XML e diversi archivi ZIP aggiuntivi contenenti i file di immagine annotati."@it-t-en-t0-mtec , "Cartlann ZIP ina bhfuil na nÃ³taÃ­ go lÃ©ir in XML, agus roinnt cartlanna ZIP breise ina bhfuil na comhaid Ã­omhÃ¡ anÃ³tÃ¡ilte."@ga-t-en-t0-mtec , "Et ZIP-arkiv, der indeholder alle anmÃ¦rkninger i XML, og flere yderligere ZIP-arkiver, der indeholder de kommenterede billedfiler."@da-t-en-t0-mtec , "ZIP Ð°Ñ€Ñ…Ð¸Ð², ÑÑŠÐ´ÑŠÑ€Ð¶Ð°Ñ‰ Ð²ÑÐ¸Ñ‡ÐºÐ¸ Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ð¸Ð¸ Ð² XML Ð¸ Ð½ÑÐºÐ¾Ð»ÐºÐ¾ Ð´Ð¾Ð¿ÑŠÐ»Ð½Ð¸Ñ‚ÐµÐ»Ð½Ð¸ ZIP Ð°Ñ€Ñ…Ð¸Ð²Ð¸, ÑÑŠÐ´ÑŠÑ€Ð¶Ð°Ñ‰Ð¸ Ð°Ð½Ð¾Ñ‚Ð¸Ñ€Ð°Ð½Ð¸Ñ‚Ðµ Ñ„Ð°Ð¹Ð»Ð¾Ð²Ðµ Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ."@bg-t-en-t0-mtec , "ZIP arhÄ«vs, kas satur visas XML anotÄcijas, un vairÄki papildu ZIP arhÄ«vi, kuros ir anotÄ“tie attÄ“lu faili."@lv-t-en-t0-mtec;
+        dct:format           <http://publications.europa.eu/resource/authority/file-type/XML>;
+        dct:identifier       "Image files and the corresponding annotations.@en";
+        dct:license          <https://creativecommons.org/licenses/by-nc-sa/2.0/>;
+        dct:rights           <https://creativecommons.org/licenses/by-nc-sa/2.0/>;
+        dct:title            "Arquivos de imagem e as apontamentos correspondentes."@pt-t-en-t0-mtec , "Afbeeldingsbestanden en de bijbehorende annotaties."@nl-t-en-t0-mtec , "ObrazovÃ© soubory a odpovÃ­dajÃ­cÃ­ poznÃ¡mky."@cs-t-en-t0-mtec , "Comhaid Ã­omhÃ¡ agus na nÃ³taÃ­ comhfhreagracha."@ga-t-en-t0-mtec , "AttÄ“lu faili un attiecÄ«gÄs anotÄcijas."@lv-t-en-t0-mtec , "Archivos de imagen y las anotaciones correspondientes."@es-t-en-t0-mtec , "File immagine e le annotazioni corrispondenti."@it-t-en-t0-mtec , "Les fichiers image et les annotations correspondantes."@fr-t-en-t0-mtec , "Î‘ÏÏ‡ÎµÎ¯Î± ÎµÎ¹ÎºÏŒÎ½Î±Ï‚ ÎºÎ±Î¹ Ï„Î± Î±Î½Ï„Î¯ÏƒÏ„Î¿Î¹Ï‡Î± ÏƒÏ‡ÏŒÎ»Î¹Î±."@el-t-en-t0-mtec , "Bilddateien und die entsprechenden Anmerkungen."@de-t-en-t0-mtec , "Slikovne datoteke in ustrezne opombe."@sl-t-en-t0-mtec , "Image files and the corresponding annotations."@en , "Fajls taâ€™ immaÄ¡ni u l-annotazzjonijiet korrispondenti."@mt-t-en-t0-mtec , "Kuvatiedostot ja vastaavat merkinnÃ¤t."@fi-t-en-t0-mtec , "ObrÃ¡zkovÃ© sÃºbory a zodpovedajÃºce poznÃ¡mky."@sk-t-en-t0-mtec , "Ð¤Ð°Ð¹Ð»Ð¸ Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½ÑŒ Ñ– Ð²Ñ–Ð´Ð¿Ð¾Ð²Ñ–Ð´Ð½Ñ– Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ñ–Ñ—."@uk-t-en-t0-mtec , "Bildfiler och motsvarande anteckningar."@sv-t-en-t0-mtec , "KÃ©pfÃ¡jlok Ã©s a megfelelÅ‘ megjegyzÃ©sek."@hu-t-en-t0-mtec , "Slikovne datoteke i odgovarajuÄ‡e napomene."@hr-t-en-t0-mtec , "Pliki obrazÃ³w i odpowiednie adnotacje."@pl-t-en-t0-mtec , "Vaizdo failai ir atitinkamos pastabos."@lt-t-en-t0-mtec , "Ð¤Ð°Ð¹Ð»Ð¾Ð²Ðµ Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ð¸ ÑÑŠÐ¾Ñ‚Ð²ÐµÑ‚Ð½Ð¸Ñ‚Ðµ Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ð¸Ð¸."@bg-t-en-t0-mtec , "Billedfiler og tilhÃ¸rende annotationer."@da-t-en-t0-mtec , "FiÈ™iere imagine È™i adnotÄƒri corespunzÄƒtoare."@ro-t-en-t0-mtec , "Pildifailid ja vastavad mÃ¤rkused."@et-t-en-t0-mtec;
+        <http://www.w3.org/ns/admsstatus>
+                <http://purl.org/adms/status/Completed>;
+        dcat:accessURL       <https://zenodo.org/record/6984525>;
+        dcat:compressFormat  <https://www.iana.org/assignments/media-types/application/zip>;
+        dcat:mediaType       <https://www.iana.org/assignments/media-types/application/xml>;
+        dcat:packageFormat   <https://www.iana.org/assignments/media-types/application/zip> .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML>
+        a              dct:MediaTypeOrExtent;
+        skos:inScheme  <http://publications.europa.eu/resource/authority/file-type> .
+		
+
+<https://www.iana.org/assignments/media-types/application/zip>
+        a       dct:MediaType .
+
+<http://purl.org/adms/licencetype/Attribution>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/licencetype/1.0>;
+        skos:prefLabel  "Attribution"@en .
+
+dcatap:stable  a  skos:Concept .
+
+<http://purl.org/adms/licencetype/ViralEffect-ShareAlike>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/licencetype/1.0>;
+        skos:prefLabel  "Viral effect (a.k.a. Share-alike)"@en .
+
+<http://publications.europa.eu/resource/authority/file-type/XML>
+        a              dct:MediaTypeOrExtent;
+        skos:inScheme  <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://www.iana.org/assignments/media-types/text/html>
+        a       dct:MediaType .
+
+<http://purl.org/adms/licencetype/NonCommercialUseOnly>
+        a               skos:Concept;
+        skos:inScheme   <http://purl.org/adms/licencetype/1.0>;
+        skos:prefLabel  "Non-commercial use only"@en .
+
+<https://creativecommons.org/licenses/by-nc-sa/2.0/>
+        a         dct:LicenseDocument , dct:RightsStatement;
+        dct:type  <http://purl.org/adms/licencetype/Attribution> , <http://purl.org/adms/licencetype/NonCommercialUseOnly> , <http://purl.org/adms/licencetype/ViralEffect-ShareAlike> .
+
+<https://www.iana.org/assignments/media-types/application/xml>
+        a       dct:MediaType .
+
+<http://data.europa.eu/88u/distribution/9bc19481-9d6d-4fd6-beca-3d07ed062dbd>
+        a                    dcat:Distribution;
+        dcatap:availability  dcatap:stable;
+        dct:description      "ZIP archyvas, kuriame yra visos pastabos XML ir keli papildomi ZIP archyvai, kuriuose yra anotuotÅ³ vaizdo failÅ³."@lt-t-en-t0-mtec , "ArchÃ­v ZIP obsahujÃºci vÅ¡etky anotÃ¡cie v XML a niekoÄ¾ko ÄalÅ¡Ã­ch ZIP archÃ­vov obsahujÃºcich anotovanÃ© obrazovÃ© sÃºbory."@sk-t-en-t0-mtec , "Ett ZIP-arkiv som innehÃ¥ller alla kommentarer i XML, och flera ytterligare ZIP-arkiv som innehÃ¥ller de kommenterade bildfilerna."@sv-t-en-t0-mtec , "A ZIP archive containing all the annotations in XML, and several additional ZIP archives containing the annotated image files."@en , "ZIP-arhiiv, mis sisaldab kÃµiki XML-i mÃ¤rkeid, ja mitu tÃ¤iendavat ZIP-arhiivi, mis sisaldavad selgitustega pildifaile."@et-t-en-t0-mtec , "Un archivo ZIP que contiene todas las anotaciones en XML, y varios archivos ZIP adicionales que contienen los archivos de imagen anotados."@es-t-en-t0-mtec , "Archiwum ZIP zawierajÄ…ce wszystkie adnotacje w XML oraz kilka dodatkowych archiwÃ³w ZIP zawierajÄ…cych pliki obrazÃ³w z adnotacjami."@pl-t-en-t0-mtec , "Een ZIP-archief met alle annotaties in XML en een aantal extra ZIP-archieven met de geannoteerde afbeeldingsbestanden."@nl-t-en-t0-mtec , "Ein ZIP-Archiv mit allen Anmerkungen in XML und mehrere zusÃ¤tzliche ZIP-Archive mit den kommentierten Bilddateien."@de-t-en-t0-mtec , "ZIP-arkisto, joka sisÃ¤ltÃ¤Ã¤ kaikki XML: n merkinnÃ¤t, ja useita muita ZIP-arkistoja, jotka sisÃ¤ltÃ¤vÃ¤t selityksillÃ¤ varustetut kuvatiedostot."@fi-t-en-t0-mtec , "ZIP-Ð°Ñ€Ñ…Ñ–Ð², Ñ‰Ð¾ Ð¼Ñ–ÑÑ‚Ð¸Ñ‚ÑŒ Ð²ÑÑ– Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ñ–Ñ— Ð² XML, Ñ– ÐºÑ–Ð»ÑŒÐºÐ° Ð´Ð¾Ð´Ð°Ñ‚ÐºÐ¾Ð²Ð¸Ñ… Ð°Ñ€Ñ…Ñ–Ð²Ñ–Ð² ZIP, Ñ‰Ð¾ Ð¼Ñ–ÑÑ‚ÑÑ‚ÑŒ Ð°Ð½Ð¾Ñ‚Ð¾Ð²Ð°Ð½Ñ– Ñ„Ð°Ð¹Ð»Ð¸ Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½ÑŒ."@uk-t-en-t0-mtec , "Archiv ZIP obsahujÃ­cÃ­ vÅ¡echny poznÃ¡mky v XML a nÄ›kolik dalÅ¡Ã­ch ZIP archivÅ¯ obsahujÃ­cÃ­ch komentovanÃ© obrazovÃ© soubory."@cs-t-en-t0-mtec , "O arhivÄƒ ZIP care conÈ›ine toate adnotÄƒrile din XML È™i mai multe arhive ZIP suplimentare care conÈ›in fiÈ™ierele de imagine adnotate."@ro-t-en-t0-mtec , "Une archive ZIP contenant toutes les annotations en XML, et plusieurs archives ZIP supplÃ©mentaires contenant les fichiers image annotÃ©s."@fr-t-en-t0-mtec , "Arhiv ZIP, ki vsebuje vse opombe v XML, in veÄ dodatnih arhivov ZIP, ki vsebujejo oznaÄene slikovne datoteke."@sl-t-en-t0-mtec , "ÎˆÎ½Î± Î±ÏÏ‡ÎµÎ¯Î¿ ZIP Ï€Î¿Ï… Ï€ÎµÏÎ¹Î­Ï‡ÎµÎ¹ ÏŒÎ»Î± Ï„Î± ÏƒÏ‡ÏŒÎ»Î¹Î± ÏƒÏ„Î¿ XML, ÎºÎ±Î¹ Ï€Î¿Î»Î»Î¬ ÎµÏ€Î¹Ï€Î»Î­Î¿Î½ Î±ÏÏ‡ÎµÎ¯Î± ZIP Ï€Î¿Ï… Ï€ÎµÏÎ¹Î­Ï‡Î¿Ï…Î½ Ï„Î± ÏƒÏ‡Î¿Î»Î¹Î±ÏƒÎ¼Î­Î½Î± Î±ÏÏ‡ÎµÎ¯Î± ÎµÎ¹ÎºÏŒÎ½Î±Ï‚."@el-t-en-t0-mtec , "ZIP arhiva koja sadrÅ¾i sve biljeÅ¡ke u XML-u i nekoliko dodatnih ZIP arhiva koje sadrÅ¾e biljeÅ¡ke s slikovnim datotekama."@hr-t-en-t0-mtec , "Arkivju ZIP li fih l-annotazzjonijiet kollha fl-XML, u diversi arkivji ZIP addizzjonali li fihom il-fajls tal-immaÄ¡ni annotati."@mt-t-en-t0-mtec , "Um arquivo ZIP contendo todas as apontamentos em XML e vÃ¡rios arquivos ZIP adicionais contendo os arquivos de imagem anotados."@pt-t-en-t0-mtec , "Egy ZIP archÃ­vum, amely tartalmazza az Ã¶sszes XML-jegyzetet, Ã©s tÃ¶bb tovÃ¡bbi ZIP archÃ­vumot, amelyek a jegyzetelt kÃ©pfÃ¡jlokat tartalmazzÃ¡k."@hu-t-en-t0-mtec , "Un archivio ZIP contenente tutte le annotazioni in XML e diversi archivi ZIP aggiuntivi contenenti i file di immagine annotati."@it-t-en-t0-mtec , "Cartlann ZIP ina bhfuil na nÃ³taÃ­ go lÃ©ir in XML, agus roinnt cartlanna ZIP breise ina bhfuil na comhaid Ã­omhÃ¡ anÃ³tÃ¡ilte."@ga-t-en-t0-mtec , "Et ZIP-arkiv, der indeholder alle anmÃ¦rkninger i XML, og flere yderligere ZIP-arkiver, der indeholder de kommenterede billedfiler."@da-t-en-t0-mtec , "ZIP Ð°Ñ€Ñ…Ð¸Ð², ÑÑŠÐ´ÑŠÑ€Ð¶Ð°Ñ‰ Ð²ÑÐ¸Ñ‡ÐºÐ¸ Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ð¸Ð¸ Ð² XML Ð¸ Ð½ÑÐºÐ¾Ð»ÐºÐ¾ Ð´Ð¾Ð¿ÑŠÐ»Ð½Ð¸Ñ‚ÐµÐ»Ð½Ð¸ ZIP Ð°Ñ€Ñ…Ð¸Ð²Ð¸, ÑÑŠÐ´ÑŠÑ€Ð¶Ð°Ñ‰Ð¸ Ð°Ð½Ð¾Ñ‚Ð¸Ñ€Ð°Ð½Ð¸Ñ‚Ðµ Ñ„Ð°Ð¹Ð»Ð¾Ð²Ðµ Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ."@bg-t-en-t0-mtec , "ZIP arhÄ«vs, kas satur visas XML anotÄcijas, un vairÄki papildu ZIP arhÄ«vi, kuros ir anotÄ“tie attÄ“lu faili."@lv-t-en-t0-mtec;
+        dct:format           <http://publications.europa.eu/resource/authority/file-type/XML>;
+        dct:identifier       "Image files and the corresponding annotations.@en";
+        dct:license          <https://creativecommons.org/licenses/by-nc-sa/2.0/>;
+        dct:rights           <https://creativecommons.org/licenses/by-nc-sa/2.0/>;
+        dct:title            "Arquivos de imagem e as apontamentos correspondentes."@pt-t-en-t0-mtec , "Afbeeldingsbestanden en de bijbehorende annotaties."@nl-t-en-t0-mtec , "ObrazovÃ© soubory a odpovÃ­dajÃ­cÃ­ poznÃ¡mky."@cs-t-en-t0-mtec , "Comhaid Ã­omhÃ¡ agus na nÃ³taÃ­ comhfhreagracha."@ga-t-en-t0-mtec , "AttÄ“lu faili un attiecÄ«gÄs anotÄcijas."@lv-t-en-t0-mtec , "Archivos de imagen y las anotaciones correspondientes."@es-t-en-t0-mtec , "File immagine e le annotazioni corrispondenti."@it-t-en-t0-mtec , "Les fichiers image et les annotations correspondantes."@fr-t-en-t0-mtec , "Î‘ÏÏ‡ÎµÎ¯Î± ÎµÎ¹ÎºÏŒÎ½Î±Ï‚ ÎºÎ±Î¹ Ï„Î± Î±Î½Ï„Î¯ÏƒÏ„Î¿Î¹Ï‡Î± ÏƒÏ‡ÏŒÎ»Î¹Î±."@el-t-en-t0-mtec , "Bilddateien und die entsprechenden Anmerkungen."@de-t-en-t0-mtec , "Slikovne datoteke in ustrezne opombe."@sl-t-en-t0-mtec , "Image files and the corresponding annotations."@en , "Fajls taâ€™ immaÄ¡ni u l-annotazzjonijiet korrispondenti."@mt-t-en-t0-mtec , "Kuvatiedostot ja vastaavat merkinnÃ¤t."@fi-t-en-t0-mtec , "ObrÃ¡zkovÃ© sÃºbory a zodpovedajÃºce poznÃ¡mky."@sk-t-en-t0-mtec , "Ð¤Ð°Ð¹Ð»Ð¸ Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½ÑŒ Ñ– Ð²Ñ–Ð´Ð¿Ð¾Ð²Ñ–Ð´Ð½Ñ– Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ñ–Ñ—."@uk-t-en-t0-mtec , "Bildfiler och motsvarande anteckningar."@sv-t-en-t0-mtec , "KÃ©pfÃ¡jlok Ã©s a megfelelÅ‘ megjegyzÃ©sek."@hu-t-en-t0-mtec , "Slikovne datoteke i odgovarajuÄ‡e napomene."@hr-t-en-t0-mtec , "Pliki obrazÃ³w i odpowiednie adnotacje."@pl-t-en-t0-mtec , "Vaizdo failai ir atitinkamos pastabos."@lt-t-en-t0-mtec , "Ð¤Ð°Ð¹Ð»Ð¾Ð²Ðµ Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ð¸ ÑÑŠÐ¾Ñ‚Ð²ÐµÑ‚Ð½Ð¸Ñ‚Ðµ Ð°Ð½Ð¾Ñ‚Ð°Ñ†Ð¸Ð¸."@bg-t-en-t0-mtec , "Billedfiler og tilhÃ¸rende annotationer."@da-t-en-t0-mtec , "FiÈ™iere imagine È™i adnotÄƒri corespunzÄƒtoare."@ro-t-en-t0-mtec , "Pildifailid ja vastavad mÃ¤rkused."@et-t-en-t0-mtec;
+        <http://www.w3.org/ns/admsstatus>
+                <http://purl.org/adms/status/Completed>;
+        dcat:accessURL       <https://zenodo.org/record/6984525>;
+        dcat:compressFormat  <https://www.iana.org/assignments/media-types/application/zip>;
+        dcat:mediaType       <https://www.iana.org/assignments/media-types/application/xml>;
+        dcat:packageFormat   <https://www.iana.org/assignments/media-types/application/zip> .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML>
+        a              dct:MediaTypeOrExtent;
+        skos:inScheme  <http://publications.europa.eu/resource/authority/file-type> .
+
+<https://zenodo.org/record/6984525>
+        a                foaf:Document;
+        dct:description  "The landing page the DEArt dataset at Zenodo, where the dataset and its metadata can be accessed."@en;
+        dct:format       <http://publications.europa.eu/resource/authority/file-type/HTML>;
+        dct:title        "The dataset landing page at Zenodo."@en;
+        dct:type         <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN>;
+        schema:url       "https://zenodo.org/record/6984525";
+        dcat:mediaType   <http://www.iana.org/assignments/media-types/text/html> .

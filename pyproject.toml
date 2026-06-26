@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataq"
+version = "1.0.0"
+description = "Automated quality assessment of open data catalogs (DCAT/RDF) across eight FAIR-aligned quality dimensions."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Jorge Martinez-Gil", email = "jorgemarcc@gmail.com" }]
+keywords = [
+    "open data", "data catalog", "data quality", "metadata quality",
+    "FAIR data", "FAIR assessment", "DCAT", "DCAT validation", "RDF",
+    "linked data", "knowledge graph", "data governance", "semantic web",
+    "open government data", "metadata benchmarking", "repository quality",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing :: Markup",
+]
+dependencies = [
+    "rdflib>=6.2.0",
+    "requests>=2.28.0",
+    "textstat==0.7.3",
+    "pytz>=2022.1",
+]
+
+[project.optional-dependencies]
+similarity = ["nltk>=3.6.5"]
+dev = ["pytest>=7.0", "nltk>=3.6.5"]
+
+[project.urls]
+Homepage = "https://github.com/jorge-martinez-gil/dataq"
+Repository = "https://github.com/jorge-martinez-gil/dataq"
+Paper = "https://doi.org/10.1016/j.eswa.2025.128379"
+Preprint = "https://arxiv.org/abs/2307.15464"
+
+[project.scripts]
+dataq = "dataq.cli:main"
+
+[tool.setuptools]
+packages = ["dataq", "dataq.metrics"]
+
+[tool.setuptools.package-data]
+dataq = ["data/*.ttl"]
+
+# Notes:
+# textstat is pinned to 0.7.3 (the version used in the paper): it computes
+# Flesch-Kincaid grades offline via pyphen, whereas newer releases require the
+# cmudict resource to be downloaded at runtime. textstat 0.7.3 imports
+# pkg_resources, so on setuptools >= 81 also install setuptools < 81.

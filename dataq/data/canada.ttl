@@ -1,0 +1,20 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://open.canada.ca/data/en/dataset/c4c5c7f1-bfa6-4ff6-b4a0-c164cb2060f7>
+    a dcat:Dataset ;
+    dcterms:title "Open Data Portal Catalogue" ;
+    dcterms:description "The open data portal catalogue is a downloadable dataset containing key metadata for the general datasets available on the Government of Canada's Open Data portal." ;
+    dcterms:issued "2025-03-19"^^xsd:date ;
+    dcterms:publisher <https://open.canada.ca/data/en/organization/treasury-board-of-canada-secretariat> ;
+    dcterms:license <https://open.canada.ca/en/open-government-licence-canada> ;
+    dcat:keyword "metadata", "open data", "catalogue" ;
+    dcat:distribution <https://open.canada.ca/static/od-do-canada.jsonl.gz> .
+
+<https://open.canada.ca/static/od-do-canada.jsonl.gz>
+    a dcat:Distribution ;
+    dcterms:title "Open Data Portal Catalogue JSONL" ;
+    dcat:accessURL <https://open.canada.ca/static/od-do-canada.jsonl.gz> ;
+    dcat:mediaType "application/json" ;
+    dcat:format "JSONL" .

@@ -1,0 +1,18 @@
+# DataQ benchmark over bundled catalogs
+
+Computed live by `examples/run_benchmark.py` (no hard-coded values).
+
+| catalog | triples | aggregate% | Completeness(DCAT)% | Completeness(DCT)% | Consistency% | Licensing% | Provenance% | Readability(FK) | Timely |
+|---|---|---|---|---|---|---|---|---|---|
+| example001.ttl | 27 | 50.42 | 40.0 | 13.33 | 95.0 | 50.0 | 16.7 | 0.25 | False |
+| example002.ttl | 37 | 25.8 | 6.67 | 66.67 | 96.55 | 0.0 | 0.0 | 5.25 | False |
+| example003.ttl | 26 | 50.42 | 40.0 | 13.33 | 95.0 | 50.0 | 16.7 | 1.65 | False |
+| example004.ttl | 56 | 29.17 | 23.81 | 14.29 | 92.86 | 0.0 | 0.0 | 8.8 | False |
+| canada.ttl | 15 | 48.08 | 0.0 | 50.0 | 92.31 | 100.0 | 0.0 | 14.2 | False |
+| canada2.ttl | 45 | 19.0 | 0.0 | 55.56 | 76.0 | 0.0 | 0.0 | 10.7 | False |
+| easa.ttl | 356 | 21.91 | 8.33 | 75.0 | 79.31 | 0.0 | 0.0 | 7.9 | False |
+| euromap.ttl | 786 | 18.21 | 0.0 | 81.48 | 72.84 | 0.0 | 0.0 | 15.12 | False |
+| europeana.ttl | 223 | 19.74 | 0.0 | 77.78 | 78.95 | 0.0 | 0.0 | 10.6 | False |
+| hadea.ttl | 97 | 27.04 | 11.11 | 77.78 | 97.06 | 0.0 | 0.0 | 17.7 | False |
+| pacific.ttl | 16 | 48.08 | 0.0 | 50.0 | 92.31 | 100.0 | 0.0 | 14.2 | False |
+| pacific2.ttl | 59 | 48.28 | 0.0 | 66.67 | 93.1 | 100.0 | 0.0 | 22.1 | False |

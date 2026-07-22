@@ -1,0 +1,13 @@
+tool,reference,reference_doi,unit_assessed,target_model,dimensions_covered,automation,output,open_source
+DataQ,Martinez-Gil 2025,10.1016/j.eswa.2025.128379,whole catalog (DCAT graph),"DCAT, DCT, PROV-O (RDF/Turtle)","completeness; accuracy; consistency; licensing; provenance; readability; timeliness; scalability; compatibility; similarity",automated one-command offline-deterministic,text / JSON / Markdown (DQV-mappable),MIT
+data.europa.eu MQA,Wentzel et al. 2023,10.1007/978-3-031-41138-0_17,whole catalog (DCAT-AP),DCAT-AP (RDF) + SHACL,"findability; accessibility; interoperability; reusability; contextuality",automated web service,dashboards / PDF,partly open service
+Open Data Portal Watch,Neumaier et al. 2016,10.1145/2964909,many portals (per record),CKAN / Socrata mapped to DCAT,"existence; conformance; retrievability; accuracy; openness",automated crawler,reports / API,research service
+Roomba,Assaf et al. 2015,10.1007/978-3-319-25639-9_46,dataset profile,CKAN metadata,"completeness; correctness (license, access, provenance)",automated validate and correct,dataset profiles,open (research)
+Luzzu,Debattista et al. 2016,10.1145/2992786,dataset / graph,RDF / linked data,"pluggable: accessibility; intrinsic; representational; contextual",semi-automated metric language,daQ / DQV RDF,open
+RDFUnit,Kontokostas et al. 2014,10.1145/2566486.2568002,dataset / graph,"RDF, RDFS, OWL","consistency; accuracy; conformance; completeness",automated SPARQL tests,RDF report,open
+SHACL,Knublauch & Kontokostas 2017,,graph,RDF shapes,"conformance; consistency; completeness",declarative automatable,RDF validation report,W3C standard
+ShEx,Prud'hommeaux et al. 2014,10.1145/2660517.2660523,graph,RDF shapes,"structural conformance; completeness",declarative,validation report,open
+F-UJI,Devaraju & Huber 2021,10.1016/j.patter.2021.100370,single dataset,"DataCite, schema.org, Dublin Core","FAIR facets (F, A, I, R)",automated web / API,per-metric score,open
+FAIRshake,Clarke et al. 2019,10.1016/j.cels.2019.09.011,digital resource,configurable rubrics,"FAIR (rubric-dependent)",hybrid manual and automated,rubric scores,open
+FAIR Evaluator,Wilkinson et al. 2019,10.1038/s41597-019-0184-5,digital resource (GUID),maturity indicators,"FAIR facets",automated tests,pass/fail per test,open
+FAIR-Checker,Gaignard et al. 2023,10.1186/s13326-023-00289-5,resource / metadata doc,"embedded RDF (JSON-LD, RDFa)",FAIR metrics via SPARQL / SHACL,automated,metric report,open

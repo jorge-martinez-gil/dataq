@@ -1,19 +1,25 @@
-# DataQ — Automated Quality Assessment of Open Data Catalogs
+# DataQ: Automated Quality Assessment of Open Data Catalogs
 
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.eswa.2025.128379-red.svg)](https://doi.org/10.1016/j.eswa.2025.128379)
 [![arXiv preprint](https://img.shields.io/badge/arXiv-2307.15464-brightgreen.svg)](https://arxiv.org/abs/2307.15464)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Tests](https://img.shields.io/badge/tests-213%20passing-brightgreen.svg)](#tests--reproducibility)
+[![Survey](https://img.shields.io/badge/living%20survey-SURVEY.md-blueviolet.svg)](SURVEY.md)
 
-> **DataQ** automatically measures the quality of an open data catalog encoded in
-> RDF/Turtle (DCAT) across **eight FAIR-aligned quality dimensions** and produces a
-> structured, machine-readable quality report — in **one command**.
+> **DataQ** measures the quality of an open data catalog encoded in RDF/Turtle (DCAT)
+> across **eight FAIR-aligned quality dimensions** and produces a structured,
+> machine-readable quality report in **one command**.
 >
-> Reference implementation for: Martinez-Gil, J. (2025). *Framework to automatically
-> determine the quality of open data catalogs.* **Expert Systems with Applications**,
-> 289, 128379. [[journal]](https://doi.org/10.1016/j.eswa.2025.128379) ·
-> [[preprint]](https://arxiv.org/abs/2307.15464) · [[how to cite]](#-how-to-cite)
+> This repository holds two things that reinforce each other: the open-source
+> **reference implementation** of the method, and a **living survey** of the whole
+> research area, [`SURVEY.md`](SURVEY.md), that maps the tools and papers on open data,
+> linked data, and FAIR quality assessment and shows where DataQ fits.
+>
+> Reference paper: Martinez-Gil, J. (2025). *Framework to automatically determine the
+> quality of open data catalogs.* **Expert Systems with Applications**, 289, 128379.
+> [[journal]](https://doi.org/10.1016/j.eswa.2025.128379) ·
+> [[preprint]](https://arxiv.org/abs/2307.15464) · [[how to cite]](#how-to-cite)
 
 ```bash
 pip install -e .             # from this repository
@@ -22,41 +28,29 @@ dataq assess my_catalog.ttl  # full quality report in your terminal
 
 ---
 
+## Two resources in one repository
+
+**1. The tool.** Point DataQ at a DCAT/RDF catalog and it returns per-dimension scores plus a machine-readable report you can track over time, compare across portals, and cite in a paper.
+
+**2. The living survey.** [`SURVEY.md`](SURVEY.md) is a maintained systematic review of automated quality assessment for open data catalogs, linked data, and FAIR resources. It gathers more than forty verified references into one taxonomy, compares every major tool in an honest feature table, and lists the open problems worth solving. If you are entering this area, start there. Corrections and additions are welcome ([CONTRIBUTING.md](CONTRIBUTING.md)).
+
+---
+
 ## What problem does this solve?
 
-Open data catalogs (data.gov, the EU Open Data Portal, regional and institutional
-portals) are critical public infrastructure, yet **their metadata quality is rarely
-assessed in a systematic, automated, comparable way.** Poor catalog quality — missing
-fields, broken links, no license, stale or unreadable metadata, absent provenance —
-silently undermines discoverability, reuse, and trust.
+Open data catalogs (data.gov, the EU Open Data Portal, regional and institutional portals) are public infrastructure, yet their metadata quality is rarely assessed in a systematic, automated, comparable way. Poor catalog quality, meaning missing fields, broken links, no license, stale or unreadable metadata, absent provenance, silently undermines discoverability, reuse, and trust.
 
-**DataQ turns "is this catalog any good?" into a reproducible number.** Point it at a
-DCAT/RDF catalog and it returns per-dimension scores plus a machine-readable report you
-can track over time, compare across portals, and cite in a paper.
+DataQ turns "is this catalog any good?" into a reproducible number. Every metric is a short, readable module, so a reviewer can see exactly what a score means, and assessment is offline-deterministic, so the same catalog yields the same result on any machine.
 
-## Why does catalog quality matter?
+## Why catalog quality matters
 
-Data quality is a precondition for the **FAIR principles** (Findable, Accessible,
-Interoperable, Reusable). A dataset nobody can find, that has no license, or whose
-provenance is unknown, is not reusable regardless of how good the underlying data is.
-Catalog-level quality is where findability and reusability are won or lost.
-
-## Why is DataQ different?
-
-- **Catalog-level, not dataset-level** — it evaluates the whole DCAT graph
-  (Catalog → Dataset → Distribution), not a single file.
-- **Eight dimensions in one pass** — accuracy, completeness, consistency, scalability,
-  timeliness, provenance, readability, licensing — plus cross-catalog compatibility and
-  similarity.
-- **Machine-readable & reproducible** — JSON / Markdown / text reports, a stable Python
-  API, and a test suite that proves every number matches the published reference.
-- **Standards-native** — works directly on W3C **DCAT**, **Dublin Core Terms (DCT)**,
-  and **PROV-O** vocabularies in RDF/Turtle.
-- **Peer-reviewed method** — backed by a paper in *Expert Systems with Applications*.
+Data quality is a precondition for the **FAIR principles** (Findable, Accessible, Interoperable, Reusable). A dataset nobody can find, that has no license, or whose provenance is unknown, is not reusable however good the underlying data is. Catalog-level quality is where findability and reuse are won or lost.
 
 ---
 
 ## Quality dimensions
+
+Each dimension traces to the data-quality literature. The mapping to source references is in [`SURVEY.md`](SURVEY.md), Section 3.
 
 | Dimension | What it measures | Output |
 |---|---|---|
@@ -73,6 +67,43 @@ Catalog-level quality is where findability and reusability are won or lost.
 
 ---
 
+## How DataQ compares to other tools
+
+The field has three communities that mostly work apart: open-data portal quality, linked-data and knowledge-graph quality, and FAIR assessment. Most tools score a single dataset; few score a whole catalog. The short table below places DataQ among representative tools. The full twelve-tool comparison, with references, is in [`SURVEY.md`](SURVEY.md), Section 5.
+
+| Tool | Unit assessed | Target model | Automation | Open source |
+|---|---|---|---|---|
+| **DataQ** | Whole catalog (DCAT graph) | DCAT, DCT, PROV-O | one command, offline-deterministic | MIT |
+| data.europa.eu MQA | Whole catalog (DCAT-AP) | DCAT-AP + SHACL | web service | partly open |
+| F-UJI | Single dataset | DataCite, schema.org | web / API | open |
+| Luzzu | Dataset / RDF graph | linked data | metric language | open |
+| RDFUnit | Dataset / RDF graph | RDF, RDFS, OWL | SPARQL tests | open |
+
+DataQ occupies the open, reproducible, research-friendly niche: a place to prototype a new dimension, run a fair cross-portal comparison, or teach how catalog quality is measured. It complements the European MQA service and the dataset-level FAIR tools rather than replacing them.
+
+---
+
+## Benchmark over the bundled catalogs
+
+Real numbers, recomputed live from the bundled data with `python examples/run_benchmark.py`. Nothing is hard-coded, so the table reproduces on any machine.
+
+| catalog | triples | aggregate% | Completeness(DCAT)% | Completeness(DCT)% | Consistency% | Licensing% | Provenance% | Readability(FK) | Timely |
+|---|---|---|---|---|---|---|---|---|---|
+| example001.ttl | 27 | 50.42 | 40.0 | 13.33 | 95.0 | 50.0 | 16.7 | 0.25 | False |
+| example002.ttl | 37 | 25.8 | 6.67 | 66.67 | 96.55 | 0.0 | 0.0 | 5.25 | False |
+| example003.ttl | 26 | 50.42 | 40.0 | 13.33 | 95.0 | 50.0 | 16.7 | 1.65 | False |
+| example004.ttl | 56 | 29.17 | 23.81 | 14.29 | 92.86 | 0.0 | 0.0 | 8.8 | False |
+| canada.ttl | 15 | 48.08 | 0.0 | 50.0 | 92.31 | 100.0 | 0.0 | 14.2 | False |
+| canada2.ttl | 45 | 19.0 | 0.0 | 55.56 | 76.0 | 0.0 | 0.0 | 10.7 | False |
+| easa.ttl | 356 | 21.91 | 8.33 | 75.0 | 79.31 | 0.0 | 0.0 | 7.9 | False |
+| euromap.ttl | 786 | 18.21 | 0.0 | 81.48 | 72.84 | 0.0 | 0.0 | 15.12 | False |
+| europeana.ttl | 223 | 19.74 | 0.0 | 77.78 | 78.95 | 0.0 | 0.0 | 10.6 | False |
+| hadea.ttl | 97 | 27.04 | 11.11 | 77.78 | 97.06 | 0.0 | 0.0 | 17.7 | False |
+| pacific.ttl | 16 | 48.08 | 0.0 | 50.0 | 92.31 | 100.0 | 0.0 | 14.2 | False |
+| pacific2.ttl | 59 | 48.28 | 0.0 | 66.67 | 93.1 | 100.0 | 0.0 | 22.1 | False |
+
+---
+
 ## Installation
 
 ```bash
@@ -81,7 +112,7 @@ pip install -e ".[similarity]"    # + NLTK tokenizer for the similarity dimensio
 ```
 
 **Dependencies:** `rdflib`, `requests`, `textstat`, `pytz` (lightweight, no GPU).
-`textstat` is pinned to `0.7.3` to compute Flesch-Kincaid grades **offline**; on
+`textstat` is pinned to `0.7.3` to compute Flesch-Kincaid grades offline; on
 `setuptools >= 81` also run `pip install "setuptools<81"` (it provides `pkg_resources`).
 
 ---
@@ -130,9 +161,11 @@ dataq show           a.ttl
 
 > **Note on the aggregate score.** `aggregate_score` is a transparent, unweighted mean of
 > the percentage-based dimensions (completeness, consistency, licensing, provenance, and
-> accuracy when computed). It is a convenience indicator for ranking catalogs — it is
+> accuracy when computed). It is a convenience indicator for ranking catalogs. It is
 > **not** a weighted index defined in the source paper. Every dimension is always reported
-> separately so you can apply your own weighting.
+> separately so you can apply your own weighting. How to weight and aggregate dimensions
+> fairly is itself an open problem; see [`SURVEY.md`](SURVEY.md), Section 6, and the AHP
+> approach of Kubler et al. (2018).
 
 ---
 
@@ -153,22 +186,24 @@ dataq show           a.ttl
 }
 ```
 
-Stable `key`s make it easy to track a catalog over time or compare many portals.
+Stable `key`s make it easy to track a catalog over time or compare many portals. The
+schema maps cleanly onto the W3C Data Quality Vocabulary (DQV), the standard interchange
+format for quality scores; see [`SURVEY.md`](SURVEY.md), Section 4.5.
 
 ---
 
 ## How do I reproduce the experiments?
 
 The repository ships example catalogs (`example001.ttl`–`example004.ttl`) and real
-**"Official catalogs"** (Canada, Europeana, EASA, EuroMap, HADEA, Pacific Data …).
-Reproduce the full comparison table with one command:
+**"Official catalogs"** (Canada, Europeana, EASA, EuroMap, HADEA, Pacific Data). Reproduce
+the full comparison table with one command:
 
 ```bash
 python examples/run_benchmark.py    # writes benchmark/results.csv and results.md
 ```
 
-Every value is computed live from the bundled data — nothing is hard-coded — so the
-table is fully reproducible on any machine.
+Every value is computed live from the bundled data, so the table is fully reproducible on
+any machine.
 
 ## Tests & reproducibility
 
@@ -179,12 +214,12 @@ pytest -q          # 213 tests
 
 The suite includes **parity tests** asserting the packaged metrics return values
 **numerically identical** to the original standalone `check_*.py` scripts across every
-bundled catalog — the scientific-integrity guardrail that the refactor is a faithful
-reimplementation, not a re-derivation.
+bundled catalog. This is the scientific-integrity guardrail that the refactor is a
+faithful reimplementation, not a re-derivation.
 
 ---
 
-## How do I extend the framework?
+## How do I extend DataQ?
 
 A new quality dimension is a small, self-contained module:
 
@@ -204,7 +239,8 @@ def evaluate(graph: Graph) -> MetricResult:
 ```
 
 Add its `evaluate(graph)` call to `dataq/assess.py` and it appears in every report, JSON
-export, and benchmark automatically.
+export, and benchmark automatically. New dimensions that fill a gap named in
+[`SURVEY.md`](SURVEY.md), Section 7, are especially welcome as contributions.
 
 ---
 
@@ -222,6 +258,9 @@ examples/run_benchmark.py   reproducible benchmark over bundled catalogs
 tests/                 pytest suite incl. parity tests
 check_*.py             original standalone scripts (preserved, still runnable)
 Official catalogs/     real-world DCAT catalogs for benchmarking
+SURVEY.md              living survey of the research area
+references.bib         curated, verified bibliography (40+ entries)
+CONTRIBUTING.md        how to extend the tool and the survey
 ```
 
 The original `check_*.py` scripts are kept for backward compatibility and as cited
@@ -229,19 +268,38 @@ artifacts; they still run exactly as before (`python check_completeness.py file.
 
 ---
 
-## Keywords
+## The living survey
 
-`open data quality` · `data catalog quality` · `metadata quality` · `FAIR assessment` ·
-`FAIR evaluation tool` · `DCAT validation` · `linked data quality` · `repository quality` ·
-`metadata benchmarking` · `open government data quality` · `RDF` · `knowledge graph` ·
-`data governance` · `provenance` · `semantic web`
+[`SURVEY.md`](SURVEY.md) is the part of this repository meant for the wider community to
+read, cite, and extend. It contains:
+
+- a lightweight systematic-review method (search strategy, inclusion criteria, verification);
+- a unified taxonomy that reconciles quality dimensions across three research communities;
+- a twelve-tool comparison table covering DataQ, the European MQA, F-UJI, FAIRshake, the
+  FAIR Evaluator, FAIR-Checker, Luzzu, RDFUnit, SHACL, ShEx, Roomba, and Open Data Portal Watch;
+- open problems and a research agenda, including the missing shared benchmark;
+- a curated [`references.bib`](references.bib) where every entry resolves to a DOI or an
+  official standards URL.
+
+If it helps your work, please cite the reference paper below, and open a pull request to
+keep it current.
 
 ---
 
-## 📚 How to cite
+## Keywords
 
-If you use DataQ in your research, please cite the paper. GitHub's **"Cite this
-repository"** button (powered by [`CITATION.cff`](CITATION.cff)) also exports this.
+`open data quality` · `data catalog quality` · `metadata quality` · `FAIR assessment` ·
+`FAIR evaluation tool` · `DCAT validation` · `linked data quality` · `knowledge graph quality` ·
+`metadata benchmarking` · `open government data quality` · `RDF` · `data governance` ·
+`provenance` · `semantic web` · `survey`
+
+---
+
+## How to cite
+
+If you use DataQ or the survey in your research, please cite the paper. The
+[`CITATION.cff`](CITATION.cff) file also exports this through GitHub's "Cite this
+repository" button.
 
 ### BibTeX
 
